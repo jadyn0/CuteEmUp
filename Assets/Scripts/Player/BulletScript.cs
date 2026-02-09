@@ -2,15 +2,27 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public float bulletSpeed;
+    void Update()
+    {
+        move();
+    }
+
+    void move()
+    {
+        transform.Translate(Vector3.up * bulletSpeed * Time.deltaTime);
+    }
+
+    void collision()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    void OnTriggerEnter2D(Collider2D collision) 
+    { 
+        if (collision.gameObject.CompareTag("Boundary")) 
+        { 
+            Destroy(gameObject);
+        } 
+    } 
 }
