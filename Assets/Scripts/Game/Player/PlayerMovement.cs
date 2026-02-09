@@ -12,6 +12,9 @@ public class PlayerMovement : MonoBehaviour
 
     public BulletScript bullet;
     public float shootDelay;
+    Coroutine lastRoutine = null;
+
+    public PauseMenu pauseMenu;
     void Start()
     {
         moveAction = InputSystem.actions.FindAction("Move");
@@ -23,13 +26,16 @@ public class PlayerMovement : MonoBehaviour
         moveValue = moveAction.ReadValue<Vector2>();
         transform.Translate(Vector3.right * moveValue.x * playerSpeed * Time.deltaTime);
         
-        if (shootAction.IsPressed)
+        if (shootAction.triggered && shootAction.ReadValue<float>() > 0f && !pauseMenu.isPaused)
         {
-            StartCoroutine(ShootRoutine());
+            lastRoutine = StartCoroutine(ShootRoutine());
         }
-        else
+        if (shootAction.triggered && shootAction.ReadValue<float>() == 0f)
         {
-            StopCoroutine(ShootRoutine());
+            if (lastRoutine != null)
+            {
+                StopCoroutine(lastRoutine);
+            }
         }
     }
     private void Shoot()
