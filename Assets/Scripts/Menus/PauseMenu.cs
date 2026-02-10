@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private string mainMenuSceneName;
-    public GameObject container;
+    public GameObject pauseContainer;
+    public GameObject settingsContainer;
     public bool isPaused = false;
 
     InputAction pauseAction;
@@ -39,7 +40,8 @@ public class PauseMenu : MonoBehaviour
 
     public void Settings()
     {
-
+        settingsContainer.SetActive(true);
+        pauseContainer.SetActive(false);
     }
 
     public void MainMenu()
@@ -50,7 +52,7 @@ public class PauseMenu : MonoBehaviour
 
     private void Pause()
     {
-        container.SetActive(true);
+        pauseContainer.SetActive(true);
         isPaused = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -59,7 +61,7 @@ public class PauseMenu : MonoBehaviour
 
     private void Unpause()
     {
-        container.SetActive(false);
+        pauseContainer.SetActive(false);
         isPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
