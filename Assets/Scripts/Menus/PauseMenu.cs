@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -8,6 +9,11 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseContainer;
     public GameObject settingsContainer;
     public bool isPaused = false;
+    public bool isSettings = false;
+
+    public GameObject settingsButton;
+    public GameObject pauseButton;
+    EventSystem eventSystem;
 
     InputAction pauseAction;
 
@@ -16,6 +22,7 @@ public class PauseMenu : MonoBehaviour
         pauseAction = InputSystem.actions.FindAction("Cancel");
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        eventSystem = EventSystem.current;
     }
     void Update()
     {
@@ -23,9 +30,15 @@ public class PauseMenu : MonoBehaviour
         {
             if (isPaused)
             {
-                Unpause();
+                if (isSettings)
+                {
+                    unSettings();
+                }
+                else
+                {
+                   Unpause(); 
+                }
             }
-
             else
             {
                 Pause();
@@ -40,8 +53,17 @@ public class PauseMenu : MonoBehaviour
 
     public void Settings()
     {
+        isSettings = true;
         settingsContainer.SetActive(true);
         pauseContainer.SetActive(false);
+        eventSystem.SetSelectedGameObject(settingsButton);
+    }
+    public void unSettings()
+    {
+        isSettings = false;
+        settingsContainer.SetActive(false);
+        pauseContainer.SetActive(true);
+        eventSystem.SetSelectedGameObject(pauseButton);
     }
 
     public void MainMenu()

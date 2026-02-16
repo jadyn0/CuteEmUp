@@ -9,17 +9,38 @@ public class PlayerMovement : MonoBehaviour
     public float playerSpeed;
     public Rigidbody2D rb;
 
+    private Animator animator;
+
     public PauseMenu pauseMenu;
     void Start()
     {
         moveAction = InputSystem.actions.FindAction("Move");
+        animator = GetComponent<Animator>();
     }
     void Update()
     {
-        //move player
+        //sets move input
         moveValue = moveAction.ReadValue<Vector2>();
-        transform.Translate(Vector3.right * moveValue.x * playerSpeed * Time.deltaTime);
-        //rb.AddRelativeForceX(moveValue.x * playerSpeed);
+
+        //animations
+        if (moveValue.x != 0)
+        {
+            //if player is walking play walking animation
+            animator.SetBool("isWalking", true);
+            animator.SetFloat("InputX", moveValue.x);
+            animator.SetFloat("LastInputX", moveValue.x);
+        }
+        else
+        {
+            //else play idle animation
+            animator.SetBool("isWalking", false);
+        }
+    }
+
+    void FixedUpdate()
+    {
+        //moves player
+        rb.linearVelocity = new Vector2 (moveValue.x * playerSpeed, 0);
     }
 
     private void OnTriggerEnter2D(Collider2D collision) 
