@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6976937039575352940}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.15, y: -2.25, z: 0}
+  m_LocalPosition: {x: 1.28799, y: -0.75169, z: 0}
   m_LocalScale: {x: 0.07734375, y: 0.19042969, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -107,6 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BulletScript
   bulletSpeed: 10
+  explosion: {fileID: 6527346302063952371, guid: c0e7dffb2c91aae49b4004a4f771f98d, type: 3}
 --- !u!70 &6512159788078619821
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
