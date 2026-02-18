@@ -3,7 +3,10 @@ using UnityEngine;
 public class BulletScript : MonoBehaviour
 {
     public float bulletSpeed;
-    public ExplosionScript explosion;
+    private EnemyAI enemy;
+
+    public string topTag;
+    public string enemyTag;
     void Update()
     {
         move();
@@ -21,16 +24,15 @@ public class BulletScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision) 
     { 
-        if (collision.gameObject.CompareTag("Boundary")) 
+        if (collision.gameObject.CompareTag(topTag)) 
         { 
             Destroy(gameObject);
         } 
 
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag(enemyTag))
         {
-            ExplosionScript newExplosion = Instantiate(explosion, transform.position, Quaternion.identity);
-            //Destroy(collision.gameObject);
-            
+            enemy = collision.gameObject.GetComponent<EnemyAI>();
+            enemy.Hit();
             Destroy(gameObject);
         }
     } 

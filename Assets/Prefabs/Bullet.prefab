@@ -107,7 +107,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BulletScript
   bulletSpeed: 10
-  explosion: {fileID: 6527346302063952371, guid: c0e7dffb2c91aae49b4004a4f771f98d, type: 3}
+  topTag: Top
+  enemyTag: Enemy
 --- !u!70 &6512159788078619821
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
