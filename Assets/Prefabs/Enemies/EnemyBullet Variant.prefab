@@ -72,6 +72,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyBullet Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8405668261531644140, guid: 32798ce39e425426aa985c1644006314, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8405668261531644140, guid: 32798ce39e425426aa985c1644006314, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8405668261531644140, guid: 32798ce39e425426aa985c1644006314, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8405668261531644140, guid: 32798ce39e425426aa985c1644006314, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8405668261531644140, guid: 32798ce39e425426aa985c1644006314, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8405668261531644140, guid: 32798ce39e425426aa985c1644006314, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8405668261531644140, guid: 32798ce39e425426aa985c1644006314, type: 3}
+      propertyPath: m_Parameters.colorGradient.m_ColorSpace
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8405668261531644140, guid: 32798ce39e425426aa985c1644006314, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
+      value: 0.038881302
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3363323819045999680, guid: 32798ce39e425426aa985c1644006314, type: 3}
     m_RemovedGameObjects: []

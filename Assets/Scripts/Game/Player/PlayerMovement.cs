@@ -26,14 +26,14 @@ public class PlayerMovement : MonoBehaviour
         if (moveValue.x != 0)
         {
             //if player is walking play walking animation
-            animator.SetBool("isWalking", true);
+            animator.SetBool("IsWalking", true);
             animator.SetFloat("InputX", moveValue.x);
-            animator.SetFloat("LastInputX", moveValue.x);
+            //animator.SetFloat("LastInputX", moveValue.x);
         }
         else
         {
-            //else play idle animation
-            animator.SetBool("isWalking", false);
+            animator.SetBool("IsWalking", false);
+            //animator.SetFloat("InputX", moveValue.x);
         }
     }
 

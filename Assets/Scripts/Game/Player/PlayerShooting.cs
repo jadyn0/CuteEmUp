@@ -11,9 +11,13 @@ public class PlayerShooting : MonoBehaviour
     public PauseMenu pauseMenu;
 
     public bool isShooting;
+    private Animator animator;
+
+    public float shootOffsetY;
     void Start()
     {
         shootAction = InputSystem.actions.FindAction("Attack");
+        animator = GetComponent<Animator>();
     }
     void Update()
     {
@@ -37,7 +41,8 @@ public class PlayerShooting : MonoBehaviour
     //spawn in the bullet
     private void Shoot()
     {
-        BulletScript newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
+        animator.Play("Turret1Shoot");
+        BulletScript newBullet = Instantiate(bullet, (transform.position + new Vector3(0, shootOffsetY, 1)), Quaternion.identity);
         newBullet.moveDirection = 1;
     }
 

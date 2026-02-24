@@ -2,10 +2,13 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public HealthBar healthbar;
+
+    public float playerHealth;
+    public float maxHealth;
     void Start()
     {
-        
+        playerHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -16,6 +19,10 @@ public class PlayerHealth : MonoBehaviour
 
     public void Hit()
     {
+        playerHealth -= 10;
+
+        healthbar.SetHealth(playerHealth, maxHealth);
+
         Debug.Log("Hit");
     }
 }
