@@ -38,6 +38,7 @@ public class PlayerShooting : MonoBehaviour
     private void Shoot()
     {
         BulletScript newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
+        newBullet.moveDirection = 1;
     }
 
     //shooting coroutine, shoots after a delay for rapidfire 

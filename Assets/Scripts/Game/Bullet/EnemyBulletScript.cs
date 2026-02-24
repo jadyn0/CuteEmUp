@@ -1,12 +1,13 @@
 using UnityEngine;
 
-public class BulletScript : MonoBehaviour
+public class EnemyBulletScript : MonoBehaviour
 {
     public float bulletSpeed;
-    private EnemyAI enemy;
+    
+    public PlayerHealth player;
 
-    public string topTag;
-    public string enemyTag;
+    public string bottomTag;
+    public string playerTag;
     public float moveDirection;
 
     void Update()
@@ -26,15 +27,15 @@ public class BulletScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision) 
     { 
-        if (collision.gameObject.CompareTag(topTag)) 
+        if (collision.gameObject.CompareTag(bottomTag)) 
         { 
             Destroy(gameObject);
         } 
 
-        if (collision.gameObject.CompareTag(enemyTag))
+        if (collision.gameObject.CompareTag(playerTag))
         {
-            enemy = collision.gameObject.GetComponent<EnemyAI>();
-            enemy.Hit();
+            player = collision.gameObject.GetComponent<PlayerHealth>();
+            player.Hit();
             Destroy(gameObject);
         }
     } 

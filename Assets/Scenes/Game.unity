@@ -239,7 +239,9 @@ MonoBehaviour:
   explosion: {fileID: 6527346302063952371, guid: c0e7dffb2c91aae49b4004a4f771f98d, type: 3}
   topTag: Top
   bottomTag: Bottom
+  shootChance: 100
   isOnScreen: 0
+  bullet: {fileID: -6270533402705752871, guid: f7295484e984245f0b6a1f169d80ad4d, type: 3}
 --- !u!212 &18718239
 SpriteRenderer:
   serializedVersion: 2
@@ -446,7 +448,9 @@ MonoBehaviour:
   explosion: {fileID: 6527346302063952371, guid: c0e7dffb2c91aae49b4004a4f771f98d, type: 3}
   topTag: Top
   bottomTag: Bottom
+  shootChance: 100
   isOnScreen: 0
+  bullet: {fileID: -6270533402705752871, guid: f7295484e984245f0b6a1f169d80ad4d, type: 3}
 --- !u!212 &43410312
 SpriteRenderer:
   serializedVersion: 2
@@ -653,7 +657,9 @@ MonoBehaviour:
   explosion: {fileID: 6527346302063952371, guid: c0e7dffb2c91aae49b4004a4f771f98d, type: 3}
   topTag: Top
   bottomTag: Bottom
+  shootChance: 100
   isOnScreen: 0
+  bullet: {fileID: -6270533402705752871, guid: f7295484e984245f0b6a1f169d80ad4d, type: 3}
 --- !u!212 &100048301
 SpriteRenderer:
   serializedVersion: 2
@@ -1234,7 +1240,9 @@ MonoBehaviour:
   explosion: {fileID: 6527346302063952371, guid: c0e7dffb2c91aae49b4004a4f771f98d, type: 3}
   topTag: Top
   bottomTag: Bottom
+  shootChance: 100
   isOnScreen: 0
+  bullet: {fileID: -6270533402705752871, guid: f7295484e984245f0b6a1f169d80ad4d, type: 3}
 --- !u!212 &278381180
 SpriteRenderer:
   serializedVersion: 2
@@ -1336,9 +1344,10 @@ GameObject:
   - component: {fileID: 311081719}
   - component: {fileID: 311081721}
   - component: {fileID: 311081722}
+  - component: {fileID: 311081723}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1544,6 +1553,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.4, y: 0.45}
   m_EdgeRadius: 0
+--- !u!114 &311081723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311081714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aaf0e11a6fca4089ac98fe3e1b97a5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
 --- !u!1 &327992794
 GameObject:
   m_ObjectHideFlags: 0
@@ -2262,7 +2283,9 @@ MonoBehaviour:
   explosion: {fileID: 6527346302063952371, guid: c0e7dffb2c91aae49b4004a4f771f98d, type: 3}
   topTag: Top
   bottomTag: Bottom
+  shootChance: 100
   isOnScreen: 0
+  bullet: {fileID: -6270533402705752871, guid: f7295484e984245f0b6a1f169d80ad4d, type: 3}
 --- !u!212 &584308093
 SpriteRenderer:
   serializedVersion: 2
@@ -3061,7 +3084,9 @@ MonoBehaviour:
   explosion: {fileID: 6527346302063952371, guid: c0e7dffb2c91aae49b4004a4f771f98d, type: 3}
   topTag: Top
   bottomTag: Bottom
+  shootChance: 100
   isOnScreen: 0
+  bullet: {fileID: -6270533402705752871, guid: f7295484e984245f0b6a1f169d80ad4d, type: 3}
 --- !u!61 &843621970
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3277,7 +3302,9 @@ MonoBehaviour:
   explosion: {fileID: 6527346302063952371, guid: c0e7dffb2c91aae49b4004a4f771f98d, type: 3}
   topTag: Top
   bottomTag: Bottom
+  shootChance: 100
   isOnScreen: 0
+  bullet: {fileID: -6270533402705752871, guid: f7295484e984245f0b6a1f169d80ad4d, type: 3}
 --- !u!212 &885877454
 SpriteRenderer:
   serializedVersion: 2
@@ -3484,7 +3511,9 @@ MonoBehaviour:
   explosion: {fileID: 6527346302063952371, guid: c0e7dffb2c91aae49b4004a4f771f98d, type: 3}
   topTag: Top
   bottomTag: Bottom
+  shootChance: 100
   isOnScreen: 0
+  bullet: {fileID: -6270533402705752871, guid: f7295484e984245f0b6a1f169d80ad4d, type: 3}
 --- !u!212 &953416249
 SpriteRenderer:
   serializedVersion: 2
@@ -4370,7 +4399,9 @@ MonoBehaviour:
   explosion: {fileID: 6527346302063952371, guid: c0e7dffb2c91aae49b4004a4f771f98d, type: 3}
   topTag: Top
   bottomTag: Bottom
+  shootChance: 100
   isOnScreen: 0
+  bullet: {fileID: -6270533402705752871, guid: f7295484e984245f0b6a1f169d80ad4d, type: 3}
 --- !u!212 &1330864763
 SpriteRenderer:
   serializedVersion: 2
@@ -5324,7 +5355,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.05, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1773813500

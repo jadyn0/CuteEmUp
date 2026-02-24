@@ -8,7 +8,10 @@ public class EnemyAI : MonoBehaviour
     public string topTag;
     public string bottomTag;
 
+    public float shootChance;
+
     public bool isOnScreen;
+    public EnemyBulletScript bullet;
     void Start()
     {
         
@@ -16,6 +19,15 @@ public class EnemyAI : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.down * enemySpeed * Time.deltaTime);
+    }
+
+    void FixedUpdate()
+    {
+        float chance = Random.Range(0, shootChance);
+        if (chance <= 1 && isOnScreen)
+        {
+            Shoot();
+        }
     }
 
     void OnTriggerExit2D(Collider2D collision)
@@ -33,7 +45,8 @@ public class EnemyAI : MonoBehaviour
 
     private void Shoot()
     {
-
+        EnemyBulletScript newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
+        newBullet.moveDirection = -1;
     }
 
     public void Hit()
