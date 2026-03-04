@@ -10,6 +10,8 @@ public class EnemyBulletScript : MonoBehaviour
     public string playerTag;
     public float moveDirection;
 
+    public float damage;
+
     void Update()
     {
         move();
@@ -35,7 +37,7 @@ public class EnemyBulletScript : MonoBehaviour
         if (collision.gameObject.CompareTag(playerTag))
         {
             player = collision.gameObject.GetComponent<PlayerHealth>();
-            player.Hit();
+            player.Hit(damage);
             Destroy(gameObject);
         }
     } 

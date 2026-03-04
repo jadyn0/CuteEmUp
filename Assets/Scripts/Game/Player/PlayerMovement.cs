@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
 
     public PauseMenu pauseMenu;
+    public HealthBar healthbar;
+
+    public float healthBarMultiplier;
     void Start()
     {
         moveAction = InputSystem.actions.FindAction("Move");
@@ -35,12 +39,16 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("IsWalking", false);
             //animator.SetFloat("InputX", moveValue.x);
         }
+
+        //moves healthbar
+        healthbar.transform.position = new Vector3((transform.position.x * healthBarMultiplier) + 200, healthbar.transform.position.y, 0);
     }
 
     void FixedUpdate()
     {
         //moves player
         rb.linearVelocity = new Vector2 (moveValue.x * playerSpeed, 0);
+        //healthbar.transform.position = new Vector3((transform.position.x * healthBarMultiplier) +192, healthbar.transform.position.y, 0);
     }
 
     private void OnTriggerEnter2D(Collider2D collision) 

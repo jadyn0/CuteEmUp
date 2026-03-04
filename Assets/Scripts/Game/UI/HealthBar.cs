@@ -14,7 +14,6 @@ public class HealthBar : MonoBehaviour
         healthBarRect.sizeDelta = new Vector2(maxLength, height);
     }
 
-    // Update is called once per frame
     void Update()
     {
         

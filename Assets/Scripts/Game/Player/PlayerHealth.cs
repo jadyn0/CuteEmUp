@@ -17,9 +17,9 @@ public class PlayerHealth : MonoBehaviour
         
     }
 
-    public void Hit()
+    public void Hit(float damage)
     {
-        playerHealth -= 10;
+        playerHealth -= damage;
 
         healthbar.SetHealth(playerHealth, maxHealth);
 

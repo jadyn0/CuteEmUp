@@ -1,20 +1,23 @@
 using UnityEngine;
 
-public class EnemyAI : MonoBehaviour
+public class UnicornAI : MonoBehaviour
 {
     public float enemySpeed;
-    public ExplosionScript explosion;
 
     public string topTag;
     public string bottomTag;
+    public string playerTag;
 
     public float shootChance;
 
     public bool isOnScreen;
     public EnemyBulletScript bullet;
+
+    private PlayerHealth player;
+    private EnemyHealth health;
     void Start()
     {
-        
+        health = gameObject.GetComponent<EnemyHealth>();
     }
     void Update()
     {
@@ -39,7 +42,17 @@ public class EnemyAI : MonoBehaviour
 
         if (collision.gameObject.CompareTag(bottomTag))
         {
-            Die();
+            Destroy(gameObject);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag(playerTag))
+        {
+            player = collision.gameObject.GetComponent<PlayerHealth>();
+            player.Hit(1);
+            health.Hit(1);
         }
     }
 
@@ -47,16 +60,6 @@ public class EnemyAI : MonoBehaviour
     {
         EnemyBulletScript newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
         newBullet.moveDirection = -1;
-    }
-
-    public void Hit()
-    {
-        Die();
-    }
-
-    private void Die()
-    {
-        ExplosionScript newExplosion = Instantiate(explosion, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        newBullet.damage = 1;
     }
 }

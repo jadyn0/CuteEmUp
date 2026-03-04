@@ -3,7 +3,7 @@ using UnityEngine;
 public class BulletScript : MonoBehaviour
 {
     public float bulletSpeed;
-    private EnemyAI enemy;
+    private EnemyHealth enemy;
 
     public string topTag;
     public string enemyTag;
@@ -33,8 +33,8 @@ public class BulletScript : MonoBehaviour
 
         if (collision.gameObject.CompareTag(enemyTag))
         {
-            enemy = collision.gameObject.GetComponent<EnemyAI>();
-            enemy.Hit();
+            enemy = collision.gameObject.GetComponent<EnemyHealth>();
+            enemy.Hit(1);
             Destroy(gameObject);
         }
     } 
