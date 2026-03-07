@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 7118520994190038839}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.44, y: 7.63, z: 0}
+  m_LocalPosition: {x: -3.5506392, y: 3.7362223, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -112,9 +112,10 @@ MonoBehaviour:
   topTag: Top
   bottomTag: Bottom
   playerTag: Player
-  shootChance: 300
-  isOnScreen: 0
+  shootChance: 75
+  isOnScreen: 1
   bullet: {fileID: -6270533402705752871, guid: f7295484e984245f0b6a1f169d80ad4d, type: 3}
+  shootDelay: 0.2
 --- !u!114 &8369190791986346762
 MonoBehaviour:
   m_ObjectHideFlags: 0

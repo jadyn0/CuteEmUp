@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class UnicornAI : MonoBehaviour
+public class ButterflyAI : MonoBehaviour
 {
     public float enemySpeed;
 
