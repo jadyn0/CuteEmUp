@@ -20,8 +20,6 @@ public class PauseMenu : MonoBehaviour
     void Start()
     {
         pauseAction = InputSystem.actions.FindAction("Cancel");
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
         eventSystem = EventSystem.current;
     }
     void Update()

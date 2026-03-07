@@ -4,9 +4,11 @@ public class BulletScript : MonoBehaviour
 {
     public float bulletSpeed;
     private EnemyHealth enemy;
+    private WaveBlockScript waveBlock;
 
     public string topTag;
     public string enemyTag;
+    public string WaveBlockTag;
     public float moveDirection;
 
     void Update()
@@ -35,6 +37,13 @@ public class BulletScript : MonoBehaviour
         {
             enemy = collision.gameObject.GetComponent<EnemyHealth>();
             enemy.Hit(1);
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.CompareTag(WaveBlockTag))
+        {
+            waveBlock = collision.gameObject.GetComponent<WaveBlockScript>();
+            waveBlock.Hit();
             Destroy(gameObject);
         }
     } 

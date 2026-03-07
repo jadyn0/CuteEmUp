@@ -110,6 +110,7 @@ MonoBehaviour:
   bulletSpeed: 10
   topTag: Top
   enemyTag: Enemy
+  WaveBlockTag: WaveBlock
   moveDirection: 0
 --- !u!70 &6512159788078619821
 CapsuleCollider2D:
