@@ -127,6 +127,13 @@ MonoBehaviour:
   bottomTag: Bottom
   playerTag: Player
   isOnScreen: 0
+  bullet: {fileID: -6270533402705752871, guid: f7295484e984245f0b6a1f169d80ad4d, type: 3}
+  shootDelay: 0.2
+  shootChance: 75
+  butterflyLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  butterflyGrace: 0
 --- !u!61 &1452925239541548634
 BoxCollider2D:
   m_ObjectHideFlags: 0

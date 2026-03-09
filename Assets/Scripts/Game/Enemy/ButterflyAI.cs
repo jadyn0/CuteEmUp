@@ -18,6 +18,9 @@ public class ButterflyAI : MonoBehaviour
 
     private PlayerHealth player;
     private EnemyHealth health;
+
+    public LayerMask butterflyLayer;
+    public bool butterflyGrace;
     void Start()
     {
         health = gameObject.GetComponent<EnemyHealth>();
@@ -29,6 +32,17 @@ public class ButterflyAI : MonoBehaviour
 
     void FixedUpdate()
     {
+        RaycastHit2D hitLeft = Physics2D.Raycast(transform.position - (Vector3.right * 0.5f), Vector2.left, 0.5f, butterflyLayer);
+        RaycastHit2D hitRight = Physics2D.Raycast(transform.position + (Vector3.right * 0.5f), Vector2.right, 0.5f, butterflyLayer);
+        if (hitLeft || hitRight)
+        {
+            butterflyGrace = true;
+        }
+        else
+        {
+            butterflyGrace = false;
+        }
+        
         float chance = Random.Range(0, shootChance);
         if (chance <= 1 && isOnScreen && !isShooting)
         {
@@ -66,6 +80,13 @@ public class ButterflyAI : MonoBehaviour
         newBullet.moveDirection = -1;
         newBullet.damage = 1;
         yield return new WaitForSeconds(shootDelay);
+
+        if (butterflyGrace)
+        {
+            EnemyBulletScript newBullet2 = Instantiate(bullet, transform.position, Quaternion.identity);
+            newBullet2.moveDirection = -1;
+            newBullet2.damage = 1;
+        }
         isShooting = false;
     }
 }

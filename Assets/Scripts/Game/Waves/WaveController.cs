@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class WaveController : MonoBehaviour
 {
-    private int waveCount;
+    public int waveCount;
     public bool isWaveHappening;
     public GameObject[] wavesList;
     public GameObject[] wavesBlockList;
