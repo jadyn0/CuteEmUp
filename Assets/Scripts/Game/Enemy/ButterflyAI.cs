@@ -76,17 +76,21 @@ public class ButterflyAI : MonoBehaviour
     IEnumerator Shoot()
     {
         isShooting = true;
-        EnemyBulletScript newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
-        newBullet.moveDirection = -1;
-        newBullet.damage = 1;
+        SummonBullet();
         yield return new WaitForSeconds(shootDelay);
 
         if (butterflyGrace)
         {
-            EnemyBulletScript newBullet2 = Instantiate(bullet, transform.position, Quaternion.identity);
-            newBullet2.moveDirection = -1;
-            newBullet2.damage = 1;
+            SummonBullet();
         }
         isShooting = false;
+    }
+
+    private void SummonBullet()
+    {
+        EnemyBulletScript newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
+        newBullet.moveDirection = -1;
+        newBullet.damage = 1;
+        newBullet.bulletSpeed = 10;
     }
 }

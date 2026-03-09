@@ -7,7 +7,10 @@ public class PlayerShooting : MonoBehaviour
     InputAction shootAction;
     public BulletScript bullet;
     public float shootDelay;
-    Coroutine lastRoutine = null;
+    public bool canRapidFire;
+    public bool storedShoot;
+
+
     public PauseMenu pauseMenu;
 
     public bool isShooting;
@@ -21,19 +24,30 @@ public class PlayerShooting : MonoBehaviour
     }
     void Update()
     {
-        //if player is shooting, start shooting coroutine
-        if (shootAction.triggered && shootAction.ReadValue<float>() > 0f && !pauseMenu.isPaused)
+        if (canRapidFire)
         {
-            isShooting = true;
-            lastRoutine = StartCoroutine(ShootRoutine());
-        }
-        //if player has stopped, stop shooting coroutine
-        if (shootAction.triggered && shootAction.ReadValue<float>() == 0f)
-        {
-            isShooting = false;
-            if (lastRoutine != null)
+            if (shootAction.ReadValue<float>() > 0f)
             {
-                StopCoroutine(lastRoutine);
+                if (!isShooting)
+                {
+                    StartCoroutine(ShootRoutine());
+                }
+            }
+        }
+        //if player is shooting, start shooting coroutine
+        else
+        {
+            if (shootAction.triggered && shootAction.ReadValue<float>() > 0f)
+            {
+                if (!isShooting)
+                {
+                    StartCoroutine(ShootRoutine());
+                    storedShoot = false;
+                }
+                else
+                {
+                    storedShoot = true;
+                }
             }
         }
     }
@@ -46,14 +60,17 @@ public class PlayerShooting : MonoBehaviour
         newBullet.moveDirection = 1;
     }
 
-    //shooting coroutine, shoots after a delay for rapidfire 
+    //shooting coroutine, delays until next shot is available
     IEnumerator ShootRoutine()
     {
-        while (true)
+        isShooting = true;
+        Shoot();
+        yield return new WaitForSeconds(shootDelay);
+        isShooting = false;
+        if (storedShoot)
         {
-            Shoot();
-            yield return new WaitForSeconds(shootDelay);
+            StartCoroutine(ShootRoutine());
+            storedShoot = false;
         }
-        
     }
 }

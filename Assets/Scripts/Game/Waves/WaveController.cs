@@ -10,6 +10,8 @@ public class WaveController : MonoBehaviour
     public GameObject[] wavesList;
     public GameObject[] wavesBlockList;
     public int maxWaves;
+
+    public float nextBlockDelay;
     
     void Start()
     {
@@ -29,7 +31,7 @@ public class WaveController : MonoBehaviour
                 isWaveHappening = false;
                 if (waveCount <= maxWaves)
                 {
-                    wavesBlockList[waveCount - 1].SetActive(true);
+                    StartCoroutine(StartNextBlock());
                 }
             }
         }
@@ -39,5 +41,11 @@ public class WaveController : MonoBehaviour
     {
         wavesList[waveCount-1].SetActive(true);
         isWaveHappening = true;
+    }
+
+    IEnumerator StartNextBlock()
+    {
+        yield return new WaitForSeconds(nextBlockDelay);
+        wavesBlockList[waveCount - 1].SetActive(true);
     }
 }
