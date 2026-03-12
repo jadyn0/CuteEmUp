@@ -134,6 +134,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   explosion: {fileID: 6527346302063952371, guid: c0e7dffb2c91aae49b4004a4f771f98d, type: 3}
   health: 1
+  HealthChance: 7.5
+  heartPotion: {fileID: 2155244011311377631, guid: df5adc76d6ca243a59ffacd6d86e8a70, type: 3}
 --- !u!61 &8433281207517873159
 BoxCollider2D:
   m_ObjectHideFlags: 0

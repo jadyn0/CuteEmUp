@@ -5,8 +5,12 @@ using UnityEngine.Audio;
 public class SettingsMenu : MonoBehaviour
 {
     public PauseMenu pauseMenu;
+
     public AudioMixer audioMixer;
     public Dropdown resolutionDropdown;
+    public bool autofire;
+    public Dropdown languages;
+    public bool toggleMusic;
     Resolution[] resolutions;
     void Start()
     {

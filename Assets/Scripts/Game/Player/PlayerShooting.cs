@@ -7,7 +7,9 @@ public class PlayerShooting : MonoBehaviour
     InputAction shootAction;
     public BulletScript bullet;
     public float shootDelay;
-    public bool canRapidFire;
+    public float shortDelay;
+    public float longDelay;
+    public bool autoFire;
     public bool storedShoot;
 
 
@@ -24,8 +26,9 @@ public class PlayerShooting : MonoBehaviour
     }
     void Update()
     {
-        if (canRapidFire)
+        if (autoFire)
         {
+            shootDelay = longDelay;
             if (shootAction.ReadValue<float>() > 0f)
             {
                 if (!isShooting)
@@ -37,6 +40,7 @@ public class PlayerShooting : MonoBehaviour
         //if player is shooting, start shooting coroutine
         else
         {
+            shootDelay = shortDelay;
             if (shootAction.triggered && shootAction.ReadValue<float>() > 0f)
             {
                 if (!isShooting)

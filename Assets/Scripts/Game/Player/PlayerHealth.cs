@@ -22,7 +22,14 @@ public class PlayerHealth : MonoBehaviour
         playerHealth -= damage;
 
         healthbar.SetHealth(playerHealth, maxHealth);
+    }
 
-        Debug.Log("Hit");
+    public void Heal(float healAmount)
+    {
+        if (playerHealth < 12f)
+        {
+            playerHealth += healAmount;
+        }
+        
     }
 }
