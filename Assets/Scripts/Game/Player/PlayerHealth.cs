@@ -26,9 +26,14 @@ public class PlayerHealth : MonoBehaviour
 
     public void Heal(float healAmount)
     {
-        if (playerHealth < 12f)
+        if (playerHealth < maxHealth)
         {
             playerHealth += healAmount;
+            if (playerHealth > maxHealth)
+            {
+                playerHealth = maxHealth;
+            }
+            healthbar.SetHealth(playerHealth, maxHealth);
         }
         
     }

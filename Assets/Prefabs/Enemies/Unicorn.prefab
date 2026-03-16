@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 793676961358837392}
   - component: {fileID: 8522284011728105463}
-  - component: {fileID: 5528604050861253606}
   - component: {fileID: 8369190791986346762}
+  - component: {fileID: 5528604050861253606}
   - component: {fileID: 8433281207517873159}
   - component: {fileID: 8636258861661068023}
   - component: {fileID: 4057839197546469617}
@@ -96,6 +96,22 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &8369190791986346762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7118520994190038839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b28f48b48af43449b7df488e56eeb61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
+  explosion: {fileID: 6527346302063952371, guid: c0e7dffb2c91aae49b4004a4f771f98d, type: 3}
+  health: 1
+  HealthChance: 5
+  heartPotion: {fileID: 2155244011311377631, guid: df5adc76d6ca243a59ffacd6d86e8a70, type: 3}
 --- !u!114 &5528604050861253606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,22 +136,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   butterflyGrace: 0
---- !u!114 &8369190791986346762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7118520994190038839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b28f48b48af43449b7df488e56eeb61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
-  explosion: {fileID: 6527346302063952371, guid: c0e7dffb2c91aae49b4004a4f771f98d, type: 3}
-  health: 1
-  HealthChance: 7.5
-  heartPotion: {fileID: 2155244011311377631, guid: df5adc76d6ca243a59ffacd6d86e8a70, type: 3}
 --- !u!61 &8433281207517873159
 BoxCollider2D:
   m_ObjectHideFlags: 0

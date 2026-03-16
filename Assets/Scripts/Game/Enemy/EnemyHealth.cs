@@ -10,7 +10,7 @@ public class EnemyHealth : MonoBehaviour
     public HeartPotion heartPotion;
     public void Hit(float damage)
     {
-        health = -damage;
+        health -= damage;
         if (health <= 0)
         {
             Die();

@@ -110,7 +110,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6976937039575352940, guid: 32798ce39e425426aa985c1644006314, type: 3}
-      insertIndex: -1
+      insertIndex: 2
       addedObject: {fileID: -6270533402705752871}
   m_SourcePrefab: {fileID: 100100000, guid: 32798ce39e425426aa985c1644006314, type: 3}
 --- !u!1 &9031974476675425668 stripped
@@ -135,3 +135,4 @@ MonoBehaviour:
   bottomTag: Bottom
   playerTag: Player
   moveDirection: 0
+  damage: 0

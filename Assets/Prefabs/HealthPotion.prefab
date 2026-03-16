@@ -49,7 +49,7 @@ MonoBehaviour:
   speed: 2
   bottomTag: Bottom
   playerTag: Player
-  healAmount: 2
+  healAmount: 3
 --- !u!212 &8885878445549769807
 SpriteRenderer:
   serializedVersion: 2

@@ -6,7 +6,7 @@ public class WaveBlockScript : MonoBehaviour
     public WaveController waveController;
     public void Hit()
     {
-        waveController.StartNextWave();
+        waveController.StartWaves();
         ExplosionScript newExplosion = Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
