@@ -4,6 +4,7 @@ using System.Collections;
 public class UnicornAI : MonoBehaviour
 {
     public float enemySpeed;
+    public float bulletSpeed;
 
     public string topTag;
     public string bottomTag;
@@ -92,6 +93,6 @@ public class UnicornAI : MonoBehaviour
         EnemyBulletScript newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
         newBullet.moveDirection = -1;
         newBullet.damage = 1;
-        newBullet.bulletSpeed = 20;
+        newBullet.bulletSpeed = bulletSpeed;
     }
 }

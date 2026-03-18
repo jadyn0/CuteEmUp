@@ -1442,14 +1442,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartMenu
   PvPSceneName: PvPScene
-  EasySceneName: EasySceneLevel1
-  HardSceneName: HardSceneLevel1
+  EasySceneName: EasyScene
+  HardSceneName: HardScene
   startMenu: {fileID: 1824138953}
   startButton: {fileID: 227866927}
   playerOptions: {fileID: 1779986311}
   playerOptionsButton: {fileID: 177292887}
   difficultySelect: {fileID: 1449770218}
   difficultyButton: {fileID: 145923913}
+  lastScene: 
 --- !u!1 &674555964
 GameObject:
   m_ObjectHideFlags: 0
@@ -3400,7 +3401,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 320, y: 240}
+  m_ReferenceResolution: {x: 400, y: 300}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
@@ -3417,7 +3418,7 @@ Canvas:
   m_GameObject: {fileID: 2044847376}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 1365609535}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -3426,7 +3427,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 1
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: 1
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0

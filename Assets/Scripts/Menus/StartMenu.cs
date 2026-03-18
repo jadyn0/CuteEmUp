@@ -24,6 +24,21 @@ public class StartMenu : MonoBehaviour
     EventSystem eventSystem;
     InputAction pauseAction;
 
+    public static StartMenu Instance; 
+    public string lastScene;
+
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+
     void Start()
     {
         pauseAction = InputSystem.actions.FindAction("Cancel");
@@ -72,6 +87,7 @@ public class StartMenu : MonoBehaviour
 
     public void Easy()
     {
+        lastScene = EasySceneName;
         SceneManager.LoadScene(EasySceneName);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -79,6 +95,7 @@ public class StartMenu : MonoBehaviour
 
     public void Hard()
     {
+        lastScene = HardSceneName;
         SceneManager.LoadScene(HardSceneName);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;

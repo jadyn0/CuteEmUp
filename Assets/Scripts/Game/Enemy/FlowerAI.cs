@@ -4,6 +4,7 @@ using System.Collections;
 public class FlowerAI : MonoBehaviour
 {
     public float enemySpeed;
+    public float bulletSpeed;
     private float DY;
 
     public string topTag;
@@ -108,6 +109,6 @@ public class FlowerAI : MonoBehaviour
         EnemyBulletScript newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
         newBullet.moveDirection = -1;
         newBullet.damage = 3;
-        newBullet.bulletSpeed = 10;
+        newBullet.bulletSpeed = bulletSpeed;
     }
 }

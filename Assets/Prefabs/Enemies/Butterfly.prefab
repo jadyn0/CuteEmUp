@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButterflyAI
   enemySpeed: 1.5
+  bulletSpeed: 5
   topTag: Top
   bottomTag: Bottom
   playerTag: Player

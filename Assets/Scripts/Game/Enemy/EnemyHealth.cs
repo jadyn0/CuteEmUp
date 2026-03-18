@@ -8,6 +8,8 @@ public class EnemyHealth : MonoBehaviour
     public float HealthChance;
 
     public HeartPotion heartPotion;
+    public CutenessOverload overload;
+    public float overloadAmount;
     public void Hit(float damage)
     {
         health -= damage;
@@ -26,6 +28,7 @@ public class EnemyHealth : MonoBehaviour
             HeartPotion newHeart = Instantiate(heartPotion, transform.position, Quaternion.identity);
         }
         
+        overload.Increase(overloadAmount);
         Destroy(gameObject);
     }
 }

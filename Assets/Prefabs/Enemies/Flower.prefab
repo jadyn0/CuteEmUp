@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlowerAI
   enemySpeed: 1.5
+  bulletSpeed: 10
   topTag: Top
   bottomTag: Bottom
   playerTag: Player

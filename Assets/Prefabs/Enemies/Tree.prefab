@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TreeAI
   enemySpeed: 1
+  bulletSpeed: 5
   offScreenSpeed: 1.5
   topTag: Top
   bottomTag: Bottom

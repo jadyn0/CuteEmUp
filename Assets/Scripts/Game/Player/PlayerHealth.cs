@@ -1,7 +1,9 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
+    [SerializeField] private string DeathSceneName;
     public HealthBar healthbar;
 
     public float playerHealth;
@@ -22,6 +24,11 @@ public class PlayerHealth : MonoBehaviour
         playerHealth -= damage;
 
         healthbar.SetHealth(playerHealth, maxHealth);
+
+        if (playerHealth <= 0)
+        {
+            Death();
+        }
     }
 
     public void Heal(float healAmount)
@@ -36,5 +43,9 @@ public class PlayerHealth : MonoBehaviour
             healthbar.SetHealth(playerHealth, maxHealth);
         }
         
+    }
+    public void Death()
+    {
+        SceneManager.LoadScene(DeathSceneName);
     }
 }

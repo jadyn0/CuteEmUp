@@ -4,6 +4,7 @@ using System.Collections;
 public class TreeAI : MonoBehaviour
 {
     public float enemySpeed;
+    public float bulletSpeed;
     public float offScreenSpeed;
     private float DY;
 
@@ -113,6 +114,6 @@ public class TreeAI : MonoBehaviour
         EnemyBulletScript newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
         newBullet.moveDirection = -1;
         newBullet.damage = 3;
-        newBullet.bulletSpeed = 10;
+        newBullet.bulletSpeed = bulletSpeed;
     }
 }

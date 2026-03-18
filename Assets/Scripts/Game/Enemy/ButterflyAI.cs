@@ -4,6 +4,7 @@ using System.Collections;
 public class ButterflyAI : MonoBehaviour
 {
     public float enemySpeed;
+    public float bulletSpeed;
 
     public string topTag;
     public string bottomTag;
@@ -91,6 +92,6 @@ public class ButterflyAI : MonoBehaviour
         EnemyBulletScript newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
         newBullet.moveDirection = -1;
         newBullet.damage = 1;
-        newBullet.bulletSpeed = 10;
+        newBullet.bulletSpeed = bulletSpeed;
     }
 }
