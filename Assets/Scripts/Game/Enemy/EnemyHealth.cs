@@ -9,7 +9,14 @@ public class EnemyHealth : MonoBehaviour
 
     public HeartPotion heartPotion;
     public CutenessOverload overload;
+    public GameObject[] bar;
     public float overloadAmount;
+
+    private void Start()
+    {
+        bar = GameObject.FindGameObjectsWithTag("Overload");
+        overload = bar[0].gameObject.GetComponent<CutenessOverload>();
+    }
     public void Hit(float damage)
     {
         health -= damage;

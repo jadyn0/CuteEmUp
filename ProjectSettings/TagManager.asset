@@ -10,6 +10,7 @@ TagManager:
   - Bottom
   - Wave
   - WaveBlock
+  - Overload
   layers:
   - Default
   - TransparentFX
