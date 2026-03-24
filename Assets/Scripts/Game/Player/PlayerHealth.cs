@@ -1,16 +1,24 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private string DeathSceneName;
     public HealthBar healthbar;
+    public PauseMenu pauseMenu;
 
     public float playerHealth;
     public float maxHealth;
+    public bool isDead;
+    public GameObject deathScreenContainer;
+    public GameObject deathButton;
+    EventSystem eventSystem;
+
     void Start()
     {
         playerHealth = maxHealth;
+        eventSystem = EventSystem.current;
     }
 
     public void Hit(float damage)
@@ -36,10 +44,15 @@ public class PlayerHealth : MonoBehaviour
             }
             healthbar.SetHealth(playerHealth, maxHealth);
         }
-        
     }
     public void Death()
     {
-        SceneManager.LoadScene(DeathSceneName);
+        isDead = true;
+        deathScreenContainer.SetActive(true);
+        eventSystem.SetSelectedGameObject(deathButton);
+        pauseMenu.isPaused = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        Time.timeScale = 0;
     }
 }

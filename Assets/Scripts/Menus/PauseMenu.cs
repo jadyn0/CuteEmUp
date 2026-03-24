@@ -16,6 +16,7 @@ public class PauseMenu : MonoBehaviour
     EventSystem eventSystem;
 
     InputAction pauseAction;
+    public PlayerHealth playerHealth;
 
     void Start()
     {
@@ -24,7 +25,7 @@ public class PauseMenu : MonoBehaviour
     }
     void Update()
     {
-        if (pauseAction.triggered && pauseAction.ReadValue<float>() > 0f)
+        if (pauseAction.triggered && pauseAction.ReadValue<float>() > 0f && !playerHealth.isDead)
         {
             if (isPaused)
             {

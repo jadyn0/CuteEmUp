@@ -24,20 +24,7 @@ public class StartMenu : MonoBehaviour
     EventSystem eventSystem;
     InputAction pauseAction;
 
-    public static StartMenu Instance; 
     public string lastScene;
-
-    private void Awake()
-    {
-        if (Instance != null)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-    }
 
     void Start()
     {
