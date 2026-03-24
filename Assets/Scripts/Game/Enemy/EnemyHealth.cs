@@ -17,20 +17,20 @@ public class EnemyHealth : MonoBehaviour
         bar = GameObject.FindGameObjectsWithTag("Overload");
         overload = bar[0].gameObject.GetComponent<CutenessOverload>();
     }
-    public void Hit(float damage)
+    public void Hit(float damage, bool canDropHealth)
     {
         health -= damage;
         if (health <= 0)
         {
-            Die();
+            Die(canDropHealth);
         }
     }
 
-    private void Die()
+    private void Die(bool canDropHealth)
     {
         ExplosionScript newExplosion = Instantiate(explosion, transform.position, Quaternion.identity);
         float chance = Random.Range(0, 100);
-        if (chance <= HealthChance)
+        if (chance <= HealthChance && canDropHealth)
         {
             HeartPotion newHeart = Instantiate(heartPotion, transform.position, Quaternion.identity);
         }

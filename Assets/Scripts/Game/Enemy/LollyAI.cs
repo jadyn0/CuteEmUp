@@ -68,7 +68,7 @@ public class LollyAI : MonoBehaviour
         {
             player = collision.gameObject.GetComponent<PlayerHealth>();
             player.Hit(3);
-            health.Hit(1);
+            health.Hit(1, false);
         }
     }
 }

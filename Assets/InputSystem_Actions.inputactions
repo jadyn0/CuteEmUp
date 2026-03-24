@@ -37,7 +37,7 @@
                     "name": "Interact",
                     "type": "Button",
                     "id": "852140f2-7766-474d-8707-702459ba45f3",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "Hold",
                     "initialStateCheck": false
@@ -118,6 +118,15 @@
                     "name": "Player2Attack",
                     "type": "Button",
                     "id": "41d4e42c-4ed7-4b39-87e4-ea284b96f38c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SpAttack",
+                    "type": "Button",
+                    "id": "1100455d-845d-4b96-b7e3-95061d20e31d",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -705,6 +714,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Player2Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "75099c8a-6653-4ddf-b995-afe9a71948ad",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "SpAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -3,25 +3,18 @@ using UnityEngine.SceneManagement;
 
 public class DeathScreen : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private string lastScene = "HardScene";
     void Start()
     {
         if (StartMenu.Instance != null)
         {
-            
+            lastScene = StartMenu.Instance.lastScene;
         }
     }
 
     public void Restart()
     {
-        if (StartMenu.Instance.lastScene == null)
-        {
-            SceneManager.LoadScene("HardScene");
-        }
-        else
-        {
-            SceneManager.LoadScene(StartMenu.Instance.lastScene);
-        }
+        SceneManager.LoadScene(lastScene);
     }
 
     public void MainMenu()

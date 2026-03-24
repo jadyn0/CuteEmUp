@@ -36,7 +36,7 @@ public class BulletScript : MonoBehaviour
         if (collision.gameObject.CompareTag(enemyTag))
         {
             enemy = collision.gameObject.GetComponent<EnemyHealth>();
-            enemy.Hit(1);
+            enemy.Hit(1, true);
             Destroy(gameObject);
         }
 

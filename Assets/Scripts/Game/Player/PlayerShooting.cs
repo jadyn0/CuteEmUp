@@ -5,7 +5,10 @@ using System.Collections;
 public class PlayerShooting : MonoBehaviour
 {
     InputAction shootAction;
+    InputAction spShootAction;
     public BulletScript bullet;
+    public SpBulletScript spBullet;
+
     public float shootDelay;
     public float shortDelay;
     public float longDelay;
@@ -14,6 +17,7 @@ public class PlayerShooting : MonoBehaviour
 
 
     public PauseMenu pauseMenu;
+    public CutenessOverload overload;
 
     public bool isShooting;
     private Animator animator;
@@ -22,6 +26,7 @@ public class PlayerShooting : MonoBehaviour
     void Start()
     {
         shootAction = InputSystem.actions.FindAction("Attack");
+        spShootAction = InputSystem.actions.FindAction("SpAttack");
         animator = GetComponent<Animator>();
     }
     void Update()
@@ -54,6 +59,12 @@ public class PlayerShooting : MonoBehaviour
                 }
             }
         }
+
+        if (spShootAction.triggered && overload.overload == overload.maxOverload)
+        {
+            OverloadBomb();
+            overload.Increase(-80);
+        }
     }
 
     //spawn in the bullet
@@ -76,5 +87,12 @@ public class PlayerShooting : MonoBehaviour
             StartCoroutine(ShootRoutine());
             storedShoot = false;
         }
+    }
+
+    private void OverloadBomb()
+    {
+        animator.Play("Turret1Shoot");
+        SpBulletScript newBullet = Instantiate(spBullet, (transform.position + new Vector3(0, shootOffsetY, 1)), Quaternion.identity);
+        newBullet.moveDirection = 1;
     }
 }

@@ -4910,7 +4910,7 @@ GameObject:
   - component: {fileID: 2071741444650412065}
   - component: {fileID: 226324995756567339}
   m_Layer: 0
-  m_Name: Explosion
+  m_Name: ExplosionM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5933,7 +5933,7 @@ ParticleSystem:
       repeatInterval: 0.01
       probability: 1
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       serializedVersion: 2
       minMaxState: 1
@@ -5944,30 +5944,21 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0
-          inSlope: 12.242424
-          outSlope: 12.242424
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0.058276907
-        - serializedVersion: 3
-          time: 0.2548434
-          value: 1
+          value: 0.23214284
           inSlope: 0
           outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.16291101
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: -2
-          outSlope: -2
-          tangentMode: 0
+          tangentMode: 34
           weightedMode: 0
           inWeight: 0
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 0.9657702
+          value: 0.23214284
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0.33333334
           outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -9774,8 +9765,8 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 3
-  m_MinParticleSize: 0.2
-  m_MaxParticleSize: 1
+  m_MinParticleSize: 0.1
+  m_MaxParticleSize: 0.2
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
