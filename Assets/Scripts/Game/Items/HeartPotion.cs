@@ -16,7 +16,8 @@ public class HeartPotion : MonoBehaviour
     }
     void Update()
     {
-        transform.Translate(Vector3.down * speed * Time.deltaTime);
+        transform.Translate(Vector3.down * speed * Time.deltaTime, Space.World);
+        transform.Rotate(0, 0, 100 * Time.deltaTime);
     }
 
     void OnTriggerExit2D(Collider2D collision)

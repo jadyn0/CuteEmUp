@@ -727,6 +727,17 @@
                     "action": "SpAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "51465477-d29a-41f1-abce-32d191502735",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "SpAttack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
