@@ -24,10 +24,14 @@ public class TreeAI : MonoBehaviour
 
     public LayerMask butterflyLayer;
     public bool butterflyGrace;
+
+    private Animator animator;
     void Start()
     {
         health = gameObject.GetComponent<EnemyHealth>();
         DY = offScreenSpeed;
+
+        animator = GetComponent<Animator>();
     }
     void Update()
     {
@@ -111,6 +115,7 @@ public class TreeAI : MonoBehaviour
 
     private void SummonBullet()
     {
+        animator.Play("TreeAttack1");
         EnemyBulletScript newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
         newBullet.moveDirection = -1;
         newBullet.damage = 3;
