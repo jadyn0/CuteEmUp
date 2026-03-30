@@ -12,13 +12,22 @@ public class EnemyHealth : MonoBehaviour
     public GameObject[] bar;
     public float overloadAmount;
 
+    public bool hasHitAnimation;
+    public string hitAnimation;
+    private Animator animator;
+
     private void Start()
     {
         bar = GameObject.FindGameObjectsWithTag("Overload");
         overload = bar[0].gameObject.GetComponent<CutenessOverload>();
+        animator = GetComponent<Animator>();
     }
     public void Hit(float damage, bool canDropHealth)
     {
+        if (hasHitAnimation)
+        {
+            animator.Play(hitAnimation);
+        }
         health -= damage;
         if (health <= 0)
         {

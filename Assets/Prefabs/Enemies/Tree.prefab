@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1233506652849604405}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.52, y: 6.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
@@ -115,6 +115,8 @@ MonoBehaviour:
   overload: {fileID: 0}
   bar: []
   overloadAmount: 4
+  hasHitAnimation: 1
+  hitAnimation: TreeDamage1
 --- !u!114 &2114686745484769090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,7 +199,7 @@ Animator:
   m_GameObject: {fileID: 1233506652849604405}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2f2a3503da6412947a07c4a2ac5bc291, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
