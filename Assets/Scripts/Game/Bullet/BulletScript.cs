@@ -40,6 +40,13 @@ public class BulletScript : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if (collision.gameObject.CompareTag("Boss"))
+        {
+            BossHealth boss = collision.gameObject.GetComponent<BossHealth>();
+            boss.Hit(1);
+            Destroy(gameObject);
+        }
+
         if (collision.gameObject.CompareTag(WaveBlockTag))
         {
             waveBlock = collision.gameObject.GetComponent<WaveBlockScript>();

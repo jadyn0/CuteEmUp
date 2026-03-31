@@ -26,6 +26,12 @@ public class ExplosionLScript : MonoBehaviour
             enemy = collision.gameObject.GetComponent<EnemyHealth>();
             enemy.Hit(3, true);
         }
+
+        if (collision.gameObject.CompareTag("Boss"))
+        {
+            BossHealth boss = collision.gameObject.GetComponent<BossHealth>();
+            boss.Hit(3);
+        }
     }
 
 

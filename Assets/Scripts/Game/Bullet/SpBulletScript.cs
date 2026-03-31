@@ -38,7 +38,15 @@ public class SpBulletScript : MonoBehaviour
         {
             ExplosionLScript newExplosion = Instantiate(explosion, transform.position, Quaternion.identity);
             enemy = collision.gameObject.GetComponent<EnemyHealth>();
-            enemy.Hit(1, true);
+            enemy.Hit(5, true);
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("Boss"))
+        {
+            ExplosionLScript newExplosion = Instantiate(explosion, transform.position, Quaternion.identity);
+            BossHealth boss = collision.gameObject.GetComponent<BossHealth>();
+            boss.Hit(5);
             Destroy(gameObject);
         }
 

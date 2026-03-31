@@ -11,6 +11,7 @@ TagManager:
   - Wave
   - WaveBlock
   - Overload
+  - Boss
   layers:
   - Default
   - TransparentFX

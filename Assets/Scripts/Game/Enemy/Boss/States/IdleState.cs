@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class IdleState : State
 {
-    public override void Update() 
+    public override void Update()
     {
-            
+        
     }
 }

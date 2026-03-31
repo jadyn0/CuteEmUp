@@ -50,12 +50,4 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = new Vector2 (moveValue.x * playerSpeed, 0);
         //healthbar.transform.position = new Vector3((transform.position.x * healthBarMultiplier) +192, healthbar.transform.position.y, 0);
     }
-
-    private void OnTriggerEnter2D(Collider2D collision) 
-    { 
-        if (collision.gameObject.CompareTag("Boundary")) 
-        { 
-            Debug.Log("hit");
-        } 
-    } 
 }
