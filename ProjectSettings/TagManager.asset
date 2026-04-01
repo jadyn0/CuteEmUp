@@ -12,6 +12,7 @@ TagManager:
   - WaveBlock
   - Overload
   - Boss
+  - PauseMenu
   layers:
   - Default
   - TransparentFX

@@ -603,12 +603,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f1cff9740b3fd418dd282b82837563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  speed: 0.2
+  pauseMenu: {fileID: 0}
+  speed: 2
   direction: -1
   rb: {fileID: 0}
   transform: {fileID: 0}
   boundL: -3.5
   boundR: 3.5
+  delayLowerBound: 3
+  delayUpperBound: 5
 --- !u!1102 &7789313532059859897
 AnimatorState:
   serializedVersion: 6

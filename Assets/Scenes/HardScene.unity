@@ -1086,11 +1086,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 97850008}
+  - component: {fileID: 97850014}
+  - component: {fileID: 97850013}
   - component: {fileID: 97850009}
   - component: {fileID: 97850010}
   - component: {fileID: 97850012}
   - component: {fileID: 97850011}
-  - component: {fileID: 97850013}
   m_Layer: 0
   m_Name: BigBadBoss
   m_TagString: Boss
@@ -1288,6 +1289,21 @@ MonoBehaviour:
   overload: {fileID: 0}
   bar: []
   overloadAmount: 2
+--- !u!114 &97850014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97850007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d265ec3f83fca4f519fba01c16ac7e88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Boss
+  delayLowerBound: 3
+  delayUpperBound: 5
+  bossHealth: {fileID: 0}
 --- !u!1001 &98168525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17475,7 +17491,7 @@ GameObject:
   - component: {fileID: 1631012598}
   m_Layer: 5
   m_Name: PauseMenu
-  m_TagString: Untagged
+  m_TagString: PauseMenu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
