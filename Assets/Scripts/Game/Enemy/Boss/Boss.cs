@@ -15,10 +15,12 @@ public class Boss : MonoBehaviour
 
     public UnicornAI unicorn;
     public ButterflyAI butterfly;
+    public Rigidbody2D rb;
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     public void Spit()
@@ -41,6 +43,15 @@ public class Boss : MonoBehaviour
         newUnicorn.isOnScreen = true;
     }
 
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            rb.linearVelocityY = 0;
+            PlayerHealth player = collision.gameObject.GetComponent<PlayerHealth>();
+            player.Hit(3);
+        }
+    }
 
 
 
@@ -53,6 +64,7 @@ public class Boss : MonoBehaviour
 
     public void StartCharge()
     {
+        animator.SetBool("IsCharging", true);
         animator.SetTrigger("Charge");
     }
     public void StartSpawn()
