@@ -18,12 +18,75 @@ public class Boss : MonoBehaviour
         float delay = Random.Range(delayLowerBound, delayUpperBound);
         yield return new WaitForSeconds(delay);
 
-        float attackUpper;
         if (bossHealth.health / bossHealth.maxHealth >= 0.5)
         {
-            attackUpper = 2;
+            float attackChance = Random.Range(0, 50);
+            if (attackChance <= 35f)
+            {
+                //spit
+                Debug.Log("Spit");
+            }
+            if (attackChance > 35f)
+            {
+                //charge
+                Debug.Log("Charge");
+            }
         }
-        float AttackChance = Random.Range(0, 4);
-        Debug.Log(AttackChance);
+
+        if ( 0.5f > bossHealth.health / bossHealth.maxHealth)
+        {
+            if (bossHealth.health / bossHealth.maxHealth > 0.33f)
+            {
+                float attackChance = Random.Range(0, 70);
+                if (attackChance <= 35f)
+                {
+                    //spit
+                    Debug.Log("Spit");
+                }
+                if (35f < attackChance)
+                {
+                    if (attackChance < 50f)
+                    {
+                        //charge
+                    Debug.Log("Charge");
+                    }
+                    else
+                    {
+                        //spawn
+                        Debug.Log("Spawn");
+                    }
+                }
+            }
+            else
+            {
+                float attackChance = Random.Range(0, 80);
+                if (attackChance <= 35f)
+                {
+                    //spit
+                    Debug.Log("Spit");
+                }
+                if (35f < attackChance)
+                {
+                    if (attackChance < 50f)
+                    {
+                        //charge
+                    Debug.Log("Charge");
+                    }
+                    if (50f < attackChance)
+                    {
+                        if (attackChance < 70f)
+                        {
+                            //spawn
+                            Debug.Log("Spawn");
+                        }
+                        else
+                        {
+                            //beam
+                            Debug.Log("Beam");
+                        }
+                    }
+                }
+            }
+        }
     }
 }

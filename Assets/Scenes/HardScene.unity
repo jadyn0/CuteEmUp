@@ -1088,6 +1088,7 @@ GameObject:
   - component: {fileID: 97850008}
   - component: {fileID: 97850014}
   - component: {fileID: 97850013}
+  - component: {fileID: 97850015}
   - component: {fileID: 97850009}
   - component: {fileID: 97850010}
   - component: {fileID: 97850012}
@@ -1303,7 +1304,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Boss
   delayLowerBound: 3
   delayUpperBound: 5
-  bossHealth: {fileID: 0}
+  bossHealth: {fileID: 97850013}
+--- !u!114 &97850015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97850007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64dcea1a13f7d41a587a9fafd1fc5c62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossStart
+  bossHealthBar: {fileID: 996723926}
 --- !u!1001 &98168525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10594,7 +10608,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &996723927
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15725,7 +15739,7 @@ RectTransform:
   m_Father: {fileID: 996723927}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0.5}
@@ -20534,7 +20548,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1860573813
 Transform:
   m_ObjectHideFlags: 0
@@ -23103,7 +23117,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2130674836
 Transform:
   m_ObjectHideFlags: 0
