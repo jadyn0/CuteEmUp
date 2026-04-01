@@ -1092,7 +1092,7 @@ GameObject:
   - component: {fileID: 97850009}
   - component: {fileID: 97850010}
   - component: {fileID: 97850012}
-  - component: {fileID: 97850011}
+  - component: {fileID: 97850016}
   m_Layer: 0
   m_Name: BigBadBoss
   m_TagString: Boss
@@ -1196,52 +1196,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!61 &97850011
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 97850007}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.13}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4, y: 4}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 3.34, y: 1.73}
-  m_EdgeRadius: 0
 --- !u!50 &97850012
 Rigidbody2D:
   serializedVersion: 5
@@ -1302,9 +1256,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d265ec3f83fca4f519fba01c16ac7e88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Boss
-  delayLowerBound: 3
-  delayUpperBound: 5
+  delayLowerBound: 1
+  delayUpperBound: 3
   bossHealth: {fileID: 97850013}
+  animator: {fileID: 0}
+  bullet: {fileID: -6270533402705752871, guid: 43a2f278bc9734786bc9ac4591604453, type: 3}
+  bulletSpeed: 5
+  unicorn: {fileID: 5528604050861253606, guid: a7a2eba8846f81844899d665e7781f4a, type: 3}
+  butterfly: {fileID: 7682637495475613559, guid: 82e10c1cd790c48f88df735712e78d0e, type: 3}
 --- !u!114 &97850015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1318,6 +1277,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossStart
   bossHealthBar: {fileID: 996723926}
+--- !u!70 &97850016
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97850007}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.000000039096548, y: -0.32796565}
+  m_Size: {x: 3.680001, y: 1.7517581}
+  m_Direction: 1
 --- !u!1001 &98168525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11526,7 +11522,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1035674073
 Transform:
   m_ObjectHideFlags: 0
@@ -20548,7 +20544,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1860573813
 Transform:
   m_ObjectHideFlags: 0
@@ -23117,7 +23113,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2130674836
 Transform:
   m_ObjectHideFlags: 0

@@ -8,7 +8,71 @@ public class Boss : MonoBehaviour
     public float delayUpperBound;
 
     public BossHealth bossHealth;
+    public Animator animator;
 
+    public EnemyBulletScript bullet;
+    public float bulletSpeed;
+
+    public UnicornAI unicorn;
+    public ButterflyAI butterfly;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+
+    public void Spit()
+    {
+        EnemyBulletScript newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
+        newBullet.moveDirection = -1;
+        newBullet.damage = 3;
+        newBullet.bulletSpeed = bulletSpeed;
+    }
+
+    public void SummonButterfly(float offsetX)
+    {
+        ButterflyAI newButterfly = Instantiate(butterfly, transform.position + new Vector3(offsetX, 0, 0), Quaternion.identity);
+        newButterfly.isOnScreen = true;
+    }
+
+    public void SummonUnicorn(float offsetX)
+    {
+        UnicornAI newUnicorn = Instantiate(unicorn, transform.position + new Vector3(offsetX, 0, 0), Quaternion.identity);
+        newUnicorn.isOnScreen = true;
+    }
+
+
+
+
+
+
+    public void StartSpit()
+    {
+        animator.SetTrigger("Spit");
+    }
+
+    public void StartCharge()
+    {
+        animator.SetTrigger("Charge");
+    }
+    public void StartSpawn()
+    {
+        float lOrR = Random.Range(0, 2);
+        if (lOrR == 0)
+        {
+            animator.SetTrigger("SummonLeft");
+        }
+        else
+        {
+            animator.SetTrigger("SummonRight");
+        }
+        
+    }
+
+    public void StartBeam()
+    {
+        animator.SetTrigger("EyeBeam");
+    }
     public void Attack()
     {
         StartCoroutine(AttackDelay());
@@ -23,13 +87,11 @@ public class Boss : MonoBehaviour
             float attackChance = Random.Range(0, 50);
             if (attackChance <= 35f)
             {
-                //spit
-                Debug.Log("Spit");
+                StartSpit();
             }
             if (attackChance > 35f)
             {
-                //charge
-                Debug.Log("Charge");
+                StartCharge();
             }
         }
 
@@ -40,20 +102,17 @@ public class Boss : MonoBehaviour
                 float attackChance = Random.Range(0, 70);
                 if (attackChance <= 35f)
                 {
-                    //spit
-                    Debug.Log("Spit");
+                    StartSpit();
                 }
                 if (35f < attackChance)
                 {
                     if (attackChance < 50f)
                     {
-                        //charge
-                    Debug.Log("Charge");
+                        StartCharge();
                     }
                     else
                     {
-                        //spawn
-                        Debug.Log("Spawn");
+                        StartSpawn();
                     }
                 }
             }
@@ -62,27 +121,23 @@ public class Boss : MonoBehaviour
                 float attackChance = Random.Range(0, 80);
                 if (attackChance <= 35f)
                 {
-                    //spit
-                    Debug.Log("Spit");
+                    StartSpit();
                 }
                 if (35f < attackChance)
                 {
                     if (attackChance < 50f)
                     {
-                        //charge
-                    Debug.Log("Charge");
+                        StartCharge();
                     }
                     if (50f < attackChance)
                     {
                         if (attackChance < 70f)
                         {
-                            //spawn
-                            Debug.Log("Spawn");
+                            StartSpawn();
                         }
                         else
                         {
-                            //beam
-                            Debug.Log("Beam");
+                            StartBeam();
                         }
                     }
                 }
