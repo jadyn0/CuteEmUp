@@ -1239,13 +1239,11 @@ MonoBehaviour:
   explosion: {fileID: 6527346302063952371, guid: c0e7dffb2c91aae49b4004a4f771f98d, type: 3}
   health: 140
   maxHealth: 140
+  HealthChance: 5
   heartPotion: {fileID: 2155244011311377631, guid: df5adc76d6ca243a59ffacd6d86e8a70, type: 3}
   overload: {fileID: 0}
   bar: []
   overloadAmount: 2
-  isBelow50: 0
-  isBelow30: 0
-  resistance: 1
 --- !u!114 &97850014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11525,7 +11523,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1035674073
 Transform:
   m_ObjectHideFlags: 0
@@ -23116,7 +23114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2130674836
 Transform:
   m_ObjectHideFlags: 0

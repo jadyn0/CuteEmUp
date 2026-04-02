@@ -49,7 +49,7 @@ public class Boss : MonoBehaviour
         {
             rb.linearVelocityY = 0;
             PlayerHealth player = collision.gameObject.GetComponent<PlayerHealth>();
-            player.Hit(3);
+            player.Hit(4);
         }
     }
 
@@ -83,6 +83,7 @@ public class Boss : MonoBehaviour
 
     public void StartBeam()
     {
+        animator.SetBool("IsEyeBeaming", true);
         animator.SetTrigger("EyeBeam");
     }
     public void Attack()
@@ -101,7 +102,7 @@ public class Boss : MonoBehaviour
             {
                 StartSpit();
             }
-            if (attackChance > 35f)
+            else
             {
                 StartCharge();
             }
@@ -109,14 +110,14 @@ public class Boss : MonoBehaviour
 
         if ( 0.5f > bossHealth.health / bossHealth.maxHealth)
         {
-            if (bossHealth.health / bossHealth.maxHealth > 0.33f)
+            if (bossHealth.health / bossHealth.maxHealth > 0.3f)
             {
                 float attackChance = Random.Range(0, 70);
                 if (attackChance <= 35f)
                 {
                     StartSpit();
                 }
-                if (35f < attackChance)
+                else
                 {
                     if (attackChance < 50f)
                     {
@@ -131,19 +132,19 @@ public class Boss : MonoBehaviour
             else
             {
                 float attackChance = Random.Range(0, 80);
-                if (attackChance <= 35f)
+                if (attackChance <= 20f)
                 {
                     StartSpit();
                 }
-                if (35f < attackChance)
+                else
                 {
-                    if (attackChance < 50f)
+                    if (attackChance < 40f)
                     {
                         StartCharge();
                     }
-                    if (50f < attackChance)
+                    else
                     {
-                        if (attackChance < 70f)
+                        if (attackChance < 60f)
                         {
                             StartSpawn();
                         }

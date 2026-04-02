@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class BossHealth : MonoBehaviour
 {
@@ -7,12 +8,13 @@ public class BossHealth : MonoBehaviour
     public float health;
     public float maxHealth;
 
-    public float HealthChance;
-
     public HeartPotion heartPotion;
     public CutenessOverload overload;
     public GameObject[] bar;
     public float overloadAmount;
+    public bool isBelow50;
+    public bool isBelow30;
+    public float resistance = 1;
 
     private void Start()
     {
@@ -21,14 +23,21 @@ public class BossHealth : MonoBehaviour
     }
     public void Hit(float damage)
     {
-        float chance = Random.Range(0, 100);
-        if (chance <= HealthChance)
-        {
-            HeartPotion newHeart = Instantiate(heartPotion, transform.position, Quaternion.identity);
-        }
         overload.Increase(overloadAmount);
-        health -= damage;
+        health -= damage * resistance;
         healthbar.SetHealth(health, maxHealth);
+        if (health/maxHealth <= 0.5 && !isBelow50)
+        {
+            isBelow50 = true;
+            resistance = 0.75f;
+            StartCoroutine(SpawnHealth());
+        }
+        if (health / maxHealth <= 0.30 && !isBelow30)
+        {
+            isBelow30 = true;
+            resistance = 0.5f;
+            StartCoroutine(SpawnHealth());
+        }
         if (health <= 0)
         {
             Die();
@@ -39,5 +48,16 @@ public class BossHealth : MonoBehaviour
     {
         ExplosionScript newExplosion = Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
+    }
+
+    IEnumerator SpawnHealth()
+    {
+        float heartAmount = Random.Range(3, 6);
+        for (int i = 0; i < heartAmount; i++)
+        {
+            float heartOffset = Random.Range(0, 15);
+            HeartPotion newHeart = Instantiate(heartPotion, transform.position + new Vector3(heartOffset/10, 0, 0), Quaternion.identity);
+            yield return new WaitForEndOfFrame();
+        }
     }
 }
