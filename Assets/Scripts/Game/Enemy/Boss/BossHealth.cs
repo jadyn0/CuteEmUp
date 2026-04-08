@@ -10,16 +10,20 @@ public class BossHealth : MonoBehaviour
 
     public HeartPotion heartPotion;
     public CutenessOverload overload;
-    public GameObject[] bar;
+    public Score score;
     public float overloadAmount;
+    public int scoreAmount;
     public bool isBelow50;
     public bool isBelow30;
     public float resistance = 1;
 
     private void Start()
     {
-        bar = GameObject.FindGameObjectsWithTag("Overload");
-        overload = bar[0].gameObject.GetComponent<CutenessOverload>();
+        GameObject bar = GameObject.FindGameObjectWithTag("Overload");
+        overload = bar.gameObject.GetComponent<CutenessOverload>();
+
+        GameObject scoreObject = GameObject.FindGameObjectWithTag("Score"); ;
+        score = scoreObject.GetComponent<Score>();
     }
     public void Hit(float damage)
     {
@@ -46,6 +50,7 @@ public class BossHealth : MonoBehaviour
 
     private void Die()
     {
+        score.Increase(scoreAmount);
         ExplosionScript newExplosion = Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }

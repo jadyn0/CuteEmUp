@@ -13,6 +13,13 @@ TagManager:
   - Overload
   - Boss
   - PauseMenu
+  - Score
+  - Level1
+  - Level2
+  - Level3
+  - Level4
+  - Level5
+  - LevelBoss
   layers:
   - Default
   - TransparentFX

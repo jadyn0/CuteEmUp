@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -9,8 +10,9 @@ public class EnemyHealth : MonoBehaviour
 
     public HeartPotion heartPotion;
     public CutenessOverload overload;
-    public GameObject[] bar;
+    public Score score;
     public float overloadAmount;
+    public int scoreAmount;
 
     public bool hasHitAnimation;
     public string hitAnimation;
@@ -18,8 +20,12 @@ public class EnemyHealth : MonoBehaviour
 
     private void Start()
     {
-        bar = GameObject.FindGameObjectsWithTag("Overload");
-        overload = bar[0].gameObject.GetComponent<CutenessOverload>();
+        GameObject bar = GameObject.FindGameObjectWithTag("Overload");
+        overload = bar.gameObject.GetComponent<CutenessOverload>();
+
+        GameObject scoreObject = GameObject.FindGameObjectWithTag("Score"); ;
+        score = scoreObject.GetComponent<Score>();
+
         animator = GetComponent<Animator>();
     }
     public void Hit(float damage, bool canDropHealth)
@@ -45,6 +51,7 @@ public class EnemyHealth : MonoBehaviour
         }
         
         overload.Increase(overloadAmount);
+        score.Increase(scoreAmount);
         Destroy(gameObject);
     }
 }

@@ -14,8 +14,42 @@ public class BunnyAI : MonoBehaviour
 
     private PlayerHealth player;
     private EnemyHealth health;
+
+    private Animator animator;
+
+    string walkAnimation;
     void Start()
     {
+        animator = GetComponent<Animator>();
+
+
+        if (transform.parent.parent.tag == "Level1")
+        {
+            walkAnimation = "BunnyWalk";
+        }
+        else if (transform.parent.parent.tag == "Level2")
+        {
+            walkAnimation = "BunnyWalk";
+        }
+        else if (transform.parent.parent.tag == "Level3")
+        {
+            walkAnimation = "BunnyWalk2";
+        }
+        else if (transform.parent.parent.tag == "Level4")
+        {
+            walkAnimation = "BunnyWalk2";
+        }
+        else if (transform.parent.parent.tag == "Level5")
+        {
+            walkAnimation = "BunnyWalk3";
+        }
+        else if (transform.parent.parent.tag == "LevelBoss")
+        {
+            walkAnimation = "BunnyWalk3";
+        }
+
+        animator.Play(walkAnimation);
+
         health = gameObject.GetComponent<EnemyHealth>();
     }
     void Update()

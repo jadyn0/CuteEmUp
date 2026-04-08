@@ -113,8 +113,9 @@ MonoBehaviour:
   HealthChance: 5
   heartPotion: {fileID: 2155244011311377631, guid: df5adc76d6ca243a59ffacd6d86e8a70, type: 3}
   overload: {fileID: 0}
-  bar: []
+  score: {fileID: 0}
   overloadAmount: 4
+  scoreAmount: 100
   hasHitAnimation: 1
   hitAnimation: TreeDamage1
 --- !u!114 &2114686745484769090

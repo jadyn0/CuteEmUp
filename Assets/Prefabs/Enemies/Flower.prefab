@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8799855617864322230}
   - component: {fileID: 5264190326936683584}
   - component: {fileID: 2590705626493293374}
+  - component: {fileID: 4141479295791984801}
   m_Layer: 0
   m_Name: Flower
   m_TagString: Enemy
@@ -86,7 +87,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 459816943466525491, guid: deb703b322b584c39a462d828e955864, type: 3}
+  m_Sprite: {fileID: 3373568495408583166, guid: a720c800a65bc9a4092e50ec3151df4c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -113,8 +114,11 @@ MonoBehaviour:
   HealthChance: 5
   heartPotion: {fileID: 2155244011311377631, guid: df5adc76d6ca243a59ffacd6d86e8a70, type: 3}
   overload: {fileID: 0}
-  bar: []
+  score: {fileID: 0}
   overloadAmount: 2
+  scoreAmount: 30
+  hasHitAnimation: 0
+  hitAnimation: 
 --- !u!114 &8423304250760756172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,17 +178,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.15}
+  m_Offset: {x: -0.027750015, y: -0.31909823}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5, y: 1.5}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1.5, y: 1.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.9, y: 0.6}
+  m_Size: {x: 0.13023567, y: 0.3659339}
   m_EdgeRadius: 0
 --- !u!95 &5264190326936683584
 Animator:
@@ -196,7 +200,7 @@ Animator:
   m_GameObject: {fileID: 7699013448341826039}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4c52fbd862d4ec54bbc04466b8d6cf90, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -235,3 +239,39 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &4141479295791984801
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7699013448341826039}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0.14}
+  m_Radius: 0.34

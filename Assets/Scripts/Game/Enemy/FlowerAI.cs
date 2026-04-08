@@ -23,10 +23,14 @@ public class FlowerAI : MonoBehaviour
 
     public LayerMask butterflyLayer;
     public bool butterflyGrace;
+
+    private Animator animator;
     void Start()
     {
         health = gameObject.GetComponent<EnemyHealth>();
         DY = enemySpeed;
+
+        animator = GetComponent<Animator>();
     }
     void Update()
     {
@@ -106,6 +110,7 @@ public class FlowerAI : MonoBehaviour
     }
     private void SummonBullet()
     {
+        animator.Play("FlowerShoot1");
         EnemyBulletScript newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
         newBullet.moveDirection = -1;
         newBullet.damage = 3;

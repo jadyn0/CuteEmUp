@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
+using UnityEngine.UI;
 using System.Collections.Generic;
 
 public class WaveController : MonoBehaviour
@@ -15,9 +16,18 @@ public class WaveController : MonoBehaviour
 
     public float levelBlockDelay;
     public float nextWaveDelay;
-    
+
+    public bool isNewBackground;
+    public SpriteRenderer background;
+    public Sprite backgroundImage;
+
+
     void Start()
     {
+        if (isNewBackground)
+        {
+            background.sprite = backgroundImage;
+        }
         
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;

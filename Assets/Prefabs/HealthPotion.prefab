@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4997749018408429648}
   - component: {fileID: 2155244011311377631}
   - component: {fileID: 8885878445549769807}
-  - component: {fileID: 3621455555001866848}
+  - component: {fileID: 7823651879269041078}
   m_Layer: 0
   m_Name: HealthPotion
   m_TagString: Untagged
@@ -99,7 +99,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 0b028a42af20d407fb5ddf29e6d71f09, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d88aa3e2a07b5be428995824b59af2a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -109,8 +109,8 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!61 &3621455555001866848
-BoxCollider2D:
+--- !u!58 &7823651879269041078
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -144,14 +144,4 @@ BoxCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.5}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.35, y: 0.85}
-  m_EdgeRadius: 0
+  m_Radius: 0.32
