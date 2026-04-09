@@ -25,12 +25,49 @@ public class FlowerAI : MonoBehaviour
     public bool butterflyGrace;
 
     private Animator animator;
+    string walkAnimation;
+    string shootAnimation;
     void Start()
     {
         health = gameObject.GetComponent<EnemyHealth>();
         DY = enemySpeed;
 
         animator = GetComponent<Animator>();
+
+
+        if (transform.parent.parent.tag == "Level1")
+        {
+            walkAnimation = "FlowerWalk";
+            shootAnimation = "FlowerShoot1";
+        }
+        else if (transform.parent.parent.tag == "Level2")
+        {
+            walkAnimation = "FlowerWalk";
+            shootAnimation = "FlowerShoot1";
+        }
+        else if (transform.parent.parent.tag == "Level3")
+        {
+            walkAnimation = "FlowerWalk2";
+            shootAnimation = "FlowerShoot2";
+        }
+        else if (transform.parent.parent.tag == "Level4")
+        {
+            walkAnimation = "FlowerWalk2";
+            shootAnimation = "FlowerShoot2";
+        }
+        else if (transform.parent.parent.tag == "Level5")
+        {
+            walkAnimation = "FlowerWalk3";
+            shootAnimation = "FlowerShoot3";
+        }
+        else if (transform.parent.parent.tag == "LevelBoss")
+        {
+            walkAnimation = "FlowerWalk3";
+            shootAnimation = "FlowerShoot3";
+        }
+
+        animator.Play(walkAnimation);
+
     }
     void Update()
     {
@@ -110,7 +147,7 @@ public class FlowerAI : MonoBehaviour
     }
     private void SummonBullet()
     {
-        animator.Play("FlowerShoot1");
+        animator.Play(shootAnimation);
         EnemyBulletScript newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
         newBullet.moveDirection = -1;
         newBullet.damage = 3;

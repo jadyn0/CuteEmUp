@@ -134,7 +134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5126513
 Transform:
   m_ObjectHideFlags: 0
@@ -1268,6 +1268,7 @@ MonoBehaviour:
   unicorn: {fileID: 5528604050861253606, guid: a7a2eba8846f81844899d665e7781f4a, type: 3}
   butterfly: {fileID: 7682637495475613559, guid: 82e10c1cd790c48f88df735712e78d0e, type: 3}
   rb: {fileID: 0}
+  parentLayer: {fileID: 1035674072}
 --- !u!114 &97850015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19637,7 +19638,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.007104397, y: -0.0017760992}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -19647,7 +19648,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.86, y: 0.75}
+  m_Size: {x: 0.9523574, y: 0.68250775}
   m_EdgeRadius: 0
 --- !u!50 &1756627203
 Rigidbody2D:
@@ -20456,6 +20457,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree
       objectReference: {fileID: 0}
+    - target: {fileID: 8507392673246372439, guid: 1a6e0c735a2720441999bf5bc78d900a, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8507392673246372439, guid: 1a6e0c735a2720441999bf5bc78d900a, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8507392673246372439, guid: 1a6e0c735a2720441999bf5bc78d900a, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8507392673246372439, guid: 1a6e0c735a2720441999bf5bc78d900a, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20867,7 +20884,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1860573813
 Transform:
   m_ObjectHideFlags: 0

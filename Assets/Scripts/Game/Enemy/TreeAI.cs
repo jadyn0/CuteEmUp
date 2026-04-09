@@ -26,12 +26,47 @@ public class TreeAI : MonoBehaviour
     public bool butterflyGrace;
 
     private Animator animator;
+    string walkAnimation;
+    string shootAnimation;
     void Start()
     {
         health = gameObject.GetComponent<EnemyHealth>();
         DY = offScreenSpeed;
 
         animator = GetComponent<Animator>();
+
+        if (transform.parent.parent.tag == "Level1")
+        {
+            walkAnimation = "TreeWalk1";
+            shootAnimation = "TreeAttack1";
+        }
+        else if (transform.parent.parent.tag == "Level2")
+        {
+            walkAnimation = "TreeWalk1";
+            shootAnimation = "TreeAttack1";
+        }
+        else if (transform.parent.parent.tag == "Level3")
+        {
+            walkAnimation = "TreeWalk2";
+            shootAnimation = "TreeAttack2";
+        }
+        else if (transform.parent.parent.tag == "Level4")
+        {
+            walkAnimation = "TreeWalk2";
+            shootAnimation = "TreeAttack2";
+        }
+        else if (transform.parent.parent.tag == "Level5")
+        {
+            walkAnimation = "TreeWalk3";
+            shootAnimation = "TreeAttack3";
+        }
+        else if (transform.parent.parent.tag == "LevelBoss")
+        {
+            walkAnimation = "TreeWalk3";
+            shootAnimation = "TreeAttack3";
+        }
+
+        animator.Play(walkAnimation);
     }
     void Update()
     {
@@ -115,7 +150,7 @@ public class TreeAI : MonoBehaviour
 
     private void SummonBullet()
     {
-        animator.Play("TreeAttack1");
+        animator.Play(shootAnimation);
         EnemyBulletScript newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
         newBullet.moveDirection = -1;
         newBullet.damage = 3;

@@ -22,8 +22,47 @@ public class UnicornAI : MonoBehaviour
 
     public LayerMask butterflyLayer;
     public bool butterflyGrace;
+
+    private Animator animator;
+
+    string walkAnimation;
+
     void Start()
     {
+        animator = GetComponent<Animator>();
+
+        if (transform.parent.parent != null)
+        {
+            if (transform.parent.parent.tag == "Level1")
+            {
+                walkAnimation = "UnicornWalk";
+            }
+            else if (transform.parent.parent.tag == "Level2")
+            {
+                walkAnimation = "UnicornWalk";
+            }
+            else if (transform.parent.parent.tag == "Level3")
+            {
+                walkAnimation = "UnicornWalk2";
+            }
+            else if (transform.parent.parent.tag == "Level4")
+            {
+                walkAnimation = "UnicornWalk2";
+            }
+            else if (transform.parent.parent.tag == "Level5")
+            {
+                walkAnimation = "UnicornWalk3";
+            }
+            else if (transform.parent.parent.tag == "LevelBoss")
+            {
+                walkAnimation = "UnicornWalk3";
+            }
+        }
+        
+
+        animator.Play(walkAnimation);
+
+
         health = gameObject.GetComponent<EnemyHealth>();
     }
     void Update()

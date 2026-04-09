@@ -21,11 +21,37 @@ public class LollyAI : MonoBehaviour
 
     private Animator animator;
     private bool canRun;
+    string walkAnimation;
     void Start()
     {
         health = gameObject.GetComponent<EnemyHealth>();
         animator = GetComponent<Animator>();
         playerObject = GameObject.FindGameObjectsWithTag("Player");
+
+        if (transform.parent.parent.tag == "Level1")
+        {
+            walkAnimation = "LollyLegs";
+        }
+        else if (transform.parent.parent.tag == "Level2")
+        {
+            walkAnimation = "LollyLegs";
+        }
+        else if (transform.parent.parent.tag == "Level3")
+        {
+            walkAnimation = "LollyLegs2";
+        }
+        else if (transform.parent.parent.tag == "Level4")
+        {
+            walkAnimation = "LollyLegs2";
+        }
+        else if (transform.parent.parent.tag == "Level5")
+        {
+            walkAnimation = "LollyLegs3";
+        }
+        else if (transform.parent.parent.tag == "LevelBoss")
+        {
+            walkAnimation = "LollyLegs3";
+        }
     }
     void Update()
     {
@@ -42,7 +68,7 @@ public class LollyAI : MonoBehaviour
 
     IEnumerator EnterScreen()
     {
-        animator.Play("LollyLegs");
+        animator.Play(walkAnimation);
         yield return new WaitForSeconds(0.666f);
         canRun = true;
     }

@@ -17,6 +17,8 @@ public class Boss : MonoBehaviour
     public ButterflyAI butterfly;
     public Rigidbody2D rb;
 
+    public GameObject parentLayer;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -35,12 +37,14 @@ public class Boss : MonoBehaviour
     {
         ButterflyAI newButterfly = Instantiate(butterfly, transform.position + new Vector3(offsetX, 0, 0), Quaternion.identity);
         newButterfly.isOnScreen = true;
+        newButterfly.transform.parent = parentLayer.transform;
     }
 
     public void SummonUnicorn(float offsetX)
     {
         UnicornAI newUnicorn = Instantiate(unicorn, transform.position + new Vector3(offsetX, 0, 0), Quaternion.identity);
         newUnicorn.isOnScreen = true;
+        newUnicorn.transform.parent = parentLayer.transform;
     }
 
     void OnTriggerEnter2D(Collider2D collision)

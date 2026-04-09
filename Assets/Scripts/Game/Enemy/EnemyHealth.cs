@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 
@@ -15,24 +16,22 @@ public class EnemyHealth : MonoBehaviour
     public int scoreAmount;
 
     public bool hasHitAnimation;
-    public string hitAnimation;
-    private Animator animator;
+    private SpriteRenderer spriteRenderer;
 
     private void Start()
     {
         GameObject bar = GameObject.FindGameObjectWithTag("Overload");
         overload = bar.gameObject.GetComponent<CutenessOverload>();
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 
         GameObject scoreObject = GameObject.FindGameObjectWithTag("Score"); ;
         score = scoreObject.GetComponent<Score>();
-
-        animator = GetComponent<Animator>();
     }
     public void Hit(float damage, bool canDropHealth)
     {
         if (hasHitAnimation)
         {
-            animator.Play(hitAnimation);
+            StartCoroutine(HitFlash());
         }
         health -= damage;
         if (health <= 0)
@@ -53,5 +52,12 @@ public class EnemyHealth : MonoBehaviour
         overload.Increase(overloadAmount);
         score.Increase(scoreAmount);
         Destroy(gameObject);
+    }
+
+    IEnumerator HitFlash()
+    {
+        spriteRenderer.color = new Color(1f, 0.4f, 0.4f, 1f);
+        yield return new WaitForSeconds(0.135f);
+        spriteRenderer.color = Color.white;
     }
 }

@@ -22,8 +22,45 @@ public class ButterflyAI : MonoBehaviour
 
     public LayerMask butterflyLayer;
     public bool butterflyGrace;
+
+    private Animator animator;
+
+    string walkAnimation;
     void Start()
     {
+        animator = GetComponent<Animator>();
+        if (transform.parent.parent != null)
+        {
+            if (transform.parent.parent.tag == "Level1")
+            {
+                walkAnimation = "ButterflyWalk";
+            }
+            else if (transform.parent.parent.tag == "Level2")
+            {
+                walkAnimation = "ButterflyWalk";
+            }
+            else if (transform.parent.parent.tag == "Level3")
+            {
+                walkAnimation = "ButterflyWalk2";
+            }
+            else if (transform.parent.parent.tag == "Level4")
+            {
+                walkAnimation = "ButterflyWalk2";
+            }
+            else if (transform.parent.parent.tag == "Level5")
+            {
+                walkAnimation = "ButterflyWalk3";
+            }
+            else if (transform.parent.parent.tag == "LevelBoss")
+            {
+                walkAnimation = "ButterflyWalk3";
+            }
+        }
+
+        
+
+        animator.Play(walkAnimation);
+
         health = gameObject.GetComponent<EnemyHealth>();
     }
     void Update()
