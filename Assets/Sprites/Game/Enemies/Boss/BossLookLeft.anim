@@ -98,27 +98,27 @@ AnimationClip:
     functionName: SummonUnicorn
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 1.5
+    floatParameter: -1
     intParameter: 0
     messageOptions: 0
   - time: 0.41666666
     functionName: SummonButterfly
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 0.5
+    floatParameter: -2
     intParameter: 0
     messageOptions: 0
   - time: 0.5
     functionName: SummonUnicorn
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: -0.5
+    floatParameter: -3
     intParameter: 0
     messageOptions: 0
   - time: 0.5833333
     functionName: SummonButterfly
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: -1.5
+    floatParameter: -4
     intParameter: 0
     messageOptions: 0

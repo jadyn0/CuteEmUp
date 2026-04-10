@@ -29,20 +29,20 @@ public class Boss : MonoBehaviour
     {
         EnemyBulletScript newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
         newBullet.moveDirection = -1;
-        newBullet.damage = 3;
+        newBullet.damage = 4;
         newBullet.bulletSpeed = bulletSpeed;
     }
 
     public void SummonButterfly(float offsetX)
     {
-        ButterflyAI newButterfly = Instantiate(butterfly, transform.position + new Vector3(offsetX, 0, 0), Quaternion.identity);
+        ButterflyAI newButterfly = Instantiate(butterfly, transform.position + new Vector3(offsetX, 0, -1), Quaternion.identity);
         newButterfly.isOnScreen = true;
         newButterfly.transform.parent = parentLayer.transform;
     }
 
     public void SummonUnicorn(float offsetX)
     {
-        UnicornAI newUnicorn = Instantiate(unicorn, transform.position + new Vector3(offsetX, 0, 0), Quaternion.identity);
+        UnicornAI newUnicorn = Instantiate(unicorn, transform.position + new Vector3(offsetX, 0, -1), Quaternion.identity);
         newUnicorn.isOnScreen = true;
         newUnicorn.transform.parent = parentLayer.transform;
     }
@@ -53,13 +53,9 @@ public class Boss : MonoBehaviour
         {
             rb.linearVelocityY = 0;
             PlayerHealth player = collision.gameObject.GetComponent<PlayerHealth>();
-            player.Hit(4);
+            player.Hit(6);
         }
     }
-
-
-
-
 
     public void StartSpit()
     {
@@ -98,11 +94,11 @@ public class Boss : MonoBehaviour
     {
         float delay = Random.Range(delayLowerBound, delayUpperBound);
         yield return new WaitForSeconds(delay);
+        float attackChance = Random.Range(0, 100);
 
         if (bossHealth.health / bossHealth.maxHealth >= 0.5)
         {
-            float attackChance = Random.Range(0, 50);
-            if (attackChance <= 35f)
+            if (attackChance <= 60f)
             {
                 StartSpit();
             }
@@ -116,14 +112,13 @@ public class Boss : MonoBehaviour
         {
             if (bossHealth.health / bossHealth.maxHealth > 0.3f)
             {
-                float attackChance = Random.Range(0, 70);
-                if (attackChance <= 35f)
+                if (attackChance <= 45f)
                 {
                     StartSpit();
                 }
                 else
                 {
-                    if (attackChance < 50f)
+                    if (attackChance < 35f)
                     {
                         StartCharge();
                     }
@@ -135,20 +130,19 @@ public class Boss : MonoBehaviour
             }
             else
             {
-                float attackChance = Random.Range(0, 80);
-                if (attackChance <= 20f)
+                if (attackChance <= 25f)
                 {
                     StartSpit();
                 }
                 else
                 {
-                    if (attackChance < 40f)
+                    if (attackChance < 50f)
                     {
                         StartCharge();
                     }
                     else
                     {
-                        if (attackChance < 60f)
+                        if (attackChance < 75f)
                         {
                             StartSpawn();
                         }
