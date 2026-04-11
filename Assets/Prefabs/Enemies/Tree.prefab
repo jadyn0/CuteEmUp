@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b28f48b48af43449b7df488e56eeb61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
-  explosion: {fileID: 6527346302063952371, guid: c0e7dffb2c91aae49b4004a4f771f98d, type: 3}
+  explosion: {fileID: 4576064504918529221, guid: 6b90caba890f84232b1a0af2162e9b55, type: 3}
   health: 3
   HealthChance: 5
   heartPotion: {fileID: 2155244011311377631, guid: df5adc76d6ca243a59ffacd6d86e8a70, type: 3}
@@ -117,7 +117,6 @@ MonoBehaviour:
   overloadAmount: 4
   scoreAmount: 100
   hasHitAnimation: 1
-  hitAnimation: TreeDamage1
 --- !u!114 &2114686745484769090
 MonoBehaviour:
   m_ObjectHideFlags: 0
