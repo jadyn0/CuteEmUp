@@ -19,6 +19,7 @@ public class WaveController : MonoBehaviour
 
     public bool isNewBackground;
     public SpriteRenderer background;
+    public SpriteRenderer background2;
     public Sprite backgroundImage;
 
 
@@ -27,6 +28,7 @@ public class WaveController : MonoBehaviour
         if (isNewBackground)
         {
             background.sprite = backgroundImage;
+            background2.sprite = backgroundImage;
         }
         
         Cursor.lockState = CursorLockMode.Locked;

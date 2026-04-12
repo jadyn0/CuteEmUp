@@ -114,7 +114,7 @@ public class FlowerAI : MonoBehaviour
         {
             player = collision.gameObject.GetComponent<PlayerHealth>();
             player.Hit(3);
-            health.Hit(3, false);
+            health.Hit(3, false, transform.position);
         }
     }
 

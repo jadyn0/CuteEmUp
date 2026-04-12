@@ -4,7 +4,8 @@ using System.Collections;
 public class BossHealth : MonoBehaviour
 {
     public HealthBar healthbar;
-    public ExplosionScript explosion;
+    public ExplosionScript deathExplosion;
+    public ExplosionScript damageExplosion;
     public float health;
     public float maxHealth;
 
@@ -30,8 +31,9 @@ public class BossHealth : MonoBehaviour
         GameObject scoreObject = GameObject.FindGameObjectWithTag("Score"); ;
         score = scoreObject.GetComponent<Score>();
     }
-    public void Hit(float damage)
+    public void Hit(float damage, Vector3 bulletPosition)
     {
+        ExplosionScript newExplosion = Instantiate(damageExplosion, bulletPosition + new Vector3(0, 0, -5 ), Quaternion.identity);
         StartCoroutine(HitFlash());
         overload.Increase(overloadAmount);
         health -= damage * resistance;
@@ -59,7 +61,7 @@ public class BossHealth : MonoBehaviour
     private void Die()
     {
         score.Increase(scoreAmount);
-        ExplosionScript newExplosion = Instantiate(explosion, transform.position, Quaternion.identity);
+        ExplosionScript newExplosion = Instantiate(deathExplosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 

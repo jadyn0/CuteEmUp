@@ -24,13 +24,13 @@ public class ExplosionLScript : MonoBehaviour
         if (collision.gameObject.CompareTag(enemyTag))
         {
             enemy = collision.gameObject.GetComponent<EnemyHealth>();
-            enemy.Hit(3, true);
+            enemy.Hit(3, true, transform.position);
         }
 
         if (collision.gameObject.CompareTag("Boss"))
         {
             BossHealth boss = collision.gameObject.GetComponent<BossHealth>();
-            boss.Hit(3);
+            boss.Hit(3, transform.position);
         }
     }
 

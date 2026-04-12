@@ -109,7 +109,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b28f48b48af43449b7df488e56eeb61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
-  explosion: {fileID: 8938469184698871928, guid: 415848ca2e09b491ab90c51262b175a5, type: 3}
+  deathExplosion: {fileID: 8938469184698871928, guid: 415848ca2e09b491ab90c51262b175a5, type: 3}
+  damageExplosion: {fileID: 0}
   health: 1
   HealthChance: 5
   heartPotion: {fileID: 2155244011311377631, guid: df5adc76d6ca243a59ffacd6d86e8a70, type: 3}

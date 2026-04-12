@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class PlayerHealth : MonoBehaviour
     public GameObject deathButton;
     EventSystem eventSystem;
 
+    public CameraShake cameraShake;
+
     void Start()
     {
         playerHealth = maxHealth;
@@ -23,6 +26,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void Hit(float damage)
     {
+        cameraShake.StartShake(0.3f);
         playerHealth -= damage;
 
         healthbar.SetHealth(playerHealth, maxHealth);

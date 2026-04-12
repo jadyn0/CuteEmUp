@@ -107,7 +107,7 @@ public class ButterflyAI : MonoBehaviour
         {
             player = collision.gameObject.GetComponent<PlayerHealth>();
             player.Hit(1);
-            health.Hit(1, false);
+            health.Hit(1, false, transform.position);
         }
     }
 

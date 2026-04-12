@@ -4,7 +4,8 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public ExplosionScript explosion;
+    public ExplosionScript deathExplosion;
+    public ExplosionScript damageExplosion;
     public float health;
 
     public float HealthChance;
@@ -27,10 +28,11 @@ public class EnemyHealth : MonoBehaviour
         GameObject scoreObject = GameObject.FindGameObjectWithTag("Score"); ;
         score = scoreObject.GetComponent<Score>();
     }
-    public void Hit(float damage, bool canDropHealth)
+    public void Hit(float damage, bool canDropHealth, Vector3 bulletPosition)
     {
         if (hasHitAnimation)
         {
+            ExplosionScript newExplosion = Instantiate(damageExplosion, bulletPosition + new Vector3(0, 0, -5 ), Quaternion.identity);
             StartCoroutine(HitFlash());
         }
         health -= damage;
@@ -42,7 +44,7 @@ public class EnemyHealth : MonoBehaviour
 
     private void Die(bool canDropHealth)
     {
-        ExplosionScript newExplosion = Instantiate(explosion, transform.position, Quaternion.identity);
+        ExplosionScript newExplosion = Instantiate(deathExplosion, transform.position, Quaternion.identity);
         float chance = Random.Range(0, 100);
         if (chance <= HealthChance && canDropHealth)
         {
