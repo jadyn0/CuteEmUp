@@ -31,10 +31,10 @@ public class PlayerShooting : MonoBehaviour
     }
     void Update()
     {
-        if (autoFire)
+        if (PlayerPrefs.GetInt("AutoFire") == 1 ? true : false)
         {
             shootDelay = longDelay;
-            if (shootAction.ReadValue<float>() > 0f)
+            if (shootAction.ReadValue<float>() > 0f && !pauseMenu.isPaused)
             {
                 if (!isShooting)
                 {
@@ -46,7 +46,7 @@ public class PlayerShooting : MonoBehaviour
         else
         {
             shootDelay = shortDelay;
-            if (shootAction.triggered && shootAction.ReadValue<float>() > 0f)
+            if (shootAction.triggered && shootAction.ReadValue<float>() > 0f && !pauseMenu.isPaused)
             {
                 if (!isShooting)
                 {

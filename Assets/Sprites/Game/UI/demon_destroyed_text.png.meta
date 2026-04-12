@@ -1,0 +1,767 @@
+fileFormatVersion: 2
+guid: 24c1bae90257e564ba52d5044963b47c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4382212480231652058
+    second: demon_destroyed_text_0
+  - first:
+      213: -2020785466148851302
+    second: demon_destroyed_text_1
+  - first:
+      213: -3804557913166927297
+    second: demon_destroyed_text_2
+  - first:
+      213: 8804517506811797053
+    second: demon_destroyed_text_3
+  - first:
+      213: 1990830970067344171
+    second: demon_destroyed_text_4
+  - first:
+      213: 3334510445402130031
+    second: demon_destroyed_text_5
+  - first:
+      213: 5068550403056087444
+    second: demon_destroyed_text_6
+  - first:
+      213: 2057572119829884907
+    second: demon_destroyed_text_7
+  - first:
+      213: 1343109783093628416
+    second: demon_destroyed_text_8
+  - first:
+      213: 3273856454074888627
+    second: demon_destroyed_text_9
+  - first:
+      213: 2611064961691295553
+    second: demon_destroyed_text_10
+  - first:
+      213: -3303502056627348740
+    second: demon_destroyed_text_11
+  - first:
+      213: 6084961864122797768
+    second: demon_destroyed_text_12
+  - first:
+      213: -5450640507385416237
+    second: demon_destroyed_text_13
+  - first:
+      213: -631425919840982045
+    second: demon_destroyed_text_14
+  - first:
+      213: 6081047111108772504
+    second: demon_destroyed_text_15
+  - first:
+      213: 1678969362931339352
+    second: demon_destroyed_text_16
+  - first:
+      213: -6227358319590062731
+    second: demon_destroyed_text_17
+  - first:
+      213: 1119224434794886494
+    second: demon_destroyed_text_18
+  - first:
+      213: 5731456505192491395
+    second: demon_destroyed_text_19
+  - first:
+      213: 8349381775965629266
+    second: demon_destroyed_text_20
+  - first:
+      213: -3776560978048656058
+    second: demon_destroyed_text_21
+  - first:
+      213: 1745344757417727886
+    second: demon_destroyed_text_22
+  - first:
+      213: -1507554139247673141
+    second: demon_destroyed_text_23
+  - first:
+      213: 6951073314010439122
+    second: demon_destroyed_text_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: demon_destroyed_text_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 62
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adabd76680fb0dc30800000000000000
+      internalID: 4382212480231652058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: demon_destroyed_text_1
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 63
+        width: 24
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a91fcea335ab4f3e0800000000000000
+      internalID: -2020785466148851302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: demon_destroyed_text_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3aa8424cbe733bc0800000000000000
+      internalID: -3804557913166927297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: demon_destroyed_text_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 60
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3e993c260eef2a70800000000000000
+      internalID: 8804517506811797053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: demon_destroyed_text_4
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 63
+        width: 24
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2bd5ba283ad0ab10800000000000000
+      internalID: 1990830970067344171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: demon_destroyed_text_5
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 62
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f660606459f864e20800000000000000
+      internalID: 3334510445402130031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: demon_destroyed_text_6
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 36
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 491325cbcbb175640800000000000000
+      internalID: 5068550403056087444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: demon_destroyed_text_7
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 36
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bef253601f6fd8c10800000000000000
+      internalID: 2057572119829884907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: demon_destroyed_text_8
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 36
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00ec5ab4b3fa3a210800000000000000
+      internalID: 1343109783093628416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: demon_destroyed_text_9
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 36
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b1f0ce69131f6d20800000000000000
+      internalID: 3273856454074888627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: demon_destroyed_text_10
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 36
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14f1417afbd5c3420800000000000000
+      internalID: 2611064961691295553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: demon_destroyed_text_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfa54f7d16a9722d0800000000000000
+      internalID: -3303502056627348740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: demon_destroyed_text_12
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 11
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ce86de6390227450800000000000000
+      internalID: 6084961864122797768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: demon_destroyed_text_13
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 1
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d5ffe6565f6b54b0800000000000000
+      internalID: -5450640507385416237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: demon_destroyed_text_14
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 11
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3eb67e9a879bc37f0800000000000000
+      internalID: -631425919840982045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: demon_destroyed_text_15
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 11
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 892cd08f028346450800000000000000
+      internalID: 6081047111108772504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: demon_destroyed_text_16
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 11
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85059427db5ec4710800000000000000
+      internalID: 1678969362931339352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: demon_destroyed_text_17
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 11
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 575c2cf2a9af399a0800000000000000
+      internalID: -6227358319590062731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: demon_destroyed_text_18
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 11
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e55f2eb81b8488f00800000000000000
+      internalID: 1119224434794886494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: demon_destroyed_text_19
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 389a99d23593a8f40800000000000000
+      internalID: 5731456505192491395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: demon_destroyed_text_20
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 11
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25b2d820d76fed370800000000000000
+      internalID: 8349381775965629266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: demon_destroyed_text_21
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 2
+        width: 24
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64ddeceacc5f69bc0800000000000000
+      internalID: -3776560978048656058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: demon_destroyed_text_22
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 3
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8759744fc5b83810800000000000000
+      internalID: 1745344757417727886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: demon_destroyed_text_23
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 0
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc0097a6f77141be0800000000000000
+      internalID: -1507554139247673141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: demon_destroyed_text_24
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 2
+        width: 24
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dd1a49c95c277060800000000000000
+      internalID: 6951073314010439122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      demon_destroyed_text_0: 4382212480231652058
+      demon_destroyed_text_1: -2020785466148851302
+      demon_destroyed_text_10: 2611064961691295553
+      demon_destroyed_text_11: -3303502056627348740
+      demon_destroyed_text_12: 6084961864122797768
+      demon_destroyed_text_13: -5450640507385416237
+      demon_destroyed_text_14: -631425919840982045
+      demon_destroyed_text_15: 6081047111108772504
+      demon_destroyed_text_16: 1678969362931339352
+      demon_destroyed_text_17: -6227358319590062731
+      demon_destroyed_text_18: 1119224434794886494
+      demon_destroyed_text_19: 5731456505192491395
+      demon_destroyed_text_2: -3804557913166927297
+      demon_destroyed_text_20: 8349381775965629266
+      demon_destroyed_text_21: -3776560978048656058
+      demon_destroyed_text_22: 1745344757417727886
+      demon_destroyed_text_23: -1507554139247673141
+      demon_destroyed_text_24: 6951073314010439122
+      demon_destroyed_text_3: 8804517506811797053
+      demon_destroyed_text_4: 1990830970067344171
+      demon_destroyed_text_5: 3334510445402130031
+      demon_destroyed_text_6: 5068550403056087444
+      demon_destroyed_text_7: 2057572119829884907
+      demon_destroyed_text_8: 1343109783093628416
+      demon_destroyed_text_9: 3273856454074888627
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

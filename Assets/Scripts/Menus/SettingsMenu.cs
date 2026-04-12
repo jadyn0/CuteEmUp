@@ -8,18 +8,23 @@ public class SettingsMenu : MonoBehaviour
 
     public AudioMixer audioMixer;
     public Dropdown resolutionDropdown;
-    public bool autofire;
     public Dropdown languages;
+    public Toggle autoFireToggle;
     public bool toggleMusic;
     Resolution[] resolutions;
     void Start()
     {
-        
+        autoFireToggle.isOn = PlayerPrefs.GetInt("AutoFire") == 1 ? true : false;
     }
-    public void setVolume(float volume)
+    public void SetVolume(float volume)
     {
         audioMixer.SetFloat("volume", volume);
     }
+    public void SetAutoFire(bool isAutoFire)
+    {
+        PlayerPrefs.SetInt("AutoFire", isAutoFire ? 1 : 0);
+    }
+
     public void Back()
     {
         pauseMenu.unSettings();

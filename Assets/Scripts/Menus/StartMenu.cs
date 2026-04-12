@@ -15,10 +15,14 @@ public class StartMenu : MonoBehaviour
     public GameObject playerOptions;
     public GameObject playerOptionsButton;
 
+    public GameObject skinSelect;
+    public GameObject skinSelectButton;
+
     public GameObject difficultySelect;
     public GameObject difficultyButton;
 
     private bool isPlayerOptions;
+    private bool isSkinSelect;
     private bool isDifficultySelect;
 
     EventSystem eventSystem;
@@ -48,20 +52,46 @@ public class StartMenu : MonoBehaviour
             {
                 unPlayerOptions();
             }
+            else if (isSkinSelect)
+            {
+                unSkinSelect();
+            }
             else if (isDifficultySelect)
             {
-                unDifficultySelect(); 
+                unDifficultySelect();
             }
         }
     }
 
     public void PvE()
     {
-        isDifficultySelect = true;
+        isSkinSelect = true;
         isPlayerOptions = false;
-        difficultySelect.SetActive(true);
+        //difficultySelect.SetActive(true);
+        skinSelect.SetActive(true);
         playerOptions.SetActive(false);
         //eventSystem.SetSelectedGameObject(null);
+        eventSystem.SetSelectedGameObject(skinSelectButton);
+    }
+
+    public void Blue()
+    {
+        PlayerPrefs.SetInt("PlayerSkin", 0);
+
+        isDifficultySelect = true;
+        isSkinSelect = false;
+        difficultySelect.SetActive(true);
+        skinSelect.SetActive(false);
+        eventSystem.SetSelectedGameObject(difficultyButton);
+    }
+    public void Purple()
+    {
+        PlayerPrefs.SetInt("PlayerSkin", 1);
+
+        isDifficultySelect = true;
+        isSkinSelect = false;
+        difficultySelect.SetActive(true);
+        skinSelect.SetActive(false);
         eventSystem.SetSelectedGameObject(difficultyButton);
     }
 
@@ -97,14 +127,24 @@ public class StartMenu : MonoBehaviour
         eventSystem.SetSelectedGameObject(startButton);
     }
 
-    public void unDifficultySelect()
+    public void unSkinSelect()
     {
-        isDifficultySelect = false;
+        isSkinSelect = false;
         isPlayerOptions = true;
-        difficultySelect.SetActive(false);
+        skinSelect.SetActive(false);
         playerOptions.SetActive(true);
         //eventSystem.SetSelectedGameObject(null);
         eventSystem.SetSelectedGameObject(playerOptionsButton);
+    }
+
+    public void unDifficultySelect()
+    {
+        isDifficultySelect = false;
+        isSkinSelect = true;
+        difficultySelect.SetActive(false);
+        skinSelect.SetActive(true);
+        //eventSystem.SetSelectedGameObject(null);
+        eventSystem.SetSelectedGameObject(skinSelectButton);
     }
 
     public void Quit()

@@ -22,6 +22,8 @@ public class WaveController : MonoBehaviour
     public SpriteRenderer background2;
     public Sprite backgroundImage;
 
+    public GameObject levelComplete;
+
 
     void Start()
     {
@@ -56,7 +58,7 @@ public class WaveController : MonoBehaviour
         else
         {
             //start next level and deactivate all the script in current one
-            StartCoroutine(StartNextLevel());
+            StartCoroutine(LevelComplete());
         }
     }
 
@@ -73,6 +75,12 @@ public class WaveController : MonoBehaviour
         isWaveHappening = true;
     }
 
+    IEnumerator LevelComplete()
+    {
+        yield return new WaitForSeconds(0.5f);
+        levelComplete.SetActive(true);
+        StartCoroutine(StartNextLevel());
+    }
     IEnumerator StartNextLevel()
     {
         if (nextLevelContainer != null)
