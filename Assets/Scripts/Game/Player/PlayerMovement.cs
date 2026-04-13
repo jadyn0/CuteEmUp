@@ -61,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
     {
         //moves player
         //Debug.Log(PlayerPrefs.GetFloat("PlayerSpeed"));
-        rb.linearVelocity = new Vector2 (moveValue.x * PlayerPrefs.GetFloat("PlayerSpeed"), 0);
+        rb.linearVelocity = new Vector2 (moveValue.x * PlayerPrefs.GetFloat("PlayerSpeed", 4), 0);
         //healthbar.transform.position = new Vector3((transform.position.x * healthBarMultiplier) +192, healthbar.transform.position.y, 0);
     }
 }

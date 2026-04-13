@@ -26,13 +26,13 @@ public class SettingsMenu : MonoBehaviour
         autoFireToggle.isOn = PlayerPrefs.GetInt("AutoFire") == 1 ? true : false;
         speedSlider.value = PlayerPrefs.GetFloat("PlayerSpeed");
 
-        masterSlider.value = PlayerPrefs.GetFloat("MasterVolume");
+        masterSlider.value = PlayerPrefs.GetFloat("MasterVolume", 0);
         Mixer.SetFloat("MasterVolume", Mathf.Log10(PlayerPrefs.GetFloat("MasterVolume")) * 20f);
 
-        musicSlider.value = PlayerPrefs.GetFloat("MusicVolume");
+        musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 0);
         Mixer.SetFloat("MusicVolume", Mathf.Log10(PlayerPrefs.GetFloat("MusicVolume")) * 20f);
 
-        SFXSlider.value = PlayerPrefs.GetFloat("SFXVolume");
+        SFXSlider.value = PlayerPrefs.GetFloat("SFXVolume", 0);
         Mixer.SetFloat("SFXVolume", Mathf.Log10(PlayerPrefs.GetFloat("SFXVolume")) * 20f);
     }
 
