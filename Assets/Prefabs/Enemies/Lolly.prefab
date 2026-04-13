@@ -118,6 +118,7 @@ MonoBehaviour:
   overloadAmount: 2
   scoreAmount: 30
   hasHitAnimation: 0
+  damageSound: {fileID: 8300000, guid: e5267d0a688f5e34f9969fcee2f369ab, type: 3}
 --- !u!114 &6175064668682496220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +136,7 @@ MonoBehaviour:
   bottomTag: Bottom
   playerTag: Player
   isOnScreen: 0
+  LegsSound: {fileID: 8300000, guid: 69b14fbf6aa811b4885bd80099ecc280, type: 3}
 --- !u!95 &3193580568458103173
 Animator:
   serializedVersion: 7

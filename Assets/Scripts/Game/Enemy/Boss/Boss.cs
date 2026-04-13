@@ -19,6 +19,9 @@ public class Boss : MonoBehaviour
 
     public GameObject parentLayer;
 
+    public AudioClip bossSpit;
+    public AudioClip bossSummon;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -27,14 +30,15 @@ public class Boss : MonoBehaviour
 
     public void Spit()
     {
+        SoundFXManager.instance.PlaySoundFXClip(bossSpit, transform, 1f);
         EnemyBulletScript newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
         newBullet.moveDirection = -1;
         newBullet.damage = 4;
         newBullet.bulletSpeed = bulletSpeed;
     }
-
     public void SummonButterfly(float offsetX)
     {
+        SoundFXManager.instance.PlaySoundFXClip(bossSummon, transform, 1f);
         ButterflyAI newButterfly = Instantiate(butterfly, transform.position + new Vector3(offsetX, 0, -1), Quaternion.identity);
         newButterfly.isOnScreen = true;
         newButterfly.transform.parent = parentLayer.transform;
@@ -42,6 +46,7 @@ public class Boss : MonoBehaviour
 
     public void SummonUnicorn(float offsetX)
     {
+        SoundFXManager.instance.PlaySoundFXClip(bossSummon, transform, 1f);
         UnicornAI newUnicorn = Instantiate(unicorn, transform.position + new Vector3(offsetX, 0, -1), Quaternion.identity);
         newUnicorn.isOnScreen = true;
         newUnicorn.transform.parent = parentLayer.transform;

@@ -27,6 +27,8 @@ public class FlowerAI : MonoBehaviour
     private Animator animator;
     string walkAnimation;
     string shootAnimation;
+
+    public AudioClip shootSound;
     void Start()
     {
         health = gameObject.GetComponent<EnemyHealth>();
@@ -147,6 +149,7 @@ public class FlowerAI : MonoBehaviour
     }
     private void SummonBullet()
     {
+        SoundFXManager.instance.PlaySoundFXClip(shootSound, transform, 1f);
         animator.Play(shootAnimation);
         EnemyBulletScript newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
         newBullet.moveDirection = -1;

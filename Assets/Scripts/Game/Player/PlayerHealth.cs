@@ -18,6 +18,9 @@ public class PlayerHealth : MonoBehaviour
 
     public CameraShake cameraShake;
 
+    public AudioClip hurtSound;
+    public AudioClip deathSound;
+    public AudioClip healSound;
     void Start()
     {
         playerHealth = maxHealth;
@@ -26,6 +29,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void Hit(float damage)
     {
+        SoundFXManager.instance.PlaySoundFXClip(hurtSound, transform, 1f);
         cameraShake.StartShake(0.3f);
         playerHealth -= damage;
 
@@ -39,6 +43,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void Heal(float healAmount)
     {
+        SoundFXManager.instance.PlaySoundFXClip(healSound, transform, 1f);
         if (playerHealth < maxHealth)
         {
             playerHealth += healAmount;
@@ -51,6 +56,7 @@ public class PlayerHealth : MonoBehaviour
     }
     public void Death()
     {
+        SoundFXManager.instance.PlaySoundFXClip(deathSound, transform, 1f);
         isDead = true;
         deathScreenContainer.SetActive(true);
         eventSystem.SetSelectedGameObject(deathButton);

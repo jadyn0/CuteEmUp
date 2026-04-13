@@ -118,6 +118,7 @@ MonoBehaviour:
   overloadAmount: 4
   scoreAmount: 100
   hasHitAnimation: 1
+  damageSound: {fileID: 8300000, guid: e5267d0a688f5e34f9969fcee2f369ab, type: 3}
 --- !u!114 &2114686745484769090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,6 +145,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   butterflyGrace: 0
+  shootSound: {fileID: 8300000, guid: f5fc24e88f7e1264aa4ce16a2c603cd6, type: 3}
 --- !u!61 &4226662103499762494
 BoxCollider2D:
   m_ObjectHideFlags: 0

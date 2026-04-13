@@ -230,6 +230,7 @@ MonoBehaviour:
   transform: {fileID: 0}
   rb: {fileID: 0}
   bottom: 0
+  chargeSound: {fileID: 8300000, guid: 947261cf722972e4f8520ac4cb2f9922, type: 3}
 --- !u!1102 &-4693031076220517358
 AnimatorState:
   serializedVersion: 6
@@ -281,6 +282,7 @@ MonoBehaviour:
   direction: 0
   startPos: 0
   moveAmount: 2
+  bossBeaming: {fileID: 8300000, guid: 935ec71dfafdd9a46aee8c659062cad1, type: 3}
 --- !u!1102 &-1984880173264637327
 AnimatorState:
   serializedVersion: 6

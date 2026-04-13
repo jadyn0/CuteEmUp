@@ -118,6 +118,7 @@ MonoBehaviour:
   overloadAmount: 2
   scoreAmount: 10
   hasHitAnimation: 0
+  damageSound: {fileID: 8300000, guid: e5267d0a688f5e34f9969fcee2f369ab, type: 3}
 --- !u!114 &9062943258526764558
 MonoBehaviour:
   m_ObjectHideFlags: 0

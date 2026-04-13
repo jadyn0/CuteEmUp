@@ -21,6 +21,9 @@ public class BossHealth : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
+    public AudioClip damageSound;
+    public AudioClip deathSound;
+
     private void Start()
     {
         GameObject bar = GameObject.FindGameObjectWithTag("Overload");
@@ -33,6 +36,7 @@ public class BossHealth : MonoBehaviour
     }
     public void Hit(float damage, Vector3 bulletPosition)
     {
+        SoundFXManager.instance.PlaySoundFXClip(damageSound, transform, 1f);
         ExplosionScript newExplosion = Instantiate(damageExplosion, bulletPosition + new Vector3(0, 0, -5 ), Quaternion.identity);
         StartCoroutine(HitFlash());
         overload.Increase(overloadAmount);
@@ -60,6 +64,7 @@ public class BossHealth : MonoBehaviour
 
     private void Die()
     {
+        SoundFXManager.instance.PlaySoundFXClip(deathSound, transform, 1f);
         score.Increase(scoreAmount);
         ExplosionScript newExplosion = Instantiate(deathExplosion, transform.position, Quaternion.identity);
         Destroy(gameObject);

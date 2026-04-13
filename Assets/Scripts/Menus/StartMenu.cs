@@ -15,6 +15,9 @@ public class StartMenu : MonoBehaviour
     public GameObject playerOptions;
     public GameObject playerOptionsButton;
 
+    public GameObject controls;
+    public GameObject controlsButton;
+
     public GameObject skinSelect;
     public GameObject skinSelectButton;
 
@@ -24,14 +27,17 @@ public class StartMenu : MonoBehaviour
     private bool isPlayerOptions;
     private bool isSkinSelect;
     private bool isDifficultySelect;
+    private bool isControls;
 
     EventSystem eventSystem;
     InputAction pauseAction;
 
-    public string lastScene;
+    public AudioClip buttonSound;
+    public AudioClip menuMusic;
 
     void Start()
     {
+        MusicManager.instance.playMusic(menuMusic, 1f);
         pauseAction = InputSystem.actions.FindAction("Cancel");
         eventSystem = EventSystem.current;
     }
@@ -51,6 +57,10 @@ public class StartMenu : MonoBehaviour
             if (isPlayerOptions)
             {
                 unPlayerOptions();
+            }
+            else if (isControls)
+            {
+                unControls();
             }
             else if (isSkinSelect)
             {
@@ -72,6 +82,14 @@ public class StartMenu : MonoBehaviour
         playerOptions.SetActive(false);
         //eventSystem.SetSelectedGameObject(null);
         eventSystem.SetSelectedGameObject(skinSelectButton);
+    }
+    public void Controls()
+    {
+        isControls = true;
+        controls.SetActive(true);
+        startMenu.SetActive(false);
+        //eventSystem.SetSelectedGameObject(null);
+        eventSystem.SetSelectedGameObject(controlsButton);
     }
 
     public void Blue()
@@ -104,7 +122,6 @@ public class StartMenu : MonoBehaviour
 
     public void Easy()
     {
-        lastScene = EasySceneName;
         SceneManager.LoadScene(EasySceneName);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -112,10 +129,18 @@ public class StartMenu : MonoBehaviour
 
     public void Hard()
     {
-        lastScene = HardSceneName;
         SceneManager.LoadScene(HardSceneName);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+    }
+
+    public void unControls()
+    {
+        isControls = false;
+        controls.SetActive(false);
+        startMenu.SetActive(true);
+        //eventSystem.SetSelectedGameObject(null);
+        eventSystem.SetSelectedGameObject(startButton);
     }
 
     public void unPlayerOptions()
@@ -150,5 +175,11 @@ public class StartMenu : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+
+
+    public void PlayButtonSound()
+    {
+        SoundFXManager.instance.PlaySoundFXClip(buttonSound, transform, 1f);
     }
 }

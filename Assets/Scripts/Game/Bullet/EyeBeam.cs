@@ -11,6 +11,10 @@ public class EyeBeam : MonoBehaviour
     }
     private void Update()
     {
+        if (boss == null)
+        {
+            Destroy(gameObject);
+        }
         transform.SetPositionAndRotation(new Vector3(boss.transform.position.x, transform.position.y, 0), transform.rotation);
         if (!animator.GetBool("IsEyeBeaming"))
         {

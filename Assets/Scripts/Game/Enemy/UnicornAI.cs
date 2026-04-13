@@ -27,6 +27,8 @@ public class UnicornAI : MonoBehaviour
 
     string walkAnimation;
 
+    public AudioClip shootSound;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -129,6 +131,7 @@ public class UnicornAI : MonoBehaviour
 
     private void SummonBullet()
     {
+        SoundFXManager.instance.PlaySoundFXClip(shootSound, transform, 1f);
         EnemyBulletScript newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
         newBullet.moveDirection = -1;
         newBullet.damage = 1;

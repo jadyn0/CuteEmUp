@@ -7,7 +7,6 @@ public class PlayerMovement : MonoBehaviour
 {
     InputAction moveAction;
     public Vector2 moveValue;
-    public float playerSpeed;
     public Rigidbody2D rb;
 
     private Animator animator;
@@ -20,6 +19,20 @@ public class PlayerMovement : MonoBehaviour
     {
         moveAction = InputSystem.actions.FindAction("Move");
         animator = GetComponent<Animator>();
+
+        if (PlayerPrefs.GetInt("PlayerSkin") == 0)
+        {
+            animator.Play("Tank1Idle");
+        }
+        else
+        {
+            animator.Play("Tank2Idle");
+        }
+
+        if (PlayerPrefs.GetFloat("PlayerSpeed") == 0)
+        {
+            PlayerPrefs.SetFloat("PlayerSpeed", 4);
+        }
     }
     void Update()
     {
@@ -47,7 +60,8 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         //moves player
-        rb.linearVelocity = new Vector2 (moveValue.x * playerSpeed, 0);
+        //Debug.Log(PlayerPrefs.GetFloat("PlayerSpeed"));
+        rb.linearVelocity = new Vector2 (moveValue.x * PlayerPrefs.GetFloat("PlayerSpeed"), 0);
         //healthbar.transform.position = new Vector3((transform.position.x * healthBarMultiplier) +192, healthbar.transform.position.y, 0);
     }
 }

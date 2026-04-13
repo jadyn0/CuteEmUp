@@ -19,6 +19,8 @@ public class EnemyHealth : MonoBehaviour
     public bool hasHitAnimation;
     private SpriteRenderer spriteRenderer;
 
+    public AudioClip damageSound;
+
     private void Start()
     {
         GameObject bar = GameObject.FindGameObjectWithTag("Overload");
@@ -30,6 +32,7 @@ public class EnemyHealth : MonoBehaviour
     }
     public void Hit(float damage, bool canDropHealth, Vector3 bulletPosition)
     {
+        SoundFXManager.instance.PlaySoundFXClip(damageSound, transform, 1f);
         if (hasHitAnimation)
         {
             ExplosionScript newExplosion = Instantiate(damageExplosion, bulletPosition + new Vector3(0, 0, -5 ), Quaternion.identity);

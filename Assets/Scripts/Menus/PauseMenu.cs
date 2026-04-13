@@ -18,6 +18,8 @@ public class PauseMenu : MonoBehaviour
     InputAction pauseAction;
     public PlayerHealth playerHealth;
 
+    public AudioClip buttonSound;
+
     void Start()
     {
         pauseAction = InputSystem.actions.FindAction("Cancel");
@@ -87,5 +89,10 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         Time.timeScale = 1;
+    }
+
+    public void PlayButtonSound()
+    {
+        SoundFXManager.instance.PlaySoundFXClip(buttonSound, transform, 1f);
     }
 }

@@ -3,10 +3,12 @@ using UnityEngine.InputSystem;
 using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class WaveController : MonoBehaviour
 {
     public int waveCount;
+    public bool isLevelComplete;
     public bool isWaveHappening;
     public GameObject[] wavesList;
     public GameObject levelBlock;
@@ -24,9 +26,24 @@ public class WaveController : MonoBehaviour
 
     public GameObject levelComplete;
 
+    public AudioClip LevelCompleteSound;
+    public AudioClip LevelStartSound;
+
+    public AudioClip levelMusic;
+    public bool hasLevelMusic;
+
 
     void Start()
     {
+        if (hasLevelMusic)
+        {
+            MusicManager.instance.playMusic(levelMusic, 1f);
+        }
+        if (LevelStartSound != null)
+        {
+            SoundFXManager.instance.PlaySoundFXClip(LevelStartSound, transform, 1f);
+        }
+        
         if (isNewBackground)
         {
             background.sprite = backgroundImage;
@@ -55,10 +72,11 @@ public class WaveController : MonoBehaviour
                 }
             }
         }
-        else
+        else if (!isLevelComplete)
         {
             //start next level and deactivate all the script in current one
             StartCoroutine(LevelComplete());
+            isLevelComplete = true;
         }
     }
 
@@ -77,6 +95,7 @@ public class WaveController : MonoBehaviour
 
     IEnumerator LevelComplete()
     {
+        SoundFXManager.instance.PlaySoundFXClip(LevelCompleteSound, transform, 1f);
         yield return new WaitForSeconds(0.5f);
         levelComplete.SetActive(true);
         StartCoroutine(StartNextLevel());

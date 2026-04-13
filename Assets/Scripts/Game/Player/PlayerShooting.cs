@@ -23,11 +23,26 @@ public class PlayerShooting : MonoBehaviour
     private Animator animator;
 
     public float shootOffsetY;
+    private string shootAnimation;
+    private string bombAnimation;
     void Start()
     {
         shootAction = InputSystem.actions.FindAction("Attack");
         spShootAction = InputSystem.actions.FindAction("SpAttack");
         animator = GetComponent<Animator>();
+
+        if (PlayerPrefs.GetInt("PlayerSkin") == 0)
+        {
+            animator.Play("Turret1Idle");
+            shootAnimation = "Turret1Shoot";
+            bombAnimation = "Turret1Bomb";
+        }
+        else
+        {
+            animator.Play("Turret2Idle");
+            shootAnimation = "Turret2Shoot";
+            bombAnimation = "Turret2Bomb";
+        }
     }
     void Update()
     {
@@ -70,7 +85,7 @@ public class PlayerShooting : MonoBehaviour
     //spawn in the bullet
     private void Shoot()
     {
-        animator.Play("Turret1Shoot");
+        animator.Play(shootAnimation);
         BulletScript newBullet = Instantiate(bullet, (transform.position + new Vector3(0, shootOffsetY, 1)), Quaternion.identity);
         newBullet.moveDirection = 1;
     }
@@ -91,7 +106,7 @@ public class PlayerShooting : MonoBehaviour
 
     private void OverloadBomb()
     {
-        animator.Play("Turret1Shoot");
+        animator.Play(bombAnimation);
         SpBulletScript newBullet = Instantiate(spBullet, (transform.position + new Vector3(0, shootOffsetY, 1)), Quaternion.identity);
         newBullet.moveDirection = 1;
     }

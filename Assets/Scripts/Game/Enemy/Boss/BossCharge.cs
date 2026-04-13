@@ -7,12 +7,13 @@ public class BossCharge : StateMachineBehaviour
     public Transform transform;
     public Rigidbody2D rb;
     public bool bottom = false;
-    
+
+    public AudioClip chargeSound;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+        SoundFXManager.instance.PlaySoundFXClip(chargeSound, transform, 1f);
         transform = animator.GetComponent<Transform>();
         rb = animator.GetComponent<Rigidbody2D>();
 

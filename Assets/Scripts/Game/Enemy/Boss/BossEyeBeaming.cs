@@ -10,8 +10,11 @@ public class BossEyeBeaming : StateMachineBehaviour
 
     public float startPos;
     public float moveAmount;
+
+    public AudioClip bossBeaming;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        SoundFXManager.instance.PlaySoundFXClip(bossBeaming, transform, 1f);
         transform = animator.GetComponent<Transform>();
         EyeBeam beam = Instantiate(eyeBeam, (transform.position + new Vector3(0, beamOffsetY, -1)), Quaternion.identity);
         beam.boss = animator.GetComponent<Boss>();
