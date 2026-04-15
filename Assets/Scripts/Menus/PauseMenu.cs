@@ -93,6 +93,10 @@ public class PauseMenu : MonoBehaviour
 
     public void PlayButtonSound()
     {
-        SoundFXManager.instance.PlaySoundFXClip(buttonSound, transform, 1f);
+        if (SoundFXManager.instance != null)
+        {
+            SoundFXManager.instance.PlaySoundFXClip(buttonSound, transform, 1f);
+        }
+        
     }
 }

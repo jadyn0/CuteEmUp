@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //moves healthbar
-        healthbar.transform.position = new Vector3((transform.position.x * healthBarMultiplier) + 200, healthbar.transform.position.y, 0);
+        //healthbar.transform.position = new Vector3((transform.position.x * healthBarMultiplier) + 200, healthbar.transform.position.y, 0);
     }
 
     void FixedUpdate()

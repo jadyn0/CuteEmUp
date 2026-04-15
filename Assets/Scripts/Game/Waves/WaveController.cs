@@ -36,11 +36,11 @@ public class WaveController : MonoBehaviour
 
     void Start()
     {
-        if (hasLevelMusic)
+        if (hasLevelMusic && MusicManager.instance != null)
         {
             MusicManager.instance.playMusic(levelMusic, musicVolume);
         }
-        if (LevelStartSound != null)
+        if (LevelStartSound != null && SoundFXManager.instance != null)
         {
             SoundFXManager.instance.PlaySoundFXClip(LevelStartSound, transform, 1f);
         }
