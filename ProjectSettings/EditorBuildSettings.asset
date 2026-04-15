@@ -12,11 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/HardScene.unity
     guid: 7069d099e498d3641a3adf34866c8c52
   - enabled: 1
-    path: Assets/Scenes/DeathScene.unity
-    guid: a10899cc8a7154cda8d65c7acf682ae6
-  - enabled: 1
     path: Assets/Scenes/EasyScene.unity
-    guid: 407256ec49ac74def8b0749cb725370b
+    guid: cd5021c9d5de1344fb113fd4b8db9621
+  - enabled: 1
+    path: Assets/Scenes/PvPScene.unity
+    guid: a0ae7b4657cfdf548a9b6139e273f027
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 3834b1fc8a980b743822a0b76ebbd44d, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
