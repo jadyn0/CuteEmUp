@@ -37,6 +37,7 @@ public class StartMenu : MonoBehaviour
 
     void Start()
     {
+        PlayerPrefs.DeleteAll();
         MusicManager.instance.playMusic(menuMusic, 1f);
         pauseAction = InputSystem.actions.FindAction("Cancel");
         eventSystem = EventSystem.current;

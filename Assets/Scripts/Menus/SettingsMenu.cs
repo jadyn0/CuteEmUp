@@ -10,7 +10,7 @@ public class SettingsMenu : MonoBehaviour
     public Dropdown resolutionDropdown;
     public Dropdown languages;
     public Toggle autoFireToggle;
-    public bool toggleMusic;
+    public Toggle screenShakeToggle;
     Resolution[] resolutions;
 
     public Slider speedSlider;
@@ -23,16 +23,18 @@ public class SettingsMenu : MonoBehaviour
 
     void Start()
     {
-        autoFireToggle.isOn = PlayerPrefs.GetInt("AutoFire") == 1 ? true : false;
-        speedSlider.value = PlayerPrefs.GetFloat("PlayerSpeed");
+        autoFireToggle.isOn = PlayerPrefs.GetInt("AutoFire", 0) == 1 ? true : false;
+        speedSlider.value = PlayerPrefs.GetFloat("PlayerSpeed", 4);
 
-        masterSlider.value = PlayerPrefs.GetFloat("MasterVolume", 0);
+        screenShakeToggle.isOn = PlayerPrefs.GetInt("ScreenShake", 1) == 1 ? true : false;
+
+        masterSlider.value = PlayerPrefs.GetFloat("MasterVolume", 1);
         Mixer.SetFloat("MasterVolume", Mathf.Log10(PlayerPrefs.GetFloat("MasterVolume")) * 20f);
 
-        musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 0);
+        musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 1);
         Mixer.SetFloat("MusicVolume", Mathf.Log10(PlayerPrefs.GetFloat("MusicVolume")) * 20f);
 
-        SFXSlider.value = PlayerPrefs.GetFloat("SFXVolume", 0);
+        SFXSlider.value = PlayerPrefs.GetFloat("SFXVolume", 1);
         Mixer.SetFloat("SFXVolume", Mathf.Log10(PlayerPrefs.GetFloat("SFXVolume")) * 20f);
     }
 
@@ -60,6 +62,11 @@ public class SettingsMenu : MonoBehaviour
     public void SetAutoFire(bool isAutoFire)
     {
         PlayerPrefs.SetInt("AutoFire", isAutoFire ? 1 : 0);
+    }
+
+    public void SetScreenShake(bool isScreenShake)
+    {
+        PlayerPrefs.SetInt("ScreenShake", isScreenShake ? 1 : 0);
     }
 
     public void Back()

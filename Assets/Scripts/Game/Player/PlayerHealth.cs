@@ -30,7 +30,11 @@ public class PlayerHealth : MonoBehaviour
     public void Hit(float damage)
     {
         SoundFXManager.instance.PlaySoundFXClip(hurtSound, transform, 1f);
-        cameraShake.StartShake(0.3f);
+        if (PlayerPrefs.GetInt("ScreenShake", 1) == 1 ? true : false)
+        {
+            cameraShake.StartShake(0.3f);
+        }
+        
         playerHealth -= damage;
 
         healthbar.SetHealth(playerHealth, maxHealth);
