@@ -22,6 +22,11 @@ public class Boss : MonoBehaviour
     public AudioClip bossSpit;
     public AudioClip bossSummon;
 
+    public float spitDamage = 4;
+    public float collisionDamage = 6;
+    public float beamDamage = 11;
+    public float beamMovementSpeed = 4.5f;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -33,7 +38,7 @@ public class Boss : MonoBehaviour
         SoundFXManager.instance.PlaySoundFXClip(bossSpit, transform, 1f);
         EnemyBulletScript newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
         newBullet.moveDirection = -1;
-        newBullet.damage = 4;
+        newBullet.damage = spitDamage;
         newBullet.bulletSpeed = bulletSpeed;
     }
     public void SummonButterfly(float offsetX)
@@ -58,7 +63,7 @@ public class Boss : MonoBehaviour
         {
             rb.linearVelocityY = 0;
             PlayerHealth player = collision.gameObject.GetComponent<PlayerHealth>();
-            player.Hit(6);
+            player.Hit(collisionDamage);
         }
     }
 

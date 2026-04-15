@@ -4,8 +4,8 @@ public class BossEyeBeaming : StateMachineBehaviour
 {
     public EyeBeam eyeBeam;
     public Transform transform;
+    public Boss boss;
     public float beamOffsetY;
-    public float speed;
     public float direction;
 
     public float startPos;
@@ -14,13 +14,15 @@ public class BossEyeBeaming : StateMachineBehaviour
     public AudioClip bossBeaming;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        boss = animator.GetComponent<Boss>();
         SoundFXManager.instance.PlaySoundFXClip(bossBeaming, transform, 1f);
         transform = animator.GetComponent<Transform>();
         EyeBeam beam = Instantiate(eyeBeam, (transform.position + new Vector3(0, beamOffsetY, -1)), Quaternion.identity);
         beam.boss = animator.GetComponent<Boss>();
         beam.animator = animator;
+        beam.damage = boss.beamDamage;
 
-        startPos = transform.position.x;
+    startPos = transform.position.x;
         if (transform.position.x >= 0)
         {
             direction = -1;
@@ -48,7 +50,7 @@ public class BossEyeBeaming : StateMachineBehaviour
                 animator.SetBool("IsEyeBeaming", false);
             }
         }
-        transform.Translate(speed * direction * Time.deltaTime, 0, 0);
+        transform.Translate(boss.beamMovementSpeed * direction * Time.deltaTime, 0, 0);
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

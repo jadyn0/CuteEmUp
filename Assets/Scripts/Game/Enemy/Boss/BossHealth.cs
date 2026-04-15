@@ -15,9 +15,16 @@ public class BossHealth : MonoBehaviour
     public Score score;
     public float overloadAmount;
     public int scoreAmount;
+
     public bool isBelow50;
     public bool isBelow30;
+
     public float resistance = 1;
+    public float resistance50 = 0.5f;
+    public float resistance30 = 0.2f;
+
+    public float delay50 = 0.5f;
+    public float delay30 = 0.3f;
 
     private SpriteRenderer spriteRenderer;
 
@@ -45,15 +52,15 @@ public class BossHealth : MonoBehaviour
         if (health/maxHealth <= 0.5 && !isBelow50)
         {
             isBelow50 = true;
-            resistance = 0.5f;
-            boss.delayUpperBound = boss.delayUpperBound * 0.5f;
+            resistance = resistance50;
+            boss.delayUpperBound = boss.delayUpperBound * delay50;
             StartCoroutine(SpawnHealth());
         }
         if (health / maxHealth <= 0.30 && !isBelow30)
         {
             isBelow30 = true;
-            resistance = 0.2f;
-            boss.delayUpperBound = boss.delayUpperBound * 0.3f;
+            resistance = resistance30;
+            boss.delayUpperBound = boss.delayUpperBound * delay30;
             StartCoroutine(SpawnHealth());
         }
         if (health <= 0)

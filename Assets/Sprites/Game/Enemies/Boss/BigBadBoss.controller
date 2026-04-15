@@ -277,8 +277,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   eyeBeam: {fileID: -8056352690706960281, guid: a82061f34c7d3d543a68aa8f176eb0c3, type: 3}
   transform: {fileID: 0}
+  boss: {fileID: 0}
   beamOffsetY: 0
-  speed: 4.5
   direction: 0
   startPos: 0
   moveAmount: 2

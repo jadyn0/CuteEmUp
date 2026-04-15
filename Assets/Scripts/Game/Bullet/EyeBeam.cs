@@ -5,6 +5,8 @@ public class EyeBeam : MonoBehaviour
     Rigidbody2D rb;
     public Boss boss;
     public Animator animator;
+
+    public float damage = 11;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -27,7 +29,7 @@ public class EyeBeam : MonoBehaviour
         {
             rb.linearVelocityY = 0;
             PlayerHealth player = collision.gameObject.GetComponent<PlayerHealth>();
-            player.Hit(11);
+            player.Hit(damage);
         }
     }
 }
