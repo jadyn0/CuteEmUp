@@ -31,13 +31,14 @@ public class WaveController : MonoBehaviour
 
     public AudioClip levelMusic;
     public bool hasLevelMusic;
+    public float musicVolume = 1f;
 
 
     void Start()
     {
         if (hasLevelMusic)
         {
-            MusicManager.instance.playMusic(levelMusic, 1f);
+            MusicManager.instance.playMusic(levelMusic, musicVolume);
         }
         if (LevelStartSound != null)
         {

@@ -4579,6 +4579,7 @@ MonoBehaviour:
   LevelStartSound: {fileID: 8300000, guid: bf098df030c1cf940978271fba21bea2, type: 3}
   levelMusic: {fileID: 0}
   hasLevelMusic: 0
+  musicVolume: 1
 --- !u!224 &295500525
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8991,6 +8992,7 @@ MonoBehaviour:
   LevelStartSound: {fileID: 0}
   levelMusic: {fileID: 8300000, guid: 5eb98e4f51a198047bf20f0251a61b71, type: 3}
   hasLevelMusic: 1
+  musicVolume: 2
 --- !u!224 &587542381
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22404,6 +22406,7 @@ MonoBehaviour:
   LevelStartSound: {fileID: 8300000, guid: bf098df030c1cf940978271fba21bea2, type: 3}
   levelMusic: {fileID: 8300000, guid: 28336175e45f11143bb3cfc695983a72, type: 3}
   hasLevelMusic: 1
+  musicVolume: 1
 --- !u!224 &1626215706
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23552,6 +23555,7 @@ MonoBehaviour:
   LevelStartSound: {fileID: 8300000, guid: bf098df030c1cf940978271fba21bea2, type: 3}
   levelMusic: {fileID: 0}
   hasLevelMusic: 0
+  musicVolume: 1
 --- !u!224 &1703966682
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28830,6 +28834,7 @@ MonoBehaviour:
   LevelStartSound: {fileID: 8300000, guid: bf098df030c1cf940978271fba21bea2, type: 3}
   levelMusic: {fileID: 0}
   hasLevelMusic: 0
+  musicVolume: 1
 --- !u!224 &2024384197
 RectTransform:
   m_ObjectHideFlags: 0
@@ -29262,6 +29267,7 @@ MonoBehaviour:
   LevelStartSound: {fileID: 8300000, guid: bf098df030c1cf940978271fba21bea2, type: 3}
   levelMusic: {fileID: 0}
   hasLevelMusic: 0
+  musicVolume: 1
 --- !u!224 &2052407672
 RectTransform:
   m_ObjectHideFlags: 0
