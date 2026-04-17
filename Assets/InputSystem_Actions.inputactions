@@ -131,6 +131,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Player1SpAttack",
+                    "type": "Button",
+                    "id": "3c7dd7df-9243-4296-b738-d701891333c6",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Player2SpAttack",
+                    "type": "Button",
+                    "id": "c4773d7a-ef90-417d-ae31-b15c1db2fa15",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -664,34 +682,12 @@
                 },
                 {
                     "name": "",
-                    "id": "37b81589-bbaa-4870-9014-80c6983d942a",
-                    "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Player1Attack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "6c107814-92f6-4e78-bd2d-9516fafcff4c",
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Player1Attack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "912adee5-e583-4bd6-8158-89adfe60222e",
-                    "path": "<Keyboard>/downArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Player2Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -736,6 +732,28 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "SpAttack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3d603226-cc7c-4354-a4da-c6e824b6f756",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Player1SpAttack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b0b169b7-e9e6-46e7-814c-ada60cf7ee70",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Player2SpAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

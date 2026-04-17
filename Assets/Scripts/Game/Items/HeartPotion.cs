@@ -30,7 +30,7 @@ public class HeartPotion : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag(playerTag))
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Player2"))
         {
             player = collision.gameObject.GetComponent<PlayerHealth>();
             player.Heal(healAmount);

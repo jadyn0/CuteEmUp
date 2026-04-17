@@ -25,7 +25,7 @@ public class EyeBeam : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Player2"))
         {
             rb.linearVelocityY = 0;
             PlayerHealth player = collision.gameObject.GetComponent<PlayerHealth>();

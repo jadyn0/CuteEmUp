@@ -6,33 +6,41 @@ using Unity.VisualScripting;
 public class PlayerMovement : MonoBehaviour
 {
     InputAction moveAction;
+    public string inputs = "Move";
+
     public Vector2 moveValue;
     public Rigidbody2D rb;
 
     private Animator animator;
+    public bool hasSetAnimations = false;
+    public string idleAnimation;
 
     public PauseMenu pauseMenu;
     public HealthBar healthbar;
 
     public float healthBarMultiplier;
+
+    
     void Start()
     {
-        moveAction = InputSystem.actions.FindAction("Move");
+        moveAction = InputSystem.actions.FindAction(inputs);
         animator = GetComponent<Animator>();
-
-        if (PlayerPrefs.GetInt("PlayerSkin") == 0)
+        if (hasSetAnimations)
         {
-            animator.Play("Tank1Idle");
+            animator.Play(idleAnimation);
         }
         else
         {
-            animator.Play("Tank2Idle");
+            if (PlayerPrefs.GetInt("PlayerSkin") == 0)
+            {
+                animator.Play("Tank1Idle");
+            }
+            else
+            {
+                animator.Play("Tank2Idle");
+            }
         }
-
-        if (PlayerPrefs.GetFloat("PlayerSpeed") == 0)
-        {
-            PlayerPrefs.SetFloat("PlayerSpeed", 4);
-        }
+        
     }
     void Update()
     {

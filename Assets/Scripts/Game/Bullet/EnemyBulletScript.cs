@@ -36,9 +36,9 @@ public class EnemyBulletScript : MonoBehaviour
         if (collision.gameObject.CompareTag(bottomTag)) 
         { 
             Destroy(gameObject);
-        } 
+        }
 
-        if (collision.gameObject.CompareTag(playerTag))
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Player2"))
         {
             player = collision.gameObject.GetComponent<PlayerHealth>();
             player.Hit(damage);

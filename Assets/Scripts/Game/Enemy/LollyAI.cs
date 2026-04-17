@@ -26,7 +26,7 @@ public class LollyAI : MonoBehaviour
     {
         health = gameObject.GetComponent<EnemyHealth>();
         animator = GetComponent<Animator>();
-        playerObject = GameObject.FindGameObjectsWithTag("Player");
+        playerObject = GameObject.FindGameObjectsWithTag(playerTag);
 
         if (transform.parent.parent.tag == "Level1")
         {
@@ -90,7 +90,7 @@ public class LollyAI : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag(playerTag))
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Player2"))
         {
             player = collision.gameObject.GetComponent<PlayerHealth>();
             player.Hit(3);

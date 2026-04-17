@@ -13,6 +13,8 @@ public class EnemyHealth : MonoBehaviour
     public HeartPotion heartPotion;
     public CutenessOverload overload;
     public Score score;
+    public string overloadTag = "Overload";
+    public string scoreTag = "Score";
     public float overloadAmount;
     public int scoreAmount;
 
@@ -23,11 +25,11 @@ public class EnemyHealth : MonoBehaviour
 
     private void Start()
     {
-        GameObject bar = GameObject.FindGameObjectWithTag("Overload");
+        GameObject bar = GameObject.FindGameObjectWithTag(overloadTag);
         overload = bar.gameObject.GetComponent<CutenessOverload>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 
-        GameObject scoreObject = GameObject.FindGameObjectWithTag("Score"); ;
+        GameObject scoreObject = GameObject.FindGameObjectWithTag(scoreTag); ;
         score = scoreObject.GetComponent<Score>();
     }
     public void Hit(float damage, bool canDropHealth, Vector3 bulletPosition)

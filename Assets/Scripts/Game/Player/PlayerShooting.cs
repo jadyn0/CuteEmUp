@@ -6,6 +6,9 @@ public class PlayerShooting : MonoBehaviour
 {
     InputAction shootAction;
     InputAction spShootAction;
+    public string shootString = "Attack";
+    public string spShootString = "SpAttack";
+
     public BulletScript bullet;
     public SpBulletScript spBullet;
 
@@ -19,29 +22,40 @@ public class PlayerShooting : MonoBehaviour
     public PauseMenu pauseMenu;
     public CutenessOverload overload;
 
-    public bool isShooting;
-    private Animator animator;
-
     public float shootOffsetY;
-    private string shootAnimation;
-    private string bombAnimation;
+    public bool isShooting;
+
+    private Animator animator;
+    public bool hasSetAnimations = false;
+    public string idleAnimation;
+    public string shootAnimation;
+    public string bombAnimation;
+
+    
+    
     void Start()
     {
-        shootAction = InputSystem.actions.FindAction("Attack");
-        spShootAction = InputSystem.actions.FindAction("SpAttack");
+        shootAction = InputSystem.actions.FindAction(shootString);
+        spShootAction = InputSystem.actions.FindAction(spShootString);
         animator = GetComponent<Animator>();
-
-        if (PlayerPrefs.GetInt("PlayerSkin") == 0)
+        if (!hasSetAnimations)
         {
-            animator.Play("Turret1Idle");
-            shootAnimation = "Turret1Shoot";
-            bombAnimation = "Turret1Bomb";
+            if (PlayerPrefs.GetInt("PlayerSkin") == 0)
+            {
+                animator.Play("Turret1Idle");
+                shootAnimation = "Turret1Shoot";
+                bombAnimation = "Turret1Bomb";
+            }
+            else
+            {
+                animator.Play("Turret2Idle");
+                shootAnimation = "Turret2Shoot";
+                bombAnimation = "Turret2Bomb";
+            }
         }
         else
         {
-            animator.Play("Turret2Idle");
-            shootAnimation = "Turret2Shoot";
-            bombAnimation = "Turret2Bomb";
+            animator.Play(idleAnimation);
         }
     }
     void Update()

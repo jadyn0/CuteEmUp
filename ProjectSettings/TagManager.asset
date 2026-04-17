@@ -20,6 +20,9 @@ TagManager:
   - Level4
   - Level5
   - LevelBoss
+  - Player2
+  - Overload2
+  - Score2
   layers:
   - Default
   - TransparentFX
