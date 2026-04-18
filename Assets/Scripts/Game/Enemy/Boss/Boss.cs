@@ -31,6 +31,9 @@ public class Boss : MonoBehaviour
     public float boundR = 3.5f;
     public float speed = 2;
 
+    public float center = 0;
+    public float moveAmount = 2;
+
     void Start()
     {
         animator = GetComponent<Animator>();

@@ -7,6 +7,7 @@ public class BossEyeBeaming : StateMachineBehaviour
     public Boss boss;
     public float beamOffsetY;
     public float direction;
+    private float center;
 
     public float startPos;
     public float moveAmount;
@@ -21,9 +22,11 @@ public class BossEyeBeaming : StateMachineBehaviour
         beam.boss = animator.GetComponent<Boss>();
         beam.animator = animator;
         beam.damage = boss.beamDamage;
+        center = boss.center;
+        moveAmount = boss.moveAmount;
 
     startPos = transform.position.x;
-        if (transform.position.x >= 0)
+        if (transform.position.x >= center)
         {
             direction = -1;
         }

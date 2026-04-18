@@ -71,6 +71,13 @@ public class BossHealth : MonoBehaviour
 
     private void Die()
     {
+        foreach (Transform child in transform.parent)
+        {
+            if (child.gameObject.tag != "Boss")
+            {
+                Destroy(child.gameObject);
+            }
+        }
         SoundFXManager.instance.PlaySoundFXClip(deathSound, transform, 1f);
         score.Increase(scoreAmount);
         ExplosionScript newExplosion = Instantiate(deathExplosion, transform.position, Quaternion.identity);

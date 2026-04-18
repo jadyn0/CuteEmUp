@@ -1298,6 +1298,10 @@ MonoBehaviour:
   collisionDamage: 5
   beamDamage: 10
   beamMovementSpeed: 4.5
+  boundL: -3.5
+  boundR: 3.5
+  speed: 2
+  center: 0
 --- !u!114 &97850015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1728,17 +1732,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.8}
+  m_Offset: {x: 0.006044209, y: -0.7304906}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4, y: 2.4375}
+    oldSize: {x: 3.8125, y: 2.40625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3, y: 0.837}
+  m_Size: {x: 3.7736697, y: 0.69798124}
   m_EdgeRadius: 0
 --- !u!212 &123030206
 SpriteRenderer:
@@ -1789,7 +1793,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 9c7e05a11fc4032419a8f1967ba18c8b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b70f56c4288876a499af85bfa33dd598, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1813,7 +1817,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WaveBlockScript
   explosion: {fileID: 6527346302063952371, guid: c0e7dffb2c91aae49b4004a4f771f98d, type: 3}
   waveController: {fileID: 2024384196}
+  pvpWaveController: {fileID: 0}
   destroySound: {fileID: 8300000, guid: e5267d0a688f5e34f9969fcee2f369ab, type: 3}
+  isMultiplayer: 0
 --- !u!1 &135193061
 GameObject:
   m_ObjectHideFlags: 0
@@ -2845,8 +2851,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -102.56}
-  m_SizeDelta: {x: 106, y: 17}
+  m_AnchoredPosition: {x: -100, y: -128.2}
+  m_SizeDelta: {x: 145, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &222025632
 MonoBehaviour:
@@ -2868,7 +2874,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c3940fa37f7e8db42966f5db2bbc60e7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ddf9a5f48f71fd8469d4bd0d220ff7d5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6967,17 +6973,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.8}
+  m_Offset: {x: 0, y: -0.70933557}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4, y: 2.4375}
+    oldSize: {x: 3.8125, y: 2.40625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3, y: 0.837}
+  m_Size: {x: 3.78, y: 0.6556711}
   m_EdgeRadius: 0
 --- !u!212 &559742162
 SpriteRenderer:
@@ -7028,7 +7034,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 9c7e05a11fc4032419a8f1967ba18c8b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b70f56c4288876a499af85bfa33dd598, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7052,7 +7058,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WaveBlockScript
   explosion: {fileID: 6527346302063952371, guid: c0e7dffb2c91aae49b4004a4f771f98d, type: 3}
   waveController: {fileID: 587542380}
+  pvpWaveController: {fileID: 0}
   destroySound: {fileID: 8300000, guid: e5267d0a688f5e34f9969fcee2f369ab, type: 3}
+  isMultiplayer: 0
 --- !u!1001 &562446837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8013,7 +8021,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3a9016e75d1c5be49ad4cb671e47157e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: da7615f314947f74dae404920149ca3e, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9688,17 +9696,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.8}
+  m_Offset: {x: 0.0030221343, y: -0.70631343}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4, y: 2.4375}
+    oldSize: {x: 3.8125, y: 2.40625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3, y: 0.837}
+  m_Size: {x: 3.779714, y: 0.64962685}
   m_EdgeRadius: 0
 --- !u!212 &826020497
 SpriteRenderer:
@@ -9749,7 +9757,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 9c7e05a11fc4032419a8f1967ba18c8b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b70f56c4288876a499af85bfa33dd598, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9773,7 +9781,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WaveBlockScript
   explosion: {fileID: 6527346302063952371, guid: c0e7dffb2c91aae49b4004a4f771f98d, type: 3}
   waveController: {fileID: 1703966681}
+  pvpWaveController: {fileID: 0}
   destroySound: {fileID: 8300000, guid: e5267d0a688f5e34f9969fcee2f369ab, type: 3}
+  isMultiplayer: 0
 --- !u!1001 &836799142
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10628,17 +10638,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.8}
+  m_Offset: {x: 0, y: -0.70631343}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4, y: 2.4375}
+    oldSize: {x: 3.8125, y: 2.40625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3, y: 0.837}
+  m_Size: {x: 3.779714, y: 0.64962685}
   m_EdgeRadius: 0
 --- !u!212 &924441590
 SpriteRenderer:
@@ -10689,7 +10699,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 9c7e05a11fc4032419a8f1967ba18c8b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b70f56c4288876a499af85bfa33dd598, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10728,7 +10738,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WaveBlockScript
   explosion: {fileID: 6527346302063952371, guid: c0e7dffb2c91aae49b4004a4f771f98d, type: 3}
   waveController: {fileID: 1626215705}
+  pvpWaveController: {fileID: 0}
   destroySound: {fileID: 8300000, guid: e5267d0a688f5e34f9969fcee2f369ab, type: 3}
+  isMultiplayer: 0
 --- !u!1 &931143070
 GameObject:
   m_ObjectHideFlags: 0
@@ -13487,7 +13499,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.1, y: 0}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1215064531
@@ -15406,17 +15418,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.8}
+  m_Offset: {x: -0.000000059604645, y: -0.70933557}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4, y: 2.4375}
+    oldSize: {x: 3.8125, y: 2.40625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3, y: 0.837}
+  m_Size: {x: 3.7615814, y: 0.6556711}
   m_EdgeRadius: 0
 --- !u!212 &1358101331
 SpriteRenderer:
@@ -15467,7 +15479,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 9c7e05a11fc4032419a8f1967ba18c8b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b70f56c4288876a499af85bfa33dd598, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -15491,7 +15503,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WaveBlockScript
   explosion: {fileID: 6527346302063952371, guid: c0e7dffb2c91aae49b4004a4f771f98d, type: 3}
   waveController: {fileID: 2052407671}
+  pvpWaveController: {fileID: 0}
   destroySound: {fileID: 8300000, guid: e5267d0a688f5e34f9969fcee2f369ab, type: 3}
+  isMultiplayer: 0
 --- !u!1001 &1365396332
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15943,6 +15957,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9cc8b40e1e764183a8011a3ba6d733a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerShooting
+  shootString: Attack
+  spShootString: SpAttack
   bullet: {fileID: 3363323819045999680, guid: 32798ce39e425426aa985c1644006314, type: 3}
   spBullet: {fileID: -1754573828723655802, guid: bd7fbe8c6b633754d9a5f6b4292606a8, type: 3}
   shootDelay: 0.25
@@ -15952,8 +15968,12 @@ MonoBehaviour:
   storedShoot: 0
   pauseMenu: {fileID: 1631012598}
   overload: {fileID: 1762486572}
-  isShooting: 0
   shootOffsetY: 0.5
+  isShooting: 0
+  hasSetAnimations: 0
+  idleAnimation: 
+  shootAnimation: 
+  bombAnimation: 
 --- !u!1 &1393600860
 GameObject:
   m_ObjectHideFlags: 0
@@ -17101,17 +17121,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.8}
+  m_Offset: {x: 0.0060441494, y: -0.70631343}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4, y: 2.4375}
+    oldSize: {x: 3.8125, y: 2.40625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3, y: 0.837}
+  m_Size: {x: 3.7857585, y: 0.64962685}
   m_EdgeRadius: 0
 --- !u!212 &1500027415
 SpriteRenderer:
@@ -17162,7 +17182,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 9c7e05a11fc4032419a8f1967ba18c8b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b70f56c4288876a499af85bfa33dd598, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -17186,7 +17206,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WaveBlockScript
   explosion: {fileID: 6527346302063952371, guid: c0e7dffb2c91aae49b4004a4f771f98d, type: 3}
   waveController: {fileID: 295500524}
+  pvpWaveController: {fileID: 0}
   destroySound: {fileID: 8300000, guid: e5267d0a688f5e34f9969fcee2f369ab, type: 3}
+  isMultiplayer: 0
 --- !u!1 &1500868045
 GameObject:
   m_ObjectHideFlags: 0
@@ -19887,7 +19909,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 38eaa6564ade1e440b845487cd165865, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d254978ef952b0340afb42c04d904f73, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -20275,8 +20297,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bed1f9e657a324048bcee62b8078664f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  inputs: Move
   moveValue: {x: 0, y: 0}
   rb: {fileID: 1756627203}
+  hasSetAnimations: 0
+  idleAnimation: 
   pauseMenu: {fileID: 1631012598}
   healthbar: {fileID: 222025634}
   healthBarMultiplier: 32
@@ -20455,9 +20480,14 @@ MonoBehaviour:
   deathScreenContainer: {fileID: 15720605}
   deathButton: {fileID: 557416989}
   cameraShake: {fileID: 519420033}
+  explosion: {fileID: 0}
   hurtSound: {fileID: 8300000, guid: 771bf7d1e5be8e449929a5ac84fa650b, type: 3}
   deathSound: {fileID: 8300000, guid: 579ead617450bc34d82ccd9879850ce5, type: 3}
   healSound: {fileID: 8300000, guid: eac0e3a4b603e6f4ab8b4821f4fadc2f, type: 3}
+  isMultiplayer: 0
+  otherPlayer: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  turretRenderer: {fileID: 0}
 --- !u!1 &1760929738
 GameObject:
   m_ObjectHideFlags: 0
@@ -20634,8 +20664,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.1, y: -129.2}
-  m_SizeDelta: {x: 154, y: 32}
+  m_AnchoredPosition: {x: 100, y: -123.9}
+  m_SizeDelta: {x: 146, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1762486571
 MonoBehaviour:
@@ -20731,7 +20761,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 783153cb6c079b943a51682691e9aa51, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7c3bc29010c068c4885717d04bc02a1e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
