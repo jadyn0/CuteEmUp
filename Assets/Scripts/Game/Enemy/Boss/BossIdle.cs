@@ -5,13 +5,13 @@ public class BossIdle : StateMachineBehaviour
 {
     public PauseMenu pauseMenu;
     public Boss boss;
-    public float speed;
+    private float speed;
     public float direction = -1;
     public Rigidbody2D rb;
     public Transform transform;
 
-    public float boundL;
-    public float boundR;
+    private float boundL;
+    private float boundR;
 
 
 
@@ -23,6 +23,9 @@ public class BossIdle : StateMachineBehaviour
         rb = animator.GetComponent<Rigidbody2D>();
         transform = animator.GetComponent<Transform>();
         boss = animator.GetComponent<Boss>();
+        boundL = boss.boundL;
+        boundR = boss.boundR;
+        speed = boss.speed;
         boss.Attack();
     }
 
@@ -35,11 +38,11 @@ public class BossIdle : StateMachineBehaviour
             {
                 direction = 1;
             }
-                if (transform.position.x >= boundR)
+            if (transform.position.x >= boundR)
             {
                 direction = -1;
             }
-                transform.Translate(Vector3.right * speed * direction * Time.deltaTime);
+            transform.Translate(Vector3.right * speed * direction * Time.deltaTime);
         }
         
     }

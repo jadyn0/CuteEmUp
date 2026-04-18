@@ -27,6 +27,10 @@ public class Boss : MonoBehaviour
     public float beamDamage = 11;
     public float beamMovementSpeed = 4.5f;
 
+    public float boundL = -3.5f;
+    public float boundR = 3.5f;
+    public float speed = 2;
+
     void Start()
     {
         animator = GetComponent<Animator>();

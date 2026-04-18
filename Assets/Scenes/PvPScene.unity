@@ -2798,7 +2798,7 @@ Transform:
   m_GameObject: {fileID: 97850007}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 6}
+  m_LocalPosition: {x: 1.2, y: 0, z: 6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2972,6 +2972,9 @@ MonoBehaviour:
   collisionDamage: 6
   beamDamage: 11
   beamMovementSpeed: 4.5
+  boundL: -4.32
+  boundR: -1.92
+  speed: 1.5
 --- !u!114 &97850015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3783,7 +3786,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &120343554
 Transform:
   m_ObjectHideFlags: 0
@@ -22745,7 +22748,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &866072643
 Transform:
   m_ObjectHideFlags: 0
@@ -46997,7 +47000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64dcea1a13f7d41a587a9fafd1fc5c62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossStart
-  bossHealthBar: {fileID: 996723926}
+  bossHealthBar: {fileID: 57368120}
   bossSpawn: {fileID: 8300000, guid: 1da39c94462408d49ac061f9755eadbf, type: 3}
   bossMusic: {fileID: 8300000, guid: 248465cb9d0edcb419013e46fd139023, type: 3}
 --- !u!114 &1850805628
@@ -47060,6 +47063,9 @@ MonoBehaviour:
   collisionDamage: 6
   beamDamage: 11
   beamMovementSpeed: 4.5
+  boundL: 1.92
+  boundR: 4.32
+  speed: 1.5
 --- !u!4 &1853177589 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7361645047247829808, guid: 369408206dffe4541a419ae4cc6b82e6, type: 3}
@@ -47142,7 +47148,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1860573813
 Transform:
   m_ObjectHideFlags: 0
@@ -53041,7 +53047,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2130674836
 Transform:
   m_ObjectHideFlags: 0
