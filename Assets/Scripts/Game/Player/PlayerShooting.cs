@@ -26,7 +26,7 @@ public class PlayerShooting : MonoBehaviour
     public bool isShooting;
 
     private Animator animator;
-    public bool hasSetAnimations = false;
+    public bool isMultiplayer = false;
     public string idleAnimation;
     public string shootAnimation;
     public string bombAnimation;
@@ -38,7 +38,7 @@ public class PlayerShooting : MonoBehaviour
         shootAction = InputSystem.actions.FindAction(shootString);
         spShootAction = InputSystem.actions.FindAction(spShootString);
         animator = GetComponent<Animator>();
-        if (!hasSetAnimations)
+        if (!isMultiplayer)
         {
             if (PlayerPrefs.GetInt("PlayerSkin") == 0)
             {
@@ -123,5 +123,9 @@ public class PlayerShooting : MonoBehaviour
         animator.Play(bombAnimation);
         SpBulletScript newBullet = Instantiate(spBullet, (transform.position + new Vector3(0, shootOffsetY, 1)), Quaternion.identity);
         newBullet.moveDirection = 1;
+        if (isMultiplayer)
+        {
+            newBullet.isMultiplayer = true;
+        }
     }
 }

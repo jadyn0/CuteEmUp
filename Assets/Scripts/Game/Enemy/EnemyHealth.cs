@@ -67,4 +67,23 @@ public class EnemyHealth : MonoBehaviour
         yield return new WaitForSeconds(0.135f);
         spriteRenderer.color = Color.white;
     }
+
+    public void CutenessBomb()
+    {
+        SoundFXManager.instance.PlaySoundFXClip(damageSound, transform, 1f);
+        if (gameObject.GetComponent<LollyAI>() != null)
+        {
+            LollyAI lollyAI = gameObject.GetComponent<LollyAI>();
+            if (lollyAI.playerTag == "Player")
+            {
+                lollyAI.playerTag = "Player2";
+            }
+            else
+            {
+                lollyAI.playerTag = "Player";
+            }
+            lollyAI.playerObject = GameObject.FindGameObjectWithTag(lollyAI.playerTag);
+        }
+        transform.position = new Vector3(transform.position.x * -1, transform.position.y + 1, transform.position.z);
+    }
 }

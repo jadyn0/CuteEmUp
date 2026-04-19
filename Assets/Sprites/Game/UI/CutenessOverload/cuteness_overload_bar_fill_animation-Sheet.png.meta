@@ -1,0 +1,674 @@
+fileFormatVersion: 2
+guid: c719d7f0f19ff413c8371cc01e0586e8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2372141433848183882
+    second: cuteness_overload_bar_fill_animation-Sheet_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cuteness_overload_bar_fill_animation-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 120
+        width: 146
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b34e7e1fe5741fd0800000000000000
+      internalID: -2372141433848183882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cuteness_overload_bar_fill_animation-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 120
+        width: 146
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01e7e842ddd68448c92dd258910d65d8
+      internalID: -1107243608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cuteness_overload_bar_fill_animation-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 120
+        width: 146
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e777e7e2f7e14a3cbe83f1e307cfbe3
+      internalID: -303412235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cuteness_overload_bar_fill_animation-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 120
+        width: 146
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84331dbbf666d43e783a95ebc2f3e49c
+      internalID: -307541696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cuteness_overload_bar_fill_animation-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 120
+        width: 146
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b749f4a3e61f4219b1ba9e47c1485af
+      internalID: 2006458683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cuteness_overload_bar_fill_animation-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 90
+        width: 146
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fd6fc515011e4435afe968c55edb185
+      internalID: 450153681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cuteness_overload_bar_fill_animation-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 90
+        width: 146
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db5067a8720534510a07690f0e31e4e2
+      internalID: -95095250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cuteness_overload_bar_fill_animation-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 90
+        width: 146
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fce7261bdf639422cafc13d8c64b2e59
+      internalID: -456117330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cuteness_overload_bar_fill_animation-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 90
+        width: 146
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7041caa19af24d4ea3f1f5c754f7456
+      internalID: -627132903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cuteness_overload_bar_fill_animation-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 90
+        width: 146
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0df8f3115933a43fd840a62ebff4c563
+      internalID: -553349849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cuteness_overload_bar_fill_animation-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 60
+        width: 146
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feb205ce2abf843f1b581ce6f1b971dc
+      internalID: -607363053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cuteness_overload_bar_fill_animation-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 60
+        width: 146
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1594152e2f834d7e9238f1d80fedd05
+      internalID: 1992972243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cuteness_overload_bar_fill_animation-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 60
+        width: 146
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bee85a6cee8db479189f3be18651df94
+      internalID: -1241279116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cuteness_overload_bar_fill_animation-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 60
+        width: 146
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 881503858d0fc44408ece861bd9b80c8
+      internalID: -557034773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cuteness_overload_bar_fill_animation-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 60
+        width: 146
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5bd8d448cf9b428faf303b47dce5bfa
+      internalID: -1359920835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cuteness_overload_bar_fill_animation-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 30
+        width: 146
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55d45799d804940f1a68bc0d5105d6e2
+      internalID: 1107173436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cuteness_overload_bar_fill_animation-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 30
+        width: 146
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5524971294ae4e2cbcfe4c781f83daa
+      internalID: 656052105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cuteness_overload_bar_fill_animation-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 30
+        width: 146
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20c2d1233cfa44a668f91cbb842f9b73
+      internalID: -395557393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cuteness_overload_bar_fill_animation-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 30
+        width: 146
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53199083302d048d187acf654d488b64
+      internalID: -1498735909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cuteness_overload_bar_fill_animation-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 30
+        width: 146
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe4235a0b09404621bd64e4b552fceb5
+      internalID: 1355909168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cuteness_overload_bar_fill_animation-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 146
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39ac4af2591ef4a6da564033895a43eb
+      internalID: -2044577421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cuteness_overload_bar_fill_animation-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 0
+        width: 146
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44a84ee078d644409a0892ce355f428f
+      internalID: 1015456821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cuteness_overload_bar_fill_animation-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 0
+        width: 146
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b57d4f5e7d1d43b6950c6364423c25b
+      internalID: 1426284095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cuteness_overload_bar_fill_animation-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 0
+        width: 146
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee923d2b9f68a4465b054a5bfcea56c8
+      internalID: 847901393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 87a29d54d6b834993962e31d864ee721
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":5.0},"gridSpriteSize":{"x":146.0,"y":30.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      cuteness_overload_bar_fill_animation-Sheet_0: -2372141433848183882
+      cuteness_overload_bar_fill_animation-Sheet_1: -1107243608
+      cuteness_overload_bar_fill_animation-Sheet_10: -607363053
+      cuteness_overload_bar_fill_animation-Sheet_11: 1992972243
+      cuteness_overload_bar_fill_animation-Sheet_12: -1241279116
+      cuteness_overload_bar_fill_animation-Sheet_13: -557034773
+      cuteness_overload_bar_fill_animation-Sheet_14: -1359920835
+      cuteness_overload_bar_fill_animation-Sheet_15: 1107173436
+      cuteness_overload_bar_fill_animation-Sheet_16: 656052105
+      cuteness_overload_bar_fill_animation-Sheet_17: -395557393
+      cuteness_overload_bar_fill_animation-Sheet_18: -1498735909
+      cuteness_overload_bar_fill_animation-Sheet_19: 1355909168
+      cuteness_overload_bar_fill_animation-Sheet_2: -303412235
+      cuteness_overload_bar_fill_animation-Sheet_20: -2044577421
+      cuteness_overload_bar_fill_animation-Sheet_21: 1015456821
+      cuteness_overload_bar_fill_animation-Sheet_22: 1426284095
+      cuteness_overload_bar_fill_animation-Sheet_23: 847901393
+      cuteness_overload_bar_fill_animation-Sheet_3: -307541696
+      cuteness_overload_bar_fill_animation-Sheet_4: 2006458683
+      cuteness_overload_bar_fill_animation-Sheet_5: 450153681
+      cuteness_overload_bar_fill_animation-Sheet_6: -95095250
+      cuteness_overload_bar_fill_animation-Sheet_7: -456117330
+      cuteness_overload_bar_fill_animation-Sheet_8: -627132903
+      cuteness_overload_bar_fill_animation-Sheet_9: -553349849
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

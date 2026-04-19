@@ -1659,6 +1659,7 @@ MonoBehaviour:
   boundR: 3.5
   speed: 2
   center: 0
+  moveAmount: 2
 --- !u!114 &97850015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2105,6 +2106,7 @@ GameObject:
   - component: {fileID: 123030207}
   - component: {fileID: 123030206}
   - component: {fileID: 123030205}
+  - component: {fileID: 123030208}
   m_Layer: 0
   m_Name: Level2Block
   m_TagString: WaveBlock
@@ -2165,7 +2167,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.8125, y: 2.40625}
+    oldSize: {x: 3.8125, y: 2.6875}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2222,7 +2224,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: b70f56c4288876a499af85bfa33dd598, type: 3}
+  m_Sprite: {fileID: 6380114607240504805, guid: 100d2c1b3d12b47cdb51e22bc236b9cb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2249,6 +2251,28 @@ MonoBehaviour:
   pvpWaveController: {fileID: 0}
   destroySound: {fileID: 8300000, guid: e5267d0a688f5e34f9969fcee2f369ab, type: 3}
   isMultiplayer: 0
+--- !u!95 &123030208
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123030203}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4e9f97fed730a45648ad9c6380f22dce, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &135193061
 GameObject:
   m_ObjectHideFlags: 0
@@ -4763,7 +4787,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 103.01, y: -1.27}
+  m_AnchoredPosition: {x: -97, y: -1.27}
   m_SizeDelta: {x: 44, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &304112634
@@ -4786,7 +4810,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 79ae3d240c0db3d42a6e58846406648e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fcfd362101dfa4bf88909469f74159f7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8389,6 +8413,7 @@ GameObject:
   - component: {fileID: 559742163}
   - component: {fileID: 559742162}
   - component: {fileID: 559742161}
+  - component: {fileID: 559742164}
   m_Layer: 0
   m_Name: LevelBossBlock
   m_TagString: WaveBlock
@@ -8449,7 +8474,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.8125, y: 2.40625}
+    oldSize: {x: 3.8125, y: 2.6875}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -8506,7 +8531,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: b70f56c4288876a499af85bfa33dd598, type: 3}
+  m_Sprite: {fileID: 6380114607240504805, guid: 100d2c1b3d12b47cdb51e22bc236b9cb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8533,6 +8558,28 @@ MonoBehaviour:
   pvpWaveController: {fileID: 0}
   destroySound: {fileID: 8300000, guid: e5267d0a688f5e34f9969fcee2f369ab, type: 3}
   isMultiplayer: 0
+--- !u!95 &559742164
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559742159}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4e9f97fed730a45648ad9c6380f22dce, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &561716029
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9783,6 +9830,7 @@ GameObject:
   - component: {fileID: 673154519}
   - component: {fileID: 673154521}
   - component: {fileID: 673154520}
+  - component: {fileID: 673154522}
   m_Layer: 5
   m_Name: Overload
   m_TagString: Untagged
@@ -9847,6 +9895,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 673154518}
   m_CullTransparentMesh: 1
+--- !u!95 &673154522
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673154518}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 55e8e84cb74fc4e0abcd21bad62aa289, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &675255744
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11806,6 +11876,7 @@ GameObject:
   - component: {fileID: 826020498}
   - component: {fileID: 826020497}
   - component: {fileID: 826020496}
+  - component: {fileID: 826020499}
   m_Layer: 0
   m_Name: Level4Block
   m_TagString: WaveBlock
@@ -11866,7 +11937,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.8125, y: 2.40625}
+    oldSize: {x: 3.8125, y: 2.6875}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -11923,7 +11994,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: b70f56c4288876a499af85bfa33dd598, type: 3}
+  m_Sprite: {fileID: 6380114607240504805, guid: 100d2c1b3d12b47cdb51e22bc236b9cb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -11950,6 +12021,28 @@ MonoBehaviour:
   pvpWaveController: {fileID: 0}
   destroySound: {fileID: 8300000, guid: e5267d0a688f5e34f9969fcee2f369ab, type: 3}
   isMultiplayer: 0
+--- !u!95 &826020499
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826020494}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4e9f97fed730a45648ad9c6380f22dce, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &831050273 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4360484808925617091, guid: f43b2ab47ef68374eacc5eb6a2c1b31c, type: 3}
@@ -12877,6 +12970,7 @@ GameObject:
   - component: {fileID: 924441592}
   - component: {fileID: 924441590}
   - component: {fileID: 924441589}
+  - component: {fileID: 924441593}
   m_Layer: 0
   m_Name: Level1Block
   m_TagString: WaveBlock
@@ -12922,7 +13016,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.8125, y: 2.40625}
+    oldSize: {x: 3.8125, y: 2.6875}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -12979,7 +13073,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: b70f56c4288876a499af85bfa33dd598, type: 3}
+  m_Sprite: {fileID: 6380114607240504805, guid: 100d2c1b3d12b47cdb51e22bc236b9cb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -13021,6 +13115,28 @@ MonoBehaviour:
   pvpWaveController: {fileID: 0}
   destroySound: {fileID: 8300000, guid: e5267d0a688f5e34f9969fcee2f369ab, type: 3}
   isMultiplayer: 0
+--- !u!95 &924441593
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924441588}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4e9f97fed730a45648ad9c6380f22dce, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &926911111 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4360484808925617091, guid: f43b2ab47ef68374eacc5eb6a2c1b31c, type: 3}
@@ -18908,6 +19024,7 @@ GameObject:
   - component: {fileID: 1358101332}
   - component: {fileID: 1358101331}
   - component: {fileID: 1358101330}
+  - component: {fileID: 1358101333}
   m_Layer: 0
   m_Name: Level3Block
   m_TagString: WaveBlock
@@ -18968,7 +19085,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.8125, y: 2.40625}
+    oldSize: {x: 3.8125, y: 2.6875}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -19025,7 +19142,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: b70f56c4288876a499af85bfa33dd598, type: 3}
+  m_Sprite: {fileID: 6380114607240504805, guid: 100d2c1b3d12b47cdb51e22bc236b9cb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -19052,6 +19169,28 @@ MonoBehaviour:
   pvpWaveController: {fileID: 0}
   destroySound: {fileID: 8300000, guid: e5267d0a688f5e34f9969fcee2f369ab, type: 3}
   isMultiplayer: 0
+--- !u!95 &1358101333
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358101328}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4e9f97fed730a45648ad9c6380f22dce, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &1362715221 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4360484808925617091, guid: f43b2ab47ef68374eacc5eb6a2c1b31c, type: 3}
@@ -21082,6 +21221,7 @@ GameObject:
   - component: {fileID: 1500027416}
   - component: {fileID: 1500027415}
   - component: {fileID: 1500027414}
+  - component: {fileID: 1500027417}
   m_Layer: 0
   m_Name: Level5Block
   m_TagString: WaveBlock
@@ -21142,7 +21282,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.8125, y: 2.40625}
+    oldSize: {x: 3.8125, y: 2.6875}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -21199,7 +21339,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: b70f56c4288876a499af85bfa33dd598, type: 3}
+  m_Sprite: {fileID: 6380114607240504805, guid: 100d2c1b3d12b47cdb51e22bc236b9cb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -21226,6 +21366,28 @@ MonoBehaviour:
   pvpWaveController: {fileID: 0}
   destroySound: {fileID: 8300000, guid: e5267d0a688f5e34f9969fcee2f369ab, type: 3}
   isMultiplayer: 0
+--- !u!95 &1500027417
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500027412}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4e9f97fed730a45648ad9c6380f22dce, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1500868045
 GameObject:
   m_ObjectHideFlags: 0
@@ -25570,6 +25732,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 58cdec0e2c11eab429cc93b46a0cc445, type: 3}
   indicator: {fileID: 304112632}
   hasShownIndicator: 0
+  animator: {fileID: 673154522}
 --- !u!114 &1762486573
 MonoBehaviour:
   m_ObjectHideFlags: 0

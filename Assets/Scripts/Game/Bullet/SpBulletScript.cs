@@ -12,6 +12,8 @@ public class SpBulletScript : MonoBehaviour
     public string WaveBlockTag;
     public float moveDirection;
 
+    public bool isMultiplayer;
+
     void Update()
     {
         move();
@@ -37,8 +39,16 @@ public class SpBulletScript : MonoBehaviour
         if (collision.gameObject.CompareTag(enemyTag))
         {
             ExplosionLScript newExplosion = Instantiate(explosion, transform.position, Quaternion.identity);
+            newExplosion.isMultiplayer = isMultiplayer;
             enemy = collision.gameObject.GetComponent<EnemyHealth>();
-            enemy.Hit(5, true, transform.position);
+            if (isMultiplayer)
+            {
+                enemy.CutenessBomb();
+            }
+            else
+            {
+                enemy.Hit(5, true, transform.position);
+            }
             Destroy(gameObject);
         }
 

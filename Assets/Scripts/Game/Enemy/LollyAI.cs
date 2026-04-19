@@ -17,7 +17,7 @@ public class LollyAI : MonoBehaviour
     private PlayerHealth player;
     private EnemyHealth health;
 
-    private GameObject[] playerObject;
+    public GameObject playerObject;
 
     private Animator animator;
     private bool canRun;
@@ -26,7 +26,7 @@ public class LollyAI : MonoBehaviour
     {
         health = gameObject.GetComponent<EnemyHealth>();
         animator = GetComponent<Animator>();
-        playerObject = GameObject.FindGameObjectsWithTag(playerTag);
+        playerObject = GameObject.FindGameObjectWithTag(playerTag);
 
         if (transform.parent.parent.tag == "Level1")
         {
@@ -62,7 +62,7 @@ public class LollyAI : MonoBehaviour
         }
         else if (isOnScreen && canRun)
         {
-            transform.position = Vector3.MoveTowards(transform.position, playerObject[0].transform.position, enemySpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, playerObject.transform.position, enemySpeed * Time.deltaTime);
         }
     }
 

@@ -6,6 +6,7 @@ public class ExplosionLScript : MonoBehaviour
     public float explodeDelay;
     private EnemyHealth enemy;
     public string enemyTag;
+    public bool isMultiplayer;
 
     void Start()
     {
@@ -24,7 +25,14 @@ public class ExplosionLScript : MonoBehaviour
         if (collision.gameObject.CompareTag(enemyTag))
         {
             enemy = collision.gameObject.GetComponent<EnemyHealth>();
-            enemy.Hit(3, true, transform.position);
+            if (isMultiplayer)
+            {
+                enemy.CutenessBomb();
+            }
+            else
+            {
+                enemy.Hit(3, true, transform.position);
+            }
         }
 
         if (collision.gameObject.CompareTag("Boss"))

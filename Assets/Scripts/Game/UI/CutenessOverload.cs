@@ -12,6 +12,7 @@ public class CutenessOverload : MonoBehaviour
 
     public GameObject indicator;
     public bool hasShownIndicator;
+    public Animator animator;
 
     private void Start()
     {
@@ -23,6 +24,7 @@ public class CutenessOverload : MonoBehaviour
 
         if (overload >= maxOverload)
         {
+            animator.SetBool("isOverloaded", true);
             overload = maxOverload;
             face.sprite = faceSprites[3];
             if (!hasShownIndicator)
@@ -34,18 +36,21 @@ public class CutenessOverload : MonoBehaviour
 
         else if (overload >= 53f)
         {
+            animator.SetBool("isOverloaded", false);
             face.sprite = faceSprites[2];
             indicator.SetActive(false);
         }
 
         else if (overload >= 26f)
         {
+            animator.SetBool("isOverloaded", false);
             face.sprite = faceSprites[1];
             indicator.SetActive(false);
         }
 
         else
         {
+            animator.SetBool("isOverloaded", false);
             face.sprite = faceSprites[0];
             indicator.SetActive(false);
         }
