@@ -21,7 +21,8 @@ public class BunnyAI : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-
+        GameObject playerObject = GameObject.FindGameObjectWithTag(playerTag);
+        player = playerObject.GetComponent<PlayerHealth>();
 
         if (transform.parent.parent.tag == "Level1")
         {
@@ -66,6 +67,7 @@ public class BunnyAI : MonoBehaviour
 
         if (collision.gameObject.CompareTag(bottomTag))
         {
+            player.Hit(0.5f);
             Destroy(gameObject);
         }
     }

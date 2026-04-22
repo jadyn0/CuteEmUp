@@ -28,8 +28,13 @@ public class ButterflyAI : MonoBehaviour
     string walkAnimation;
 
     public AudioClip shootSound;
+
+    public bool wasSummoned;
     void Start()
     {
+        GameObject playerObject = GameObject.FindGameObjectWithTag(playerTag);
+        player = playerObject.GetComponent<PlayerHealth>();
+
         animator = GetComponent<Animator>();
         if (transform.parent.parent != null)
         {
@@ -99,6 +104,10 @@ public class ButterflyAI : MonoBehaviour
 
         if (collision.gameObject.CompareTag(bottomTag))
         {
+            if (!wasSummoned)
+            {
+                player.Hit(0.5f);
+            }
             Destroy(gameObject);
         }
     }

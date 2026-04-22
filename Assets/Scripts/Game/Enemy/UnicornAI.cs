@@ -28,9 +28,13 @@ public class UnicornAI : MonoBehaviour
     string walkAnimation;
 
     public AudioClip shootSound;
+    public bool wasSummoned;
 
     void Start()
     {
+        GameObject playerObject = GameObject.FindGameObjectWithTag(playerTag);
+        player = playerObject.GetComponent<PlayerHealth>();
+
         animator = GetComponent<Animator>();
 
         if (transform.parent.parent != null)
@@ -102,6 +106,11 @@ public class UnicornAI : MonoBehaviour
 
         if (collision.gameObject.CompareTag(bottomTag))
         {
+            if (!wasSummoned)
+            {
+                player.Hit(0.5f);
+            }
+            
             Destroy(gameObject);
         }
     }

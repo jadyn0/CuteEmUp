@@ -54,6 +54,7 @@ public class Boss : MonoBehaviour
         ButterflyAI newButterfly = Instantiate(butterfly, transform.position + new Vector3(offsetX, 0, -1), Quaternion.identity);
         newButterfly.isOnScreen = true;
         newButterfly.transform.parent = parentLayer.transform;
+        newButterfly.wasSummoned = true;
     }
 
     public void SummonUnicorn(float offsetX)
@@ -62,6 +63,7 @@ public class Boss : MonoBehaviour
         UnicornAI newUnicorn = Instantiate(unicorn, transform.position + new Vector3(offsetX, 0, -1), Quaternion.identity);
         newUnicorn.isOnScreen = true;
         newUnicorn.transform.parent = parentLayer.transform;
+        newUnicorn.wasSummoned = true;
     }
 
     void OnTriggerEnter2D(Collider2D collision)

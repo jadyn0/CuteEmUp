@@ -8,7 +8,6 @@ public class SettingsMenu : MonoBehaviour
     public PauseMenu pauseMenu;
 
     public Dropdown resolutionDropdown;
-    public Dropdown languages;
     public Toggle autoFireToggle;
     public Toggle screenShakeToggle;
     Resolution[] resolutions;

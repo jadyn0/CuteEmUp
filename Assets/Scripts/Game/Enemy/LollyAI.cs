@@ -27,6 +27,7 @@ public class LollyAI : MonoBehaviour
         health = gameObject.GetComponent<EnemyHealth>();
         animator = GetComponent<Animator>();
         playerObject = GameObject.FindGameObjectWithTag(playerTag);
+        player = playerObject.GetComponent<PlayerHealth>();
 
         if (transform.parent.parent.tag == "Level1")
         {
@@ -84,6 +85,7 @@ public class LollyAI : MonoBehaviour
 
         if (collision.gameObject.CompareTag(bottomTag))
         {
+            player.Hit(1.5f);
             Destroy(gameObject);
         }
     }

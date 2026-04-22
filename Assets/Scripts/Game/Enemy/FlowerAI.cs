@@ -31,6 +31,9 @@ public class FlowerAI : MonoBehaviour
     public AudioClip shootSound;
     void Start()
     {
+        GameObject playerObject = GameObject.FindGameObjectWithTag(playerTag);
+        player = playerObject.GetComponent<PlayerHealth>();
+
         health = gameObject.GetComponent<EnemyHealth>();
         DY = enemySpeed;
 
@@ -106,6 +109,7 @@ public class FlowerAI : MonoBehaviour
 
         if (collision.gameObject.CompareTag(bottomTag))
         {
+            player.Hit(1.5f);
             Destroy(gameObject);
         }
     }

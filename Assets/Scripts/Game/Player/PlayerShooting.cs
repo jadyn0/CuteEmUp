@@ -60,7 +60,7 @@ public class PlayerShooting : MonoBehaviour
     }
     void Update()
     {
-        if (PlayerPrefs.GetInt("AutoFire") == 1 ? true : false)
+        if (PlayerPrefs.GetInt("AutoFire", 0) == 1 ? true : false)
         {
             shootDelay = longDelay;
             if (shootAction.ReadValue<float>() > 0f && !pauseMenu.isPaused)
