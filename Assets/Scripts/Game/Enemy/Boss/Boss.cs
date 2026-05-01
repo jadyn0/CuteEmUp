@@ -34,6 +34,10 @@ public class Boss : MonoBehaviour
     public float center = 0;
     public float moveAmount = 2;
 
+    public float offScreenL = -1.5f;
+    public float offScreenR = 1.5f;
+
+    public bool isMultiplayer = false;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -51,19 +55,73 @@ public class Boss : MonoBehaviour
     public void SummonButterfly(float offsetX)
     {
         SoundFXManager.instance.PlaySoundFXClip(bossSummon, transform, 1f);
-        ButterflyAI newButterfly = Instantiate(butterfly, transform.position + new Vector3(offsetX, 0, -1), Quaternion.identity);
-        newButterfly.isOnScreen = true;
-        newButterfly.transform.parent = parentLayer.transform;
-        newButterfly.wasSummoned = true;
+        if (isMultiplayer)
+        {
+            ButterflyAI newButterfly3 = Instantiate(butterfly, new Vector3(offScreenR + offsetX/2, transform.position.y, transform.position.z - 1 + offsetX / 10), Quaternion.identity);
+            newButterfly3.isOnScreen = true;
+            newButterfly3.transform.parent = parentLayer.transform;
+            newButterfly3.wasSummoned = true;
+        }
+        else
+        {
+            if (transform.position.x >= offScreenL)
+            {
+                ButterflyAI newButterfly1 = Instantiate(butterfly, new Vector3(offScreenR + offsetX, transform.position.y, transform.position.z - 1), Quaternion.identity);
+                newButterfly1.isOnScreen = true;
+                newButterfly1.transform.parent = parentLayer.transform;
+                newButterfly1.wasSummoned = true;
+            }
+            else if (transform.position.x <= offScreenR)
+            {
+                ButterflyAI newButterfly2 = Instantiate(butterfly, new Vector3(offScreenL + offsetX, transform.position.y, transform.position.z - 1), Quaternion.identity);
+                newButterfly2.isOnScreen = true;
+                newButterfly2.transform.parent = parentLayer.transform;
+                newButterfly2.wasSummoned = true;
+            }
+            else
+            {
+                ButterflyAI newButterfly = Instantiate(butterfly, transform.position + new Vector3(offsetX, 0, -1), Quaternion.identity);
+                newButterfly.isOnScreen = true;
+                newButterfly.transform.parent = parentLayer.transform;
+                newButterfly.wasSummoned = true;
+            }
+        }
     }
 
     public void SummonUnicorn(float offsetX)
     {
         SoundFXManager.instance.PlaySoundFXClip(bossSummon, transform, 1f);
-        UnicornAI newUnicorn = Instantiate(unicorn, transform.position + new Vector3(offsetX, 0, -1), Quaternion.identity);
-        newUnicorn.isOnScreen = true;
-        newUnicorn.transform.parent = parentLayer.transform;
-        newUnicorn.wasSummoned = true;
+        if (isMultiplayer)
+        {
+            UnicornAI newUnicorn3 = Instantiate(unicorn, new Vector3(offScreenR + offsetX / 2, transform.position.y, transform.position.z - 1 + offsetX / 10), Quaternion.identity);
+            newUnicorn3.isOnScreen = true;
+            newUnicorn3.transform.parent = parentLayer.transform;
+            newUnicorn3.wasSummoned = true;
+        }
+        else
+        {
+            if (transform.position.x >= offScreenL)
+            {
+                UnicornAI newUnicorn1 = Instantiate(unicorn, new Vector3(offScreenR + offsetX, transform.position.y, transform.position.z - 1), Quaternion.identity);
+                newUnicorn1.isOnScreen = true;
+                newUnicorn1.transform.parent = parentLayer.transform;
+                newUnicorn1.wasSummoned = true;
+            }
+            else if (transform.position.x <= offScreenR)
+            {
+                UnicornAI newUnicorn2 = Instantiate(unicorn, new Vector3(offScreenL + offsetX, transform.position.y, transform.position.z - 1), Quaternion.identity);
+                newUnicorn2.isOnScreen = true;
+                newUnicorn2.transform.parent = parentLayer.transform;
+                newUnicorn2.wasSummoned = true;
+            }
+            else
+            {
+                UnicornAI newUnicorn = Instantiate(unicorn, transform.position + new Vector3(offsetX, 0, -1), Quaternion.identity);
+                newUnicorn.isOnScreen = true;
+                newUnicorn.transform.parent = parentLayer.transform;
+                newUnicorn.wasSummoned = true;
+            }
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)

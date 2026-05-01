@@ -6,6 +6,7 @@ using UnityEngine.Rendering;
 public class LollyAI : MonoBehaviour
 {
     public float enemySpeed;
+    public float offScreenSpeed = 1.5f;
 
     public string topTag;
     public string bottomTag;
@@ -59,7 +60,7 @@ public class LollyAI : MonoBehaviour
 
         if (!isOnScreen)
         {
-            transform.Translate(Vector3.down * 1.5f * Time.deltaTime);
+            transform.Translate(Vector3.down * offScreenSpeed * Time.deltaTime);
         }
         else if (isOnScreen && canRun)
         {

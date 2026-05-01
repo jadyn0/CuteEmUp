@@ -115,6 +115,8 @@ MonoBehaviour:
   heartPotion: {fileID: 2155244011311377631, guid: df5adc76d6ca243a59ffacd6d86e8a70, type: 3}
   overload: {fileID: 0}
   score: {fileID: 0}
+  overloadTag: Overload
+  scoreTag: Score
   overloadAmount: 2
   scoreAmount: 10
   hasHitAnimation: 0
@@ -180,7 +182,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.42250156, y: 0.9935298}
+  m_Size: {x: 0.48247385, y: 0.9935298}
   m_EdgeRadius: 0
 --- !u!95 &8777035404661889083
 Animator:

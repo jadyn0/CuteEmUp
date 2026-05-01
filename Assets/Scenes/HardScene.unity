@@ -1523,6 +1523,8 @@ MonoBehaviour:
   speed: 2
   center: 0
   moveAmount: 2
+  offScreenL: -1.5
+  offScreenR: 1.5
 --- !u!114 &97850015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16723,7 +16725,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SettingsMenu
   pauseMenu: {fileID: 1631012598}
   resolutionDropdown: {fileID: 0}
-  languages: {fileID: 0}
   autoFireToggle: {fileID: 1511233259}
   screenShakeToggle: {fileID: 697905085}
   speedSlider: {fileID: 1325069950}
@@ -24503,7 +24504,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.007104397, y: -0.0017760992}
+  m_Offset: {x: -0.032759756, y: -0.0017760992}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -24513,7 +24514,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.9523574, y: 0.68250775}
+  m_Size: {x: 0.7009067, y: 0.68250775}
   m_EdgeRadius: 0
 --- !u!50 &1756627203
 Rigidbody2D:

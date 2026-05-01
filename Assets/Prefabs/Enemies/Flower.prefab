@@ -115,6 +115,8 @@ MonoBehaviour:
   heartPotion: {fileID: 2155244011311377631, guid: df5adc76d6ca243a59ffacd6d86e8a70, type: 3}
   overload: {fileID: 0}
   score: {fileID: 0}
+  overloadTag: Overload
+  scoreTag: Score
   overloadAmount: 2
   scoreAmount: 30
   hasHitAnimation: 0
@@ -229,4 +231,4 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0.14}
-  m_Radius: 0.34
+  m_Radius: 0.4
