@@ -29,8 +29,11 @@ public class FlowerAI : MonoBehaviour
     string shootAnimation;
 
     public AudioClip shootSound;
+
+    private SpriteRenderer spriteRenderer;
     void Start()
     {
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         GameObject playerObject = GameObject.FindGameObjectWithTag(playerTag);
         player = playerObject.GetComponent<PlayerHealth>();
 
@@ -86,10 +89,12 @@ public class FlowerAI : MonoBehaviour
         if (hitLeft || hitRight)
         {
             butterflyGrace = true;
+            spriteRenderer.color = new Color(1f, 1f, 0f, 1f);
         }
         else
         {
             butterflyGrace = false;
+            spriteRenderer.color = Color.white;
         }
 
         float chance = Random.Range(0, shootChance);

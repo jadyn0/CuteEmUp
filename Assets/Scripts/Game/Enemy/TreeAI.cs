@@ -30,8 +30,11 @@ public class TreeAI : MonoBehaviour
     string shootAnimation;
 
     public AudioClip shootSound;
+
+    private SpriteRenderer spriteRenderer;
     void Start()
     {
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         health = gameObject.GetComponent<EnemyHealth>();
         DY = offScreenSpeed;
 
@@ -82,10 +85,12 @@ public class TreeAI : MonoBehaviour
         if (hitLeft || hitRight)
         {
             butterflyGrace = true;
+            spriteRenderer.color = new Color(1f, 1f, 0f, 1f);
         }
         else
         {
             butterflyGrace = false;
+            spriteRenderer.color = Color.white;
         }
 
         float chance = Random.Range(0, shootChance);
