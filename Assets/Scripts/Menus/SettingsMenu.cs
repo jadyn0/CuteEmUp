@@ -46,7 +46,7 @@ public class SettingsMenu : MonoBehaviour
         List<string> resolutionsString = new List<string>();
 
 
-        Screen.SetResolution(PlayerPrefs.GetInt("ResolutionX", 1600), PlayerPrefs.GetInt("ResolutionY", 1200), FullScreenMode.Windowed);
+        Screen.SetResolution(PlayerPrefs.GetInt("ResolutionX", 1200), PlayerPrefs.GetInt("ResolutionY", 900), FullScreenMode.Windowed);
         if (PlayerPrefs.GetInt("ResolutionX") == 400)
         {
             resolutionDropdown.value = 0;

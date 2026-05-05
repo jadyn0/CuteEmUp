@@ -42,7 +42,7 @@ public class StartMenu : MonoBehaviour
     void Start()
     {
         //PlayerPrefs.DeleteAll();
-        Screen.SetResolution(PlayerPrefs.GetInt("ResolutionX", 1600), PlayerPrefs.GetInt("ResolutionY", 1200), FullScreenMode.Windowed);
+        Screen.SetResolution(PlayerPrefs.GetInt("ResolutionX", 1200), PlayerPrefs.GetInt("ResolutionY", 900), FullScreenMode.Windowed);
         MusicManager.instance.playMusic(menuMusic, 1f);
         pauseAction = InputSystem.actions.FindAction("Cancel");
         eventSystem = EventSystem.current;
