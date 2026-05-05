@@ -2,15 +2,25 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
 using UnityEngine.Rendering;
+using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 
 public class SettingsMenu : MonoBehaviour
 {
     public PauseMenu pauseMenu;
 
-    public Dropdown resolutionDropdown;
+    
     public Toggle autoFireToggle;
     public Toggle screenShakeToggle;
-    Resolution[] resolutions;
+
+    public TMP_Dropdown resolutionDropdown;
+    //private Vector2[] resolutions;
+    int selectedResolution;
+   // List<Vector2> resolutions = new List<Vector2>();
+    List<int> resolutionsX = new List<int>();
+    List<int> resolutionsY = new List<int>();
+    //Resolution[] resolutions;
 
     public Slider speedSlider;
 
@@ -22,6 +32,42 @@ public class SettingsMenu : MonoBehaviour
 
     void Start()
     {
+        resolutionsX.Add(400);
+        resolutionsX.Add(800);
+        resolutionsX.Add(1200);
+        resolutionsX.Add(1600);
+        resolutionsX.Add(2000);
+
+        resolutionsY.Add(300);
+        resolutionsY.Add(600);
+        resolutionsY.Add(900);
+        resolutionsY.Add(1200);
+        resolutionsY.Add(1500);
+        List<string> resolutionsString = new List<string>();
+
+
+        Screen.SetResolution(PlayerPrefs.GetInt("ResolutionX", 1600), PlayerPrefs.GetInt("ResolutionY", 1200), FullScreenMode.Windowed);
+        if (PlayerPrefs.GetInt("ResolutionX") == 400)
+        {
+            resolutionDropdown.value = 0;
+        }
+        else if(PlayerPrefs.GetInt("ResolutionX") == 800)
+        {
+            resolutionDropdown.value = 1;
+        }
+        else if (PlayerPrefs.GetInt("ResolutionX") == 1200)
+        {
+            resolutionDropdown.value = 2;
+        }
+        else if (PlayerPrefs.GetInt("ResolutionX") == 1600)
+        {
+            resolutionDropdown.value = 3;
+        }
+        else if (PlayerPrefs.GetInt("ResolutionX") == 2000)
+        {
+            resolutionDropdown.value = 4;
+        }
+
         autoFireToggle.isOn = PlayerPrefs.GetInt("AutoFire", 0) == 1 ? true : false;
         speedSlider.value = PlayerPrefs.GetFloat("PlayerSpeed", 4);
 
@@ -61,6 +107,14 @@ public class SettingsMenu : MonoBehaviour
     public void SetAutoFire(bool isAutoFire)
     {
         PlayerPrefs.SetInt("AutoFire", isAutoFire ? 1 : 0);
+    }
+
+    public void SetResolution()
+    {
+        selectedResolution = resolutionDropdown.value;
+        Screen.SetResolution(resolutionsX[selectedResolution], resolutionsY[selectedResolution], FullScreenMode.Windowed);
+        PlayerPrefs.SetInt("ResolutionX", resolutionsX[selectedResolution]);
+        PlayerPrefs.SetInt("ResolutionY", resolutionsY[selectedResolution]);
     }
 
     public void SetScreenShake(bool isScreenShake)

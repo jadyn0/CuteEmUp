@@ -15,6 +15,9 @@ public class StartMenu : MonoBehaviour
     public GameObject playerOptions;
     public GameObject playerOptionsButton;
 
+    public GameObject settings;
+    public GameObject settingsButton;
+
     public GameObject controls;
     public GameObject controlsButton;
 
@@ -28,6 +31,7 @@ public class StartMenu : MonoBehaviour
     private bool isSkinSelect;
     private bool isDifficultySelect;
     private bool isControls;
+    private bool isSettings;
 
     EventSystem eventSystem;
     InputAction pauseAction;
@@ -38,6 +42,7 @@ public class StartMenu : MonoBehaviour
     void Start()
     {
         //PlayerPrefs.DeleteAll();
+        Screen.SetResolution(PlayerPrefs.GetInt("ResolutionX", 1600), PlayerPrefs.GetInt("ResolutionY", 1200), FullScreenMode.Windowed);
         MusicManager.instance.playMusic(menuMusic, 1f);
         pauseAction = InputSystem.actions.FindAction("Cancel");
         eventSystem = EventSystem.current;
@@ -62,6 +67,10 @@ public class StartMenu : MonoBehaviour
             else if (isControls)
             {
                 unControls();
+            }
+            else if (isSettings)
+            {
+                unSettings();
             }
             else if (isSkinSelect)
             {
@@ -91,6 +100,15 @@ public class StartMenu : MonoBehaviour
         startMenu.SetActive(false);
         //eventSystem.SetSelectedGameObject(null);
         eventSystem.SetSelectedGameObject(controlsButton);
+    }
+
+    public void Settings()
+    {
+        isSettings = true;
+        settings.SetActive(true);
+        startMenu.SetActive(false);
+        //eventSystem.SetSelectedGameObject(null);
+        eventSystem.SetSelectedGameObject(settingsButton);
     }
 
     public void Blue()
@@ -139,6 +157,15 @@ public class StartMenu : MonoBehaviour
     {
         isControls = false;
         controls.SetActive(false);
+        startMenu.SetActive(true);
+        //eventSystem.SetSelectedGameObject(null);
+        eventSystem.SetSelectedGameObject(startButton);
+    }
+
+    public void unSettings()
+    {
+        isSettings = false;
+        settings.SetActive(false);
         startMenu.SetActive(true);
         //eventSystem.SetSelectedGameObject(null);
         eventSystem.SetSelectedGameObject(startButton);
