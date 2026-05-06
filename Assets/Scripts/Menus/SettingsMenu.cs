@@ -32,6 +32,9 @@ public class SettingsMenu : MonoBehaviour
 
     void Start()
     {
+        PlayerPrefs.GetInt("ResolutionX", 1200);
+        PlayerPrefs.GetInt("ResolutionY", 900);
+        
         resolutionsX.Add(400);
         resolutionsX.Add(800);
         resolutionsX.Add(1200);
@@ -45,8 +48,7 @@ public class SettingsMenu : MonoBehaviour
         resolutionsY.Add(1500);
         List<string> resolutionsString = new List<string>();
 
-
-        Screen.SetResolution(PlayerPrefs.GetInt("ResolutionX", 1200), PlayerPrefs.GetInt("ResolutionY", 900), FullScreenMode.Windowed);
+        //Screen.SetResolution(PlayerPrefs.GetInt("ResolutionX", 1200), PlayerPrefs.GetInt("ResolutionY", 900), FullScreenMode.Windowed);
         if (PlayerPrefs.GetInt("ResolutionX") == 400)
         {
             resolutionDropdown.value = 0;
@@ -112,7 +114,7 @@ public class SettingsMenu : MonoBehaviour
     public void SetResolution()
     {
         selectedResolution = resolutionDropdown.value;
-        Screen.SetResolution(resolutionsX[selectedResolution], resolutionsY[selectedResolution], FullScreenMode.Windowed);
+        Screen.SetResolution(resolutionsX[selectedResolution], resolutionsY[selectedResolution], Screen.fullScreenMode);
         PlayerPrefs.SetInt("ResolutionX", resolutionsX[selectedResolution]);
         PlayerPrefs.SetInt("ResolutionY", resolutionsY[selectedResolution]);
     }
